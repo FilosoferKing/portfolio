@@ -1,0 +1,50 @@
+@media screen and (max-width: 768px) {
+
+input[type="checkbox"] + label {
+	min-width: 100%;
+	margin-left: -70px;
+}
+
+#header #menu #contact p {
+	min-width: 100%;
+	padding-right: 30px;
+}
+
+input[type="checkbox"]:checked + label ul {
+	width: 100%;
+	margin: 0 auto;
+	height: 100vh;
+	border: none;
+}
+
+input[type="checkbox"]:checked + label ul li input {
+	height: 40px;
+}
+
+input[type="checkbox"]:checked + label ul li .form-group {
+	display: block;
+	position: relative;
+	width: 100%;
+	right: 20px;
+	margin-top: 20px;
+}
+
+input[type="checkbox"]:checked + label ul li #input_button {
+	display: block;
+	position: absolute;
+	width: 40%;
+	height: 45px;
+	left: 5%;
+	top: 370px;
+}
+
+input[type="checkbox"]:checked + label ul li #input_reset {
+	display: block;
+	position: absolute;
+	width: 40%;
+	height: 45px;
+	left: 55%;
+	top: 370px;
+}
+
+}
