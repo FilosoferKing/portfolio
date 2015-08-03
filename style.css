@@ -3,7 +3,7 @@ GEBERAL
 *******************************************************************/
 body {
     overflow: hidden;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*******************************************************************
@@ -25,8 +25,10 @@ PAGE: index.html
     font-size: 20px;
 }
 
-h2 {
-    weight: 900;
+.intro {
+    position: relative;
+    height: 100vh;
+    text-align: center;
 }
 
 .left_nav_menu {
@@ -36,6 +38,46 @@ h2 {
     height: 100vh;
 }
 
+.left_nav_menu .title_text h2 {
+    position: absolute;
+    margin-top: -75px;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 200;
+    opacity: 0;
+}
+
+.left_nav_menu .title_text p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
+    transform: translateY(-40px);
+    opacity: 0;
+}
+
+.left_nav_menu .title_text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.landing_div:hover .left_nav_menu .title_text h2 {
+    transition-duration: 3s;
+    transition-timing-function: ease-out;
+    opacity: 1;
+}
+
+.landing_div:hover .left_nav_menu .title_text p {
+    transform: translateY(0px);
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+    transition-delay: 1.5s;
+    opacity: 1;
+}
+
 .right_nav_menu {
     position: absolute;
     top: 0;
@@ -43,16 +85,69 @@ h2 {
     height: 100vh;
 }
 
-.intro {
-    height: 100vh;
+.right_nav_menu .nav_item {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.landing_div .left_nav_menu::before, .landing_div .left_nav_menu::after,
-.landing_div .right_nav_menu::before, .landing_div .right_nav_menu::after{
+.right_nav_menu .nav_item p {
+    position: relative;
+    transform: translateX(250px);
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
+    text-align: left;
+    margin: 5% auto;
+    opacity: 0;
+}
+
+.landing_div:hover .right_nav_menu .nav_item p:nth-child(1) {
+    transform: translateX(0px);
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    opacity: 1;
+}
+
+.landing_div:hover .right_nav_menu .nav_item p:nth-child(2) {
+    transform: translateX(0px);
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.1s;
+    opacity: 1;
+}
+
+.landing_div:hover .right_nav_menu .nav_item p:nth-child(3) {
+    transform: translateX(0px);
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+
+.landing_div:hover .right_nav_menu .nav_item p:nth-child(4) {
+    transform: translateX(0px);
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.3s;
+    opacity: 1;
+}
+
+.landing_div .left_nav_menu::before, .landing_div .left_nav_menu::after {
     position: absolute;
     top: 100px;
-    left: 50%;
-    right: 50%;
+    right: 0;
+    bottom: 100px;
+    opacity: 0;
+    content: '';
+    transition: opacity 1s, transform 1s;
+}
+
+.landing_div .right_nav_menu::before, .landing_div .right_nav_menu::after {
+    position: absolute;
+    top: 100px;
+    left: 0;
     bottom: 100px;
     opacity: 0;
     content: '';
