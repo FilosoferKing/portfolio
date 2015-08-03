@@ -1,118 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Home - Trevor Linan</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<!--JQuery Library-->
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="responsive.css">
-	</head>
+<head>
+    <meta charset="utf-8">
+    <title>Home - Trevor Linan</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--JQuery Library-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+</head>
 <body>
+
+<!--====================Landing Page====================-->
 <div class="container-fluid">
-	<div class="row" id="header">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="row" id="menu">
-				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" id="nav">
-					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" id="contact">
-						<p>Contact Me</p>
-					</div>
-						<input type="checkbox" id="toggle" name="toggle">
-							<label for="toggle" id="toggle">
-								<ul>
-									<li>
-										<!--CONTACT FORM-->
-										<form action="send.php" method="post" id="form">
-											<div class="form-group" id="input_fname">
-												<label for="fname">First Name</label>
-												<input type="text" class="form-control" id="fname" placeholder="First Name">
-											</div>
-											<div class="form-group" id="input_lname">
-												<label for="lname">Last Name</label>
-												<input type="text" class="form-control" id="lname" placeholder="Last Name">
-											</div>
-											<div class="form-group" id="input_email">
-												<label for="email">Email</label>
-												<input type="text" class="form-control" id="email" placeholder="Email">
-											</div>
-											<div class="form-group" id="input_message">
-												<label for="email">Message</label>
-												<textarea class="form-control" rows="3" placeholder="Message"></textarea>
-											</div>
-											<button class="btn btn-default" type="submit" id="input_button">Send</button>
-											<button class="btn btn-default" type="reset" id="input_reset">Reset</button>
-										</form>
-										<!--END CONTACT FORM-->
-									</li>
-								</ul>
-							</label>
-				</div>
-				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" id="projects"><p><a href="#">Projects</a></p></div>
-				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" id="what"><p><a href="#page_about">What Lies Beneath</a></p></div>
-				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12" id="home"><p><a href="index.html" id="active">Home</a></p></div>
-			</div>
-		</div>
-	</div>
-	<div class="row" id="intro">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="web_dev_img">
-			<img id="iam" class="img-responsive" src="img/intro.png" alt="Intro Image">
-		</div>
-	</div>
+    <div class="col-sm-12 landing_div">
+        <div class="col-sm-6 col-sm-offset-6 nav_menu">
+            
+
+        </div>
+        <div class="col-sm-6 col-sm-pull-6 intro">
+            <h2>Trevor Linan</h2>
+            <p>Web Developer</p>
+        </div>
+    </div>
 </div>
-<div class="row" id="about_me">
-	<a name="page_about"></a>
-		<div class="content_div col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-offset-3 col-sm-offset-3" id="quote">
-			<img class="pull-left" id="marcus" src="http://upload.wikimedia.org/wikipedia/commons/5/54/Marcus_Aurelius_Louvre_MR561_n01.jpg" alt="plato">
-			<p>"The happiness of your life depends upon the quality of your thoughts: therefore, guard accordingly, and take care that you entertain no notions unsuitable to virtue and reasonable nature."<br>- Marcus Aurelius</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in eros feugiat, tristique magna ut, gravida libero. Praesent aliquet dolor non sodales mollis. Suspendisse luctus ligula ex, vitae efficitur magna fringilla ut. Aliquam nibh nibh, fringilla sit amet turpis vitae, imperdiet placerat ante. Mauris lorem magna, bibendum sed quam a, euismod varius orci. Maecenas interdum luctus eros, et sagittis nisl dictum at. Duis mi orci, hendrerit ac maximus quis, scelerisque a orci. Cras malesuada in elit vel interdum. Nulla accumsan fringilla odio vel feugiat. In nec consectetur leo. Nullam laoreet aliquam tortor, non sodales ipsum condimentum eu.</p>
-
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum leo at aliquet rhoncus. Donec eleifend magna sit amet massa convallis, at ornare nibh imperdiet. Donec ornare, justo ut scelerisque maximus, velit ante fermentum nibh, nec fringilla est nulla vel neque. Sed sagittis blandit ante id sollicitudin. Aenean efficitur vel neque a pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer sodales velit vel ante egestas aliquet. Integer vulputate massa eros. Curabitur ac sapien eget enim commodo ullamcorper ac in lacus.</p>
-
-			<p>Morbi sit amet scelerisque mi. Donec tempor sapien at erat ultrices tempor. Maecenas nec orci quis mauris molestie bibendum sed ac velit. Vestibulum tellus ex, egestas nec lacus quis, tempor lacinia dolor. Vivamus elementum mi vestibulum, consectetur nisl at, fringilla lorem. Ut facilisis magna at elit suscipit aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-			<p>Nam porttitor quam lectus, id pharetra urna viverra ut. Suspendisse vitae lectus risus. Quisque et sapien blandit, placerat eros id, ultricies odio. Morbi vehicula sollicitudin magna, in volutpat tortor egestas id. Nunc in mattis ante. Maecenas at euismod orci. Nunc maximus, nisi eu convallis molestie, ante tortor varius risus, porttitor pretium ex nulla id eros. Ut nulla sapien, eleifend id aliquet vitae, pulvinar at turpis. Cras vel arcu nec turpis cursus condimentum. Donec in risus ac dui ullamcorper convallis. Donec tincidunt porttitor aliquam. Pellentesque varius finibus dolor ut accumsan. Suspendisse eget lorem ac risus ullamcorper semper a at dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus sodales quam eu felis consequat, ut posuere nisi consequat. Donec arcu neque, mattis sit amet arcu sit amet, gravida sagittis odio.</p>
-
-			<p>Vestibulum cursus a nunc quis vulputate. Pellentesque tellus dui, vestibulum luctus porta ac, mattis id sem. Pellentesque ac nisl vitae libero blandit faucibus. Proin suscipit porta velit consectetur ornare. Mauris lacinia quam non tristique consequat. Aenean sagittis magna sit amet metus varius, vel dapibus dolor posuere. Etiam faucibus aliquam euismod. Quisque ornare imperdiet magna, et aliquam massa eleifend quis. Proin gravida tellus dui, vitae semper felis cursus non. Fusce congue eget ante eu volutpat. In pharetra quam vitae ornare porta.</p>
-
-		</div>
-	</div>
-
-
-
-
-
-
-<!--<div class="container-fluid" id="footer_container">
-	<div class="row" id="footer">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="row" id="footer_items">
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-					<p id="copyright">&copy;Website by Trevor Linan</p>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="social_div">
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-sm-push-1 col-xs-push-1" id="follow">
-							<img id="followme" src="img/followmetext.png" alt="Follow Me">
-						</div>
-						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-pull-2 col-md-pull-2 col-xs-pull-1">
-							<a href="https://instagram.com/filosoferking/" target="_blank"><img id="instagram" src="img/instagramicon.png" alt="Instagram Icon"></a>
-						</div>
-						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-pull-2 col-md-pull-2 col-xs-pull-1">
-							<a href="https://twitter.com/thewisenone" target="_blank"><img id="twitter" src="img/twittericon.png" alt="Twitter Icon"></a>
-						</div>
-						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-pull-2 col-md-pull-2 col-xs-pull-1">
-							<a href="https://www.facebook.com/trevor.linan" target="_blank"><img id="facebook" src="img/facebookicon.png" alt="Facebook Icon"></a>
-						</div>	
-				</div>
-			</div>
-		</div>
-	</div>
-</div>--> 
 </body>
 </html>
