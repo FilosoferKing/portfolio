@@ -29,65 +29,6 @@ PAGE: Landing Page
     font-size: 20px;
 }
 
-/******intro div*****/
-
-/*.intro {*/
-    /*position: relative;*/
-    /*height: 100vh;*/
-    /*text-align: center;*/
-/*}*/
-
-/*#arrow {*/
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*left: 0;*/
-    /*transform: translateY(-50%);*/
-    /*width: 25px;*/
-    /*height: 50px;*/
-    /*opacity: 0;*/
-    /*cursor: pointer;*/
-/*}*/
-
-/*.landing_div:hover #arrow {*/
-    /*transition-duration: 2s;*/
-    /*transition-delay: 2s;*/
-    /*opacity: 1;*/
-/*}*/
-
-/*.line_shift {*/
-    /*height: 100vh;*/
-    /*transform: translateX(-100%);*/
-    /*margin-left: -25px;*/
-/*}*/
-
-/*.landing_div .line_shift::before, .landing_div .line_shift::after {*/
-    /*position: absolute;*/
-    /*top: 100px;*/
-    /*left: 0;*/
-    /*bottom: 100px;*/
-    /*opacity: 1;*/
-    /*content: '';*/
-    /*transition: opacity 1s, transform 1s;*/
-/*}*/
-
-/*.landing_div .line_shift::before {*/
-    /*border-top: 1px solid #fff;*/
-    /*border-bottom: 1px solid #fff;*/
-    /*transform: scale(0, 1);*/
-/*}*/
-
-/*.landing_div .line_shift::after {*/
-    /*border-left: 1px solid #fff;*/
-    /*border-right: 1px solid #fff;*/
-    /*transform: scale(1, 0);*/
-/*}*/
-
-/*.landing_div:hover .line_shift::before, .landing_div:hover .line_shift::after {*/
-    /*opacity: 1;*/
-    /*transform: scale(1);*/
-/*}*/
-
-
 /******left_nav_menu div*****/
 
 .left_nav_menu {
@@ -194,52 +135,6 @@ PAGE: Landing Page
     top: 50%;
     transform: translateY(-50%);
 }
-
-/*.landing_div:hover .right_nav_menu .nav_item p:nth-child(1) {
-    transform: translateX(0px);
-    transition-duration: 1s;
-    transition-timing-function: ease-out;
-    opacity: 1;
-}
-
-.landing_div:hover .right_nav_menu .nav_item p:nth-child(2) {
-    transform: translateX(0px);
-    transition-duration: 1s;
-    transition-timing-function: ease-out;
-    transition-delay: 0.25s;
-    opacity: 1;
-}
-
-.landing_div:hover .right_nav_menu .nav_item p:nth-child(3) {
-    transform: translateX(0px);
-    transition-duration: 1s;
-    transition-timing-function: ease-out;
-    transition-delay: 0.75s;
-    opacity: 1;
-}
-
-.landing_div:hover .right_nav_menu .nav_item p:nth-child(4) {
-    transform: translateX(0px);
-    transition-duration: 1s;
-    transition-timing-function: ease-out;
-    transition-delay: 1s;
-    opacity: 1;
-}*/
-
-/*.landing_div .right_nav_menu::before, .landing_div .right_nav_menu::after {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    bottom: 100px;
-    opacity: 0;
-    content: '';
-    transition: opacity 1s, transform 1s;
-}
-
-.landing_div:hover .right_nav_menu::before, .landing_div:hover .right_nav_menu::after {
-    opacity: 1;
-    transform: scale(1);
-}*/
 
 /********************************
 PAGE: About Page
