@@ -29,89 +29,23 @@ PAGE: Landing Page
     font-size: 20px;
 }
 
-/******left_nav_menu div*****/
-
-.left_nav_menu {
+.menu_div {
     position: absolute;
-    top: 0;
     left: 0;
-    height: 100vh;
 }
 
-.left_nav_menu .title_text h2 {
+.menu_button {
     position: absolute;
-    margin-top: -75px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-    font-size: 3vw;
-    font-weight: 200;
-    opacity: 0;
+    top: 10px;
+    left: 0;
+    font-size: 2.5vw;
+    cursor: pointer;
 }
 
-.left_nav_menu .title_text p {
-    position: absolute;
-    width: 100%;
-    left: 50%;
-    margin-left: -50%;
-    text-align: center;
-    font-size: 1.5vw;
-    font-weight: 300;
-    transform: translateY(-2vh);
-    opacity: 0;
-}
-
-.left_nav_menu .title_text {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.landing_div:hover .left_nav_menu .title_text h2 {
-    transition-duration: 3s;
-    transition-timing-function: ease-out;
-    opacity: 1;
-}
-
-.landing_div:hover .left_nav_menu .title_text p {
-    transform: translateY(0px);
-    transition-duration: 2s;
-    transition-timing-function: ease-out;
-    transition-delay: 1.5s;
-    opacity: 1;
-}
-
-.landing_div .left_nav_menu::before, .landing_div .left_nav_menu::after {
-    position: absolute;
-    top: 5vh;
-    right: 0;
-    bottom: 5vh;
-    opacity: 0;
-    content: '';
-    transition: opacity 1s, transform 1s;
-}
-
-.landing_div .left_nav_menu::before, .landing_div .right_nav_menu::before {
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    transform: scale(0, 1);
-}
-
-.landing_div .left_nav_menu::after, .landing_div .right_nav_menu::after {
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-    transform: scale(1, 0);
-}
-
-.landing_div:hover .left_nav_menu::before, .landing_div:hover .left_nav_menu::after {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/******right_nav_menu div*****/
+/******nav_menu div*****/
 
 .nav_menu {
+    visibility: hidden;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
