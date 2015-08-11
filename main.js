@@ -1,7 +1,6 @@
 $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
-
     /***************************************
      * NAME: Menu button click handler
      * GLOBAL VARIABLES: menu_toggle

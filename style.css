@@ -19,7 +19,7 @@ PAGE: Landing Page
     left: 0;
     max-width: 100%;
     height: 100vh;
-    background: #fff url('img/land.jpg') no-repeat 50% 50%;
+    background: #000 url('img/land.jpg') no-repeat 50% 50%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;
@@ -72,6 +72,7 @@ PAGE: Landing Page
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 1.5vw;
 }
 
 /********************************
@@ -79,8 +80,7 @@ PAGE: About Page
 *********************************/
 .about_div {
     position: relative;
-    width: 100%;
-    height: 100vh;
+    max-width: 100%;
 }
 
 h1 {
