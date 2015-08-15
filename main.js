@@ -17,4 +17,8 @@ $(document).ready(function () {
         }
     });
 
+    function name_animation(){
+
+    }
+
 });

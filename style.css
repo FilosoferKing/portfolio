@@ -1,55 +1,42 @@
 /*******************************************************************
-GEBERAL
+GENERAL
 *******************************************************************/
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 0;
 }
-
-/*******************************************************************
-index.html
-*******************************************************************/
 /********************************
-PAGE: Landing Page
+Navigation menu
 *********************************/
-.landing_div {
-    overflow: hidden;
-    position: relative;
-    top: 0;
-    left: 0;
-    max-width: 100%;
+.nav_container {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
     height: 100vh;
-    background: #000 url('img/land.jpg') no-repeat 50% 50%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     color: #fff;
-    font-size: 20px;
 }
 
-.menu_div {
+.top_nav {
     position: absolute;
     left: 0;
 }
 
 .menu_button {
+    visibility: visible;
     position: absolute;
     top: 10px;
     right: 0;
     font-size: 2.5vw;
     cursor: pointer;
+    z-index: 200;
 }
 
-/******nav_menu div*****/
-
 .nav_menu {
-    visibility: hidden;
-    position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 0;
+    z-index: 10;
     height: 90vh;
 }
 
@@ -73,7 +60,58 @@ PAGE: Landing Page
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.5vw;
+    font-weight: 200;
 }
+
+/*******************************************************************
+index.html
+*******************************************************************/
+/********************************
+PAGE: Landing Page
+*********************************/
+.landing_div {
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100vh;
+    background: #000 url('img/land.jpg') no-repeat 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+}
+
+.fname_div, .lname_div {
+    height: 49vh;
+}
+
+.line_break {
+    height: 1vh;
+}
+
+.line_break hr {
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.fname, .lname {
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.fname h1, .lname h1 {
+    font-weight: 200;
+    font-size: 5.5vh;
+ }
 
 /********************************
 PAGE: About Page
@@ -81,6 +119,7 @@ PAGE: About Page
 .about_div {
     position: relative;
     max-width: 100%;
+    height: 100vh;
 }
 
 h1 {
