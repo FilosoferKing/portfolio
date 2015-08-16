@@ -55,8 +55,15 @@ $(document).ready(function () {
     /*calls the name_animation() function every 5 seconds*/
     setInterval(function () {
         name_animation();
-    }, 5000);
+    }, 10000);
 
+    /***************************************
+     * NAME: fname_letter_loop
+     * PARAMS: none
+     * GLOBAL VARIABLES: i
+     * LOCAL VARIABLES: none
+     * PURPOSE: consecutively adds visible attribute to each letter of first name
+     */
     var i = 1;
 
     function fname_letter_loop() {
@@ -69,10 +76,18 @@ $(document).ready(function () {
         }, 150);
     }
 
+    /*calls the fname_letter_loop function 1 second after page loads*/
     setTimeout(function () {
         fname_letter_loop();
     }, 1000);
 
+    /***************************************
+     * NAME: lname_letter_loop
+     * PARAMS: none
+     * GLOBAL VARIABLES: j
+     * LOCAL VARIABLES: none
+     * PURPOSE: consecutively adds visible attribute to each letter of last name
+     */
     var j = 1;
 
     function lname_letter_loop() {
@@ -85,10 +100,18 @@ $(document).ready(function () {
         }, 150);
     }
 
+    /*calls the lname_letter_loop function 2.5 seconds after page loads*/
     setTimeout(function () {
         lname_letter_loop();
     }, 2500);
 
+    /***************************************
+     * NAME: fname_wave_animation
+     * PARAMS: none
+     * GLOBAL VARIABLES: n
+     * LOCAL VARIABLES: none
+     * PURPOSE: consecutively adds wave_rotate class to each letter of first name
+     */
     var n = 2;
 
     function fname_wave_animation() {
@@ -99,12 +122,19 @@ $(document).ready(function () {
                 fname_wave_animation();
             }
         }, 100);
+        /*removes wave_rotate class from all .fname h1 elements after 1 second*/
         setTimeout(function () {
             $('h1').removeClass('wave_rotate')
         }, 1000);
     }
 
-
+    /***************************************
+     * NAME: lname_wave_animation
+     * PARAMS: none
+     * GLOBAL VARIABLES: m
+     * LOCAL VARIABLES: none
+     * PURPOSE: consecutively adds wave_rotate class to each letter of first name
+     */
     var m = 3;
 
     function lname_wave_animation() {
@@ -115,12 +145,13 @@ $(document).ready(function () {
                 lname_wave_animation();
             }
         }, 100);
+        /*removes wave_rotate class from all .lname h1 elements after 1 second*/
         setTimeout(function () {
             $('h1').removeClass('wave_rotate')
         }, 1000);
     }
 
-
+    /*calls the fname_wave_animation function 4 seconds after page load and lname_wave_function 4.6 seconds after page load*/
     setTimeout(function () {
         fname_wave_animation();
         setTimeout(function () {

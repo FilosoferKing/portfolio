@@ -1,6 +1,8 @@
 @media screen and (max-width: 768px) {
 
-    /*Adjust navigation menu sizing for mobile*/
+    /************************************
+    Navgation
+    ************************************/
     .menu_button {
         font-size: 6vw;
     }
@@ -12,5 +14,29 @@
     .about, .skills, .projects, .contact {
         height: 22.5vh;
     }
+
+    /************************************
+    Name
+    ************************************/
+    .fname {
+        transform: translateY(0);
+    }
+
+    .lname {
+        transform: translateY(70vh);
+    }
+
+    .fname h1, .lname h1 {
+        font-size: 7vh;
+    }
+
+    /************************************
+    About Me
+    ************************************/
+    .title img {
+       width: 100%;
+        height: auto;
+    }
+
 
 }
