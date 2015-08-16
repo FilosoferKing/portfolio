@@ -12,9 +12,11 @@ $(document).ready(function () {
     $('.menu_button').on('click', function () {
         if (menu_toggle == false) {
             $('.nav_menu').css({"visibility": "visible"});
+            $('.nav_container').css({"background-color": "rgba(0, 0, 0, .9)"});
             menu_toggle = true;
         } else {
             $('.nav_menu').css({"visibility": "hidden"});
+            $('.nav_container').css({"background-color": "rgba(0, 0, 0, 0)"});
             menu_toggle = false;
         }
     });
@@ -40,7 +42,7 @@ $(document).ready(function () {
             $('.lname h1:nth-child(' + j + ')').css({"visibility": "visible"});
             console.log("Time OUT!");
             j++;
-            if (j <= 8) {
+            if (j <= 7) {
                 lname_letter_loop();
             }
         }, 150);
