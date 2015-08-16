@@ -5,6 +5,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 0;
 }
+
 /********************************
 Navigation menu
 *********************************/
@@ -116,7 +117,7 @@ PAGE: Landing Page
     display: inline-block;
     font-weight: 200;
     font-size: 8vh;
- }
+}
 
 /*********Name Animation**********/
 .rotate_letter_x {
@@ -126,8 +127,12 @@ PAGE: Landing Page
 }
 
 @keyframes letter_rotate_x {
-    0% { transform: rotateX(0deg);}
-    100% { transform: rotateX(360deg);}
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
 }
 
 .rotate_letter_y {
@@ -137,8 +142,12 @@ PAGE: Landing Page
 }
 
 @keyframes letter_rotate_y {
-    0% { transform: rotateY(0deg);}
-    100% { transform: rotateY(360deg);}
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 .rotate_letter_left_z {
@@ -148,8 +157,12 @@ PAGE: Landing Page
 }
 
 @keyframes letter_rotate_left_z {
-    0% { transform: rotateZ(0deg);}
-    100% { transform: rotateZ(-360deg);}
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(-360deg);
+    }
 }
 
 .rotate_letter_right_z {
@@ -159,8 +172,27 @@ PAGE: Landing Page
 }
 
 @keyframes letter_rotate_right_z {
-    0% { transform: rotateZ(0deg);}
-    100% { transform: rotateZ(360deg);}
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.wave_rotate {
+    animation-name: wave_rotate;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes wave_rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 /***********Title*******************/
