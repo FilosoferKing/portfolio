@@ -42,7 +42,7 @@ $(document).ready(function () {
             $('.lname h1:nth-child(' + j + ')').css({"visibility": "visible"});
             console.log("Time OUT!");
             j++;
-            if (j <= 7) {
+            if (j <= 8) {
                 lname_letter_loop();
             }
         }, 150);

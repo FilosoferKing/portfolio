@@ -93,10 +93,20 @@ PAGE: Landing Page
 }
 
 .fname {
-
+    transform: translateY(80vh);
 }
 
 .lname {
+    transform: translateY(80vh);
+    padding-left: 5vw;
+}
+
+.fname_xs {
+    transform: translateY(60vh);
+}
+
+.lname_xs {
+    transform: translateY(80vh);
     padding-left: 5vw;
 }
 
@@ -107,10 +117,6 @@ PAGE: Landing Page
     font-weight: 200;
     font-size: 8vh;
  }
-
-.name #6 {
-    opacity: .5;
-}
 
 /*********Name Animation**********/
 .rotate_letter_x {
