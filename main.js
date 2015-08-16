@@ -19,6 +19,36 @@ $(document).ready(function () {
         }
     });
 
+    var i = 1;
+    function fname_letter_loop(){
+        setTimeout(function(){
+            $('.fname h1:nth-child(' + i + ')').css({"visibility": "visible"});
+            console.log("Time OUT!");
+            i++;
+            if (i <= 8) {
+                fname_letter_loop();
+            }
+        }, 150);
+    }
+    setTimeout(function(){
+        fname_letter_loop();
+    }, 1000);
+
+    var j = 1;
+    function lname_letter_loop(){
+        setTimeout(function(){
+            $('.lname h1:nth-child(' + j + ')').css({"visibility": "visible"});
+            console.log("Time OUT!");
+            j++;
+            if (j <= 8) {
+                lname_letter_loop();
+            }
+        }, 150);
+    }
+    setTimeout(function(){
+        lname_letter_loop();
+    }, 2500);
+
     /***************************************
      * NAME: name_animation
      * PARAMS: animation_number
@@ -54,4 +84,9 @@ $(document).ready(function () {
     name_animation();
     }, 5000);
 
+
+    function show_title(){
+        $('.title h1').addClass('title_slide');
+    }
+    show_title();
 });

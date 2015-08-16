@@ -88,21 +88,31 @@ PAGE: Landing Page
 /***************Name************/
 .name_div {
     position: relative;
-    height: 25vh;
+    height: 100vh;
 }
 
-.name {
-    #top: 10vh;
-    display: block;
-    margin: 0 auto;
+.fname {
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.name h1 {
-    width: 8%;
+.lname {
+    padding-left: 2vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fname h1, .lname h1 {
+    visibility: hidden;
+    width: 12%;
     display: inline-block;
     font-weight: 200;
-    font-size: 6vh;
+    font-size: 8vh;
  }
+
+.name #6 {
+    opacity: .5;
+}
 
 /*********Name Animation**********/
 .rotate_letter_x {
@@ -147,6 +157,12 @@ PAGE: Landing Page
 @keyframes letter_rotate_right_z {
     0% { transform: rotateZ(0deg);}
     100% { transform: rotateZ(360deg);}
+}
+
+/***********Title*******************/
+.title h1 {
+    font-weight: 200;
+    font-size: 2vw;
 }
 
 /********************************
