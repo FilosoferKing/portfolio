@@ -3,7 +3,6 @@ GENERAL
 *******************************************************************/
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0;
 }
 
 /********************************
@@ -125,7 +124,7 @@ PAGE: Landing Page
 
 .fname h1, .lname h1 {
     visibility: hidden;
-    width: 12%;
+    width: 11%;
     margin: 0 auto;
     display: inline-block;
     font-weight: 200;
@@ -226,56 +225,55 @@ PAGE: About Page
 }
 
 .self_image {
+    height: 100vh;
+    overflow: hidden;
     padding: 0;
 }
 
-.title_box {
+.image_box {
     position: relative;
     padding: 0;
     top: 0;
     display: block;
-    height: 100vh;
-
 }
 
-.title {
-    height: 100vh;
+.image {
     padding: 0;
 }
 
-.title img {
+.image img {
     position: relative;
-    height: 100vh;
-    top: 50%;
+    width: 100%;
+
     left: 0;
-    transform: translateY(-50%);
+
 }
 
 .about_title {
     position: relative;
-}
-
-.title_h1 h1 {
-    position: absolute;
-    left: 0;
-    text-align: center;
-    font-weight: 200;
-    font-size: 4vw;
-
 }
 
 .about_text_div {
-    overflow: hidden;
-    height: 100vh;
     padding: 0;
 }
 
 .about_title {
+
+}
+
+.title_h1 h1 {
+    position: relative;
     height: 20vh;
+    text-align: center;
+    font-weight: 200;
+    font-size: 4vw;
 }
 
 .about_text {
-    height: 80vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    color: #000;
+    font-size: 1.5vw;
 }
 
 
