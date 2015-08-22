@@ -151,11 +151,29 @@ $(document).ready(function () {
         }, 1000);
     }
 
-    /*calls the fname_wave_animation function 4 seconds after page load and lname_wave_function 4.6 seconds after page load*/
+    /***************************************
+     * NAME: fade_out_name_tags
+     * PARAMS: none
+     * GLOBAL VARIABLES: none
+     * LOCAL VARIABLES: none
+     * PURPOSE: fades out the greater than, less than and slash from name after the wave_animation runs.
+     * It also slides .lname(last name) over to be centered on right side of screen.
+     */
+    function fade_out_name_tags(){
+        $('#fade1').fadeTo(500, 0);
+        $('#fade2').fadeTo(500, 0);
+        $('#fade3').fadeTo(500, 0);
+        $('#fade4').fadeTo(500, 0);
+        $('.lname').delay(500).animate({"right": "+5vw"}, 2000);
+        $('#fade5').fadeTo(500, 0);
+    }
+
+    /*calls the fname_wave_animation function 4 seconds after page load and the lname_wave_function and fade_out_name_tags function 4.6 seconds after page load*/
     setTimeout(function () {
         fname_wave_animation();
         setTimeout(function () {
             lname_wave_animation();
+            fade_out_name_tags()
         }, 600);
     }, 4000);
 
