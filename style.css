@@ -83,6 +83,18 @@ PAGE: Landing Page
     background-size: cover;
     color: #fff;
     padding: 0;
+    z-index: -2;
+    blur: 5px;
+}
+
+.pseudo_landing_div {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100vh;
+    color: #fff;
+    padding: 0;
 }
 
 .left_black_bg::before {
@@ -95,6 +107,7 @@ PAGE: Landing Page
     background-color: #000;
     opacity: 1;
     transition-duration: 2s;
+    z-index: 0;
 }
 
 .left_transparent_bg::before {
@@ -120,6 +133,7 @@ PAGE: Landing Page
     background-color: #000;
     opacity: 1;
     transition-duration: 2s;
+    z-index: 0;
 }
 
 .right_transparent_bg::before {
@@ -136,10 +150,11 @@ PAGE: Landing Page
 }
 
 
-/***************Name************/
+    /***************Name************/
 .name_div {
     position: relative;
     height: 100vh;
+    padding: 0;
 }
 
 .name_div h1 {

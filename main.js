@@ -1,11 +1,6 @@
 $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
-    /*Hides nav menu_button until background image shows up*/
-    setTimeout(function(){
-        $('.menu_button').css({"opacity": "1"});
-    }, 7000);
-
     /***************************************
      * NAME: Menu button click handler
      * PARAMS: none
@@ -17,11 +12,11 @@ $(document).ready(function () {
     $('.menu_button').on('click', function () {
         if (menu_toggle == false) {
             $('.nav_menu').css({"visibility": "visible"});
-            $('.nav_container').css({"background-color": "rgba(0, 0, 0, .9)"});
+            $('.nav_container').css({"background-color": "rgba(0, 0, 0, .9)", "top": "50%",  "height": "100vh"});
             menu_toggle = true;
         } else {
             $('.nav_menu').css({"visibility": "hidden"});
-            $('.nav_container').css({"background-color": "rgba(0, 0, 0, 0)"});
+            $('.nav_container').css({"background-color": "rgba(0, 0, 0, 0)", "top": "0", "height": "0"});
             menu_toggle = false;
         }
     });
@@ -121,9 +116,9 @@ $(document).ready(function () {
 
     function fname_wave_animation() {
         setTimeout(function () {
-            $('.fname h1:nth-child(' + n + ')').addClass('wave_rotate');
+            $('.fname h1:nth-child(' + n + ')').addClass('wave_rotate').css({"color": "#3385D6"});
             n++;
-            if (n <= 9) {
+            if (n <= 8) {
                 fname_wave_animation();
             }
         }, 100);
@@ -144,7 +139,7 @@ $(document).ready(function () {
 
     function lname_wave_animation() {
         setTimeout(function () {
-            $('.lname h1:nth-child(' + m + ')').addClass('wave_rotate');
+            $('.lname h1:nth-child(' + m + ')').addClass('wave_rotate').css({"color": "#3385D6"});
             m++;
             if (m <= 7) {
                 lname_wave_animation();
@@ -169,13 +164,15 @@ $(document).ready(function () {
         setTimeout(function () {
             $('.left_black_bg').toggleClass('left_transparent_bg');
             $('.fname').animate({"left": "-=50vw"}, 3000, function(){
-                $(this).remove();
+                $(this).fadeOut(1000);
             });
             $('.right_black_bg').toggleClass('right_transparent_bg');
             $('.lname').animate({"left": "+=50vw"}, 3000, function(){
-                $(this).remove();
+                $(this).fadeOut(1000);
             });
         }, 0);
+        $('.menu_button').css({"opacity": "1"});
+        $('.nav_container').css({"height": "0", "top": "0"});
     }
 
     /***************************************
