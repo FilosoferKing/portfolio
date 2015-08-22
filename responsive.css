@@ -19,15 +19,19 @@
     Name
     ************************************/
     .fname {
-        transform: translateY(0);
+        transform: translateY(75vh);
+        padding: 0;
     }
 
     .lname {
-        transform: translateY(70vh);
+        transform: translateY(75vh);
+        padding: 0;
+        margin-left: 5vw;
+
     }
 
     .fname h1, .lname h1 {
-        font-size: 7vh;
+        font-size: 10vh;
     }
 
     /************************************
