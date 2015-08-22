@@ -166,15 +166,16 @@ $(document).ready(function () {
      * It also slides .lname(last name) over to be centered on right side of screen.
      */
     function fade_out_name_tags() {
-        $('#fade1').fadeTo(600, 0);
-        $('#fade2').fadeTo(600, 0);
-        $('#fade3').fadeTo(600, 0);
-        $('#fade4').fadeTo(600, 0);
-        $('#fade5').fadeTo(600, 0);
-
         setTimeout(function () {
-            $('.black_bg').toggleClass('transparent_bg');
-        }, 600);
+            $('.left_black_bg').toggleClass('left_transparent_bg');
+            $('.fname').animate({"left": "-=50vw"}, 3000, function(){
+                $(this).remove();
+            });
+            $('.right_black_bg').toggleClass('right_transparent_bg');
+            $('.lname').animate({"left": "+=50vw"}, 3000, function(){
+                $(this).remove();
+            });
+        }, 0);
     }
 
     /***************************************
@@ -193,7 +194,9 @@ $(document).ready(function () {
         fname_wave_animation();
         setTimeout(function () {
             lname_wave_animation();
-            fade_out_name_tags();
+            setTimeout(function() {
+                fade_out_name_tags();
+            }, 1000);
         }, 700);
     }, 5000);
     typing_caret_flash();
