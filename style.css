@@ -87,6 +87,23 @@ PAGE: Landing Page
     color: #fff;
 }
 
+.fade_away {
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100vh;
+    background: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    padding: 0;
+}
+
 /***************Name************/
 .name_div {
     position: relative;
