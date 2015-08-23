@@ -161,14 +161,15 @@ $(document).ready(function () {
      * It also slides .lname(last name) over to be centered on right side of screen.
      */
     function fade_out_name_tags() {
+
         setTimeout(function () {
             $('.left_black_bg').toggleClass('left_transparent_bg');
             $('.fname').animate({"left": "-=50vw"}, 3000, function(){
-                $(this).fadeOut(1000);
+                $(this).fadeOut(200);
             });
             $('.right_black_bg').toggleClass('right_transparent_bg');
             $('.lname').animate({"left": "+=50vw"}, 3000, function(){
-                $(this).fadeOut(1000);
+                $(this).fadeOut(200);
             });
         }, 0);
         $('.menu_button').css({"opacity": "1"});
@@ -189,8 +190,10 @@ $(document).ready(function () {
     /*calls the fname_wave_animation function 4 seconds after page load and the lname_wave_function and fade_out_name_tags function 4.6 seconds after page load*/
     setTimeout(function () {
         fname_wave_animation();
+        $('#fade1, #fade2').fadeTo(200, 0);
         setTimeout(function () {
             lname_wave_animation();
+            $('#fade3, #fade4, #fade5').fadeTo(200, 0);
             setTimeout(function() {
                 fade_out_name_tags();
             }, 1000);

@@ -162,11 +162,11 @@ PAGE: Landing Page
 }
 
 .fname {
-    transform: translateY(80vh);
+    transform: translateY(48vh);
 }
 
 .lname {
-    transform: translateY(80vh);
+    transform: translateY(48vh);
     padding-left: 5vw;
 }
 
