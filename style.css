@@ -57,56 +57,68 @@ Navigation menu
     transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
-    background: rgba(255, 255, 255, .1);
-    border: 1px solid #fff;
+    background: rgba(255, 255, 255, .75);
+    border: 1px solid #3385D6;
 }
 
 .about_click {
-    background: #000 url('img/trevoutline.png') no-repeat 20% 50%;
+    background: white url('img/trevoutline.png') no-repeat 20% 50%;
     background-size: contain;
 }
 
 .about:hover .about_click {
-    transition-duration: .25s;
-    box-shadow: 0 0 100px 10px #3385D6 inset;
-    background: #000 url('img/trevoutline.png') no-repeat 80% 50%;
+    transition-duration: .5s;
+    background: rgb(51, 133, 214) url('img/trevoutline.png') no-repeat 80% 50%;
     background-size: contain;
 }
 
+.about:hover .about_click p {
+    color: #fff;
+}
+
 .skills_click {
-    background: #000 url('img/skilloutline.png') no-repeat 0% 50%;
+    background: white url('img/skilloutline.png') no-repeat 0% 50%;
     background-size: contain;
 }
 
 .skills:hover .skills_click {
-    transition-duration: .25s;
-    box-shadow: 0 0 100px 10px #3385D6 inset;
-    background: #000 url('img/skilloutline.png') no-repeat 100% 50%;
+    transition-duration: .5s;
+    background: rgb(51, 133, 214) url('img/skilloutline.png') no-repeat 100% 50%;
     background-size: contain;
 }
 
+.skills:hover .skills_click p {
+    color: #fff;
+}
+
 .projects_click {
-    background: #000 url('img/projectoutline.png') no-repeat 110% 50%;
+    background: white url('img/projectoutline.png') no-repeat 110% 50%;
     background-size: contain;
 }
 
 .projects:hover .projects_click {
-    transition-duration: .25s;
-    box-shadow: 0 0 100px 10px #3385D6 inset;
-    background: #000 url('img/projectoutline.png') no-repeat 0% 50%;
+    transition-duration: .5s;
+    background: rgb(51, 133, 214) url('img/projectoutline.png') no-repeat 0% 50%;
     background-size: contain;
 }
 
+.projects:hover .projects_click p {
+    color: #fff;
+}
+
 .contact_click {
-    background: #000 url('img/connectoutline.png') no-repeat 100% 50%;
+    background: white url('img/connectoutline.png') no-repeat 100% 50%;
     background-size: contain;
 }
 
 .contact:hover .contact_click {
-    transition-duration: .25s;
-    box-shadow: 0 0 100px 10px #3385D6 inset;
-    background: #000 url('img/connectoutline.png') no-repeat 0% 50%;
+    transition-duration: .5s;
+    background: rgb(51, 133, 214) url('img/connectoutline.png') no-repeat 0% 50%;
     background-size: contain;
+}
+
+.contact:hover .contact_click p {
+    color: #fff;
 }
 
 .nav_menu p {
@@ -114,7 +126,7 @@ Navigation menu
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-weight: 200;
     color: #3385D6;
 }

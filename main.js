@@ -12,7 +12,7 @@ $(document).ready(function () {
     $('.menu_button').on('click', function () {
         if (menu_toggle == false) {
             $('.nav_menu').css({"visibility": "visible"});
-            $('.nav_container').css({"background-color": "rgba(0, 0, 0, .9)", "top": "50%",  "height": "100vh"});
+            $('.nav_container').css({"background-color": "rgba(0, 0, 0, .75)", "top": "50%",  "height": "100vh"});
             menu_toggle = true;
         } else {
             $('.nav_menu').css({"visibility": "hidden"});
