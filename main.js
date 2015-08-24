@@ -183,9 +183,11 @@ $(document).ready(function () {
      * LOCAL VARIABLES: none
      * PURPOSE: removes flashing typing caret from screen
      */
-    function typing_caret_flash(){
-       $('#type_caret').remove(2500);
-    }
+    //function typing_caret_flash(){
+    //   $('#type_caret').remove(2500);
+    //}
+
+    //typing_caret_flash();
 
     /*calls the fname_wave_animation function 4 seconds after page load and the lname_wave_function and fade_out_name_tags function 4.6 seconds after page load*/
     setTimeout(function () {
@@ -199,5 +201,8 @@ $(document).ready(function () {
             }, 1000);
         }, 700);
     }, 5000);
-    typing_caret_flash();
+
+
+
+
 });
