@@ -56,78 +56,251 @@ Navigation menu
     transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
-    background: rgba(255, 255, 255, .75);
-    border: 1px solid rgb(42, 71, 101);
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(139, 139, 142, 1);
+    overflow: hidden;
 }
+
+/*****************About Menu Button*****************/
 
 .about_click {
-    background: transparent url('img/trevoutline.png') no-repeat 20% 50%;
-    background-size: contain;
+    transition-duration: .5s;
 }
 
-.about:hover .about_click {
-    transition-duration: .5s;
-    background: rgb(42, 71, 101) url('img/trevoutline.png') no-repeat 80% 50%;
-    background-size: contain;
+.about_click::before {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    content: '';
+    height: 200%;
+    width: 200%;
+    #transition-duration: 1s;
+    transform: rotateZ(-45deg);
+}
+
+.about_click::after {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    content: '';
+    height: 0;
+    width: 50%;
+    transition-duration: 1s;
+    opacity: 0;
+    transform: rotateZ(-45deg);
+}
+
+.about:hover .about_click::before {
+    transition-duration: 1.5s;
+    top: 100%;
+    left: 100%;
+    background-color: rgba(139, 139, 142, .5);
+    transform: rotateZ(-45deg);
+}
+
+.about:hover .about_click::after {
+    top: 20%;
+    left: 25%;
+    height: 60%;
+    width: 50%;
+    #background-color: rgba(0, 0, 0, .25);
+    border-top: 1px solid rgba(139, 139, 142, 1);
+    border-bottom: 1px solid rgba(139, 139, 142, 1);
+    transition-delay: .35s;
+    transition-duration: .25s;
+    opacity: 1;
+    transform: rotateZ(0);
+
 }
 
 .about:hover .about_click p {
-    color: #fff;
+    font-size: 4vw;
+    transition-duration: .5s;
 }
+
+/*****************Skills Menu Button*****************/
 
 .skills_click {
-    background: transparent url('img/skilloutline.png') no-repeat 0% 50%;
-    background-size: contain;
+    transition-duration: .5s;
 }
 
-.skills:hover .skills_click {
-    transition-duration: .5s;
-    background: rgb(42, 71, 101) url('img/skilloutline.png') no-repeat 100% 50%;
-    background-size: contain;
+.skills_click::before {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    content: '';
+    height: 200%;
+    width: 250%;
+    #transition-duration: 1s;
+    transform: rotateZ(45deg);
+}
+
+.skills_click::after {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    content: '';
+    height: 0;
+    width: 50%;
+    transition-duration: 1s;
+    opacity: 0;
+    transform: rotateZ(45deg);
+}
+
+.skills:hover .skills_click::before {
+    transition-duration: 1.5s;
+    top: -100%;
+    left: 100%;
+    background-color: rgba(139, 139, 142, .5);
+    transform: rotateZ(45deg);
+}
+
+.skills:hover .skills_click::after {
+    top: 20%;
+    left: 25%;
+    height: 60%;
+    width: 50%;
+    #background-color: rgba(0, 0, 0, .25);
+    border-top: 1px solid rgba(139, 139, 142, 1);
+    border-bottom: 1px solid rgba(139, 139, 142, 1);
+    transition-delay: .40s;
+    transition-duration: .25s;
+    opacity: 1;
+    transform: rotateZ(0);
+
 }
 
 .skills:hover .skills_click p {
-    color: #fff;
+    font-size: 4vw;
+    transition-duration: .5s;
 }
+
+/*****************Projects Menu Button*****************/
 
 .projects_click {
-    background: transparent url('img/projectoutline.png') no-repeat 110% 50%;
-    background-size: contain;
+    transition-duration: .5s;
 }
 
-.projects:hover .projects_click {
-    transition-duration: .5s;
-    background: rgb(42, 71, 101) url('img/projectoutline.png') no-repeat 0% 50%;
-    background-size: contain;
+.projects_click::before {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    content: '';
+    height: 200%;
+    width: 200%;
+    #transition-duration: 1s;
+    transform: rotateZ(45deg);
+}
+
+.projects_click::after {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    content: '';
+    height: 0;
+    width: 50%;
+    transition-duration: 1s;
+    opacity: 0;
+    transform: rotateZ(45deg);
+}
+
+.projects:hover .projects_click::before {
+    transition-duration: 1.5s;
+    top: 100%;
+    left: -200%;
+    background-color: rgba(139, 139, 142, .5);
+    transform: rotateZ(45deg);
+}
+
+.projects:hover .projects_click::after {
+    top: 20%;
+    left: 25%;
+    height: 60%;
+    width: 50%;
+    #background-color: rgba(0, 0, 0, .25);
+    border-top: 1px solid rgba(139, 139, 142, 1);
+    border-bottom: 1px solid rgba(139, 139, 142, 1);
+    transition-delay: .35s;
+    transition-duration: .25s;
+    opacity: 1;
+    transform: rotateZ(0);
+
 }
 
 .projects:hover .projects_click p {
-    color: #fff;
+    font-size: 4vw;
+    transition-duration: .5s;
 }
+
+/*****************Connect Menu Button*****************/
 
 .contact_click {
-    background: transparent url('img/connectoutline.png') no-repeat 100% 50%;
-    background-size: contain;
+    transition-duration: .5s;
 }
 
-.contact:hover .contact_click {
-    transition-duration: .5s;
-    background: rgb(42, 71, 101) url('img/connectoutline.png') no-repeat 0% 50%;
-    background-size: contain;
+.contact_click::before {
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    content: '';
+    height: 200%;
+    width: 250%;
+    #transition-duration: 1s;
+    transform: rotateZ(-45deg);
+}
+
+.contact_click::after {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    content: '';
+    height: 0;
+    width: 50%;
+    transition-duration: 1s;
+    opacity: 0;
+    transform: rotateZ(-45deg);
+}
+
+.contact:hover .contact_click::before {
+    transition-duration: 1.5s;
+    top: -100%;
+    left: -250%;
+    background-color: rgba(139, 139, 142, .5);
+    transform: rotateZ(-45deg);
+}
+
+.contact:hover .contact_click::after {
+    top: 20%;
+    left: 25%;
+    height: 60%;
+    width: 50%;
+    #background-color: rgba(0, 0, 0, .25);
+    border-top: 1px solid rgba(139, 139, 142, 1);
+    border-bottom: 1px solid rgba(139, 139, 142, 1);
+    transition-delay: .40s;
+    transition-duration: .25s;
+    opacity: 1;
+    transform: rotateZ(0);
+
 }
 
 .contact:hover .contact_click p {
-    color: #fff;
+    font-size: 4vw;
+    transition-duration: .5s;
 }
+
+
+
 
 .nav_menu p {
     position: relative;
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: 200;
-    color: #3385D6;
+    color: #8B8B8E;
+    transition-duration: .5s;
 }
 
 .left_nav, .right_nav {
