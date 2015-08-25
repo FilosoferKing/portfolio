@@ -64,7 +64,7 @@ Navigation menu
 /*****************About Menu Button*****************/
 
 .about_click {
-    transition-duration: .5s;
+
 }
 
 .about_click::before {
@@ -121,7 +121,7 @@ Navigation menu
 /*****************Skills Menu Button*****************/
 
 .skills_click {
-    transition-duration: .5s;
+
 }
 
 .skills_click::before {
@@ -178,7 +178,7 @@ Navigation menu
 /*****************Projects Menu Button*****************/
 
 .projects_click {
-    transition-duration: .5s;
+
 }
 
 .projects_click::before {
@@ -235,7 +235,7 @@ Navigation menu
 /*****************Connect Menu Button*****************/
 
 .contact_click {
-    transition-duration: .5s;
+
 }
 
 .contact_click::before {
@@ -300,7 +300,6 @@ Navigation menu
     font-size: 3vw;
     font-weight: 200;
     color: #8B8B8E;
-    transition-duration: .5s;
 }
 
 .left_nav, .right_nav {
