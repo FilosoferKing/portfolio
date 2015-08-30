@@ -8,31 +8,32 @@
     }
 
     .nav_menu p {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .about, .skills, .projects, .contact {
         height: 22.5vh;
     }
 
+    .about:hover .about_click p {
+        font-size: 6vw;
+    }
+
+    .skills:hover .skills_click p {
+        font-size: 6vw;
+    }
+
+    .projects:hover .projects_click p {
+        font-size: 6vw;
+    }
+
+    .contact:hover .contact_click p {
+        font-size: 6vw;
+    }
+
     /************************************
     Name
     ************************************/
-    .fname {
-        transform: translateY(75vh);
-        padding: 0;
-    }
-
-    .lname {
-        transform: translateY(75vh);
-        padding: 0;
-        margin-left: 5vw;
-
-    }
-
-    .fname h1, .lname h1 {
-        font-size: 10vh;
-    }
 
     /************************************
     About Me

@@ -56,8 +56,8 @@ Navigation menu
     transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
-    background: rgba(255, 255, 255, 0);
-    border: 1px solid rgba(139, 139, 142, 1);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 50px #000 inset;
     overflow: hidden;
 }
 
@@ -115,7 +115,6 @@ Navigation menu
 
 .about:hover .about_click p {
     font-size: 4vw;
-    transition-duration: .5s;
 }
 
 /*****************Skills Menu Button*****************/
@@ -127,7 +126,7 @@ Navigation menu
 .skills_click::before {
     position: absolute;
     top: 100%;
-    left: -100%;
+    left: -125%;
     content: '';
     height: 200%;
     width: 250%;
@@ -149,8 +148,8 @@ Navigation menu
 
 .skills:hover .skills_click::before {
     transition-duration: 1.5s;
-    top: -100%;
-    left: 100%;
+    top: -150%;
+    left: 75%;
     background-color: rgba(139, 139, 142, .5);
     transform: rotateZ(45deg);
 }
@@ -172,7 +171,6 @@ Navigation menu
 
 .skills:hover .skills_click p {
     font-size: 4vw;
-    transition-duration: .5s;
 }
 
 /*****************Projects Menu Button*****************/
@@ -229,7 +227,6 @@ Navigation menu
 
 .projects:hover .projects_click p {
     font-size: 4vw;
-    transition-duration: .5s;
 }
 
 /*****************Connect Menu Button*****************/
@@ -241,7 +238,7 @@ Navigation menu
 .contact_click::before {
     position: absolute;
     top: 100%;
-    left: -50%;
+    left: 100%;
     content: '';
     height: 200%;
     width: 250%;
@@ -263,8 +260,8 @@ Navigation menu
 
 .contact:hover .contact_click::before {
     transition-duration: 1.5s;
-    top: -100%;
-    left: -250%;
+    top: -175%;
+    left: -200%;
     background-color: rgba(139, 139, 142, .5);
     transform: rotateZ(-45deg);
 }
@@ -286,7 +283,6 @@ Navigation menu
 
 .contact:hover .contact_click p {
     font-size: 4vw;
-    transition-duration: .5s;
 }
 
 
@@ -326,13 +322,20 @@ PAGE: Landing Page
     color: #fff;
     padding: 0;
     z-index: -2;
-    blur: 5px;
+
 }
 
 /***********Title*******************/
-.title h1 {
+.fname h1 {
     font-weight: 200;
-    font-size: 2vw;
+    font-size: 20vw;
+    text-align: left;
+}
+
+.lname h1 {
+    font-weight: 200;
+    font-size: 20vw;
+    text-align: right;
 }
 
 /********************************
