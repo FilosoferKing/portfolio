@@ -16,6 +16,24 @@
     }
 
     /************************************
+        Landing Page
+    ************************************/
+    .landing_div {
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        height: 100vh;
+        background: #000 url('img/land.jpg') no-repeat 50% 50%;
+        background-size: cover;
+        color: #fff;
+        padding: 0;
+        z-index: -2;
+        blur: 5px;
+    }
+
+    /************************************
     Name
     ************************************/
     .fname {
