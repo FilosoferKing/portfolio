@@ -12,7 +12,7 @@ $(document).ready(function () {
     $('.menu_button').on('click', function () {
         if (menu_toggle == false) {
             $('.nav_menu').css({"visibility": "visible"});
-            $('.nav_container').css({"background-color": "rgba(0, 0, 0, .5)", "top": "0", "height": "7vh"});
+            $('.nav_container').css({"background-color": "rgba(0, 0, 0, .25)", "top": "0", "height": "7vh"});
             menu_toggle = true;
         } else {
             $('.nav_menu').css({"visibility": "hidden"});
@@ -29,14 +29,14 @@ $(document).ready(function () {
         }, 1000);
         setTimeout(function () {
             $('.title h1').fadeOut(1000)
-        }, 3000);
-        setTimeout(function () {
-            $('.title h1').text('Web Developer').css({'font-size': '8vw'});
-            $('.title h1').fadeIn(1000).fadeOut(1000);
         }, 4000);
         setTimeout(function () {
+            $('.title h1').text('Web Developer').css({'font-size': '6vw'});
+            $('.title h1').fadeIn(2000).fadeOut(1000);
+        }, 5000);
+        setTimeout(function () {
             $('.menu_button').fadeIn(3000);
-        }, 5000)
+        }, 6000)
     }
 
     fade_title();

@@ -2,7 +2,7 @@
 GENERAL
 *******************************************************************/
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     padding: 0;
 }
 
@@ -229,8 +229,8 @@ Navigation menu
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.5vw;
-    font-weight: 200;
+    font-size: 1vw;
+    font-weight: 300;
     color: #fff;
 }
 
@@ -290,9 +290,9 @@ PAGE: Landing Page
 /***********Title*******************/
 .title h1 {
     position: relative;
-    top: 7vh;
-    font-weight: 200;
-    font-size: 10vw;
+    top: 2vh;
+    font-weight: 100;
+    font-size: 7vw;
     text-align: center;
     opacity: .5;
 }
