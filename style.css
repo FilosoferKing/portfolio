@@ -324,6 +324,16 @@ PAGE: About Page
     background-color: #fff;
 }
 
+hr {
+    background-color: #000;
+    height: 1px;
+    width: 25%;
+}
+
+.info_left p {
+    font-size: 1.25vw;
+}
+
 
 .self_image {
     /*height: 100vh;*/
@@ -350,6 +360,8 @@ PAGE: About Page
 
 .info_left, .info_right {
     height: 100vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
 }
 
 /*.image::after {*/
