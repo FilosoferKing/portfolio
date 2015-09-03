@@ -313,6 +313,31 @@ PAGE: Landing Page
     opacity: .5;
 }
 
+
+.word1{
+    display: inline-block;
+    margin-right: 1vw;
+    transform: scaleY(.25);
+}
+
+.word1 .char1 {
+    display: inline-block;
+    transform: scaleY(1.5);
+}
+.word2{
+    display: inline-block;
+    margin-left: 1vw;
+    transform: scaleY(.25);
+}
+
+.word2 .char1 {
+    display: inline-block;
+    margin-left: 1vw;
+    transform: scaleY(1.5);
+}
+
+
+
 /********************************
 PAGE: About Page
 *********************************/

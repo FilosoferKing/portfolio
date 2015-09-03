@@ -2,6 +2,7 @@ $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
     $('.nav_container').hide();
     $('.title h1').hide();
+    $('.title h2').hide();
     $('.about_click, .skills_click, .projects_click, .contact_click').css({'top': '-50px'});
     /***************************************
      * NAME: Menu button click handler
@@ -40,8 +41,8 @@ $(document).ready(function () {
             $('.title h1').fadeOut(1000)
         }, 4000);
         setTimeout(function () {
-            $('.title h1').text('Web Developer').css({'font-size': '6vw'});
-            $('.title h1').fadeIn(2000).fadeOut(1000);
+            $('title h2').text('Web Developer');
+            $('.title h2').fadeIn(2000).fadeOut(1000);
         }, 5000);
         setTimeout(function () {
             $('.nav_container').fadeIn();
