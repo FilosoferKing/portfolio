@@ -61,17 +61,114 @@ $(document).ready(function () {
      * PURPOSE: slides in nav p elements from top of page into menu bar
      * FUNCTIONS USED:
      */
-    function nav_p_slide_down(){
+    function nav_p_slide_down() {
         $('.about_click').animate({'top': '50%'}, 1000);
-        setTimeout(function(){
+        setTimeout(function () {
             $('.skills_click').animate({'top': '50%'}, 1000);
         }, 250);
-        setTimeout(function(){
+        setTimeout(function () {
             $('.projects_click').animate({'top': '50%'}, 1000);
         }, 500);
-        setTimeout(function(){
+        setTimeout(function () {
             $('.contact_click').animate({'top': '50%'}, 1000);
         }, 750);
     }
 
+
+    $(document).scroll(function(){
+
+        var bottomPosition = $(window).scrollTop() + $(window).height();
+        console.log('Bottom position: ', bottomPosition);
+
+        var sectionArray = [];
+
+        $('.trigger_point').each(function(){
+            var trigger_position = $(this).offset().top;
+            console.log('Target position: ', trigger_position);
+            if(trigger_position <= bottomPosition){
+                sectionArray[sectionArray.length] = this;
+                console.log('SectionArray ', sectionArray);
+            }
+        });
+
+        $('.about, .projects, .skills, .contact').removeClass('js_hover');
+
+        if(sectionArray.length) {
+            var highlighted_section = $(sectionArray[sectionArray.length - 1]).attr('data-indicator');
+            console.log('Data-indicator: ', highlighted_section);
+            $(highlighted_section).addClass('js_hover');
+        }
+
+
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //$(document).scroll(function(eventData, event){
+    //    var currentBottom = $(window).scrollTop()+$(window).height();//the pixel postition at the bottonm of the window
+    //    var trigger_array = [];
+    //    $('.trigger_point').each(function(){
+    //        //console.log('comparing '+$(this).attr('data-section')+' = '+$(this).offset().top+ ' with ' + currentTop);
+    //        if($(this).offset().top <= currentBottom) {
+    //            trigger_array[trigger_array.length] = this;
+    //        }
+    //    });
+    //    //console.log('array is now: ',trigger_array);
+    //    $('.js_hover').removeClass('js_hover');
+    //    if(trigger_array.length) {
+    //
+    //        var highlight_element = $(trigger_array[trigger_array.length - 1]).attr('data-indicator');
+    //        //console.log('going to hover ', highlight_element);
+    //        $(highlight_element).addClass('js_hover');
+    //    }
+    //    //console.log($(document).scrollTop())
+    //})
 });
