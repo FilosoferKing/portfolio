@@ -2,7 +2,7 @@ $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
     $('.nav_container').hide();
-    //$('.menu_button').hide();
+    $('.menu_button').hide();
     //$('.title h1').hide();
     //$('.title h2').hide();
     $('.about_click, .skills_click, .projects_click, .contact_click').css({'top': '-50px'});
