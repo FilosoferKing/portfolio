@@ -353,24 +353,89 @@ PAGE: Landing Page
 .word1{
     display: inline-block;
     margin-right: 1vw;
-    transform: scaleY(1);
 }
 
 .word1 .char1 {
     display: inline-block;
-    transform: scaleY(1.5);
+    transform: scaleY(0);
+    transition-duration: 1.5s;
 }
+
+.word1 .char2 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .15s;
+}
+
+.word1 .char3 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .30s;
+}
+
+.word1 .char4 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .45s;
+}
+
+.word1 .char5 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .60s;
+}
+
+.word1 .char6 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .75s;
+}
+
 .word2{
     display: inline-block;
     margin-left: 1vw;
-    transform: scaleY(1);
 }
 
 .word2 .char1 {
     display: inline-block;
     margin-left: 1vw;
-    transform: scaleY(1.5);
+    transform: scaleY(0);
+    transition-duration: 1s;
 }
+
+.word2 .char2 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .15s;
+}
+
+.word2 .char3 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .30s;
+}
+
+.word2 .char4 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .45s;
+}
+
+.word2 .char5 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .60s;
+}
+
 
 
 
