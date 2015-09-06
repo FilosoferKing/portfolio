@@ -2,12 +2,13 @@ $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
     $('.nav_container').hide();
+    $('.menu_button').hide();
     //$('.title h1').hide();
     //$('.title h2').hide();
     $('.about_click, .skills_click, .projects_click, .contact_click').css({'top': '-50px'});
     fade_title();
     $('.nav_container').fadeIn();
-    $('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "7vh"});
+    $('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "30vh"});
     nav_p_slide_down();
 
 
@@ -90,7 +91,7 @@ function fade_title() {
         $('.word2 .char3').css({'transform': 'scaleY(1) scaleX(1)'});
         $('.word2 .char4').css({'transform': 'scaleY(1) scaleX(1)'});
         $('.word2 .char5').css({'transform': 'scaleY(1) scaleX(1)'});
-    }, 1900);
+    }, 1600);
 };
 
 /***************************************

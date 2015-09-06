@@ -3,8 +3,6 @@ var projectImageArray = ['marounrecords.png', 'memorymatch.png', 'sgt.png', 'cal
 
 $(document).ready(function(){
 
-    $('#' + currentImage).css({'left': '0'});
-
    loadProjectImage();
 
     $('.carouselLeft').on('click', function(){
@@ -26,6 +24,8 @@ $(document).ready(function(){
         $('.projectImagesContainer #' + imageButtonId).css({'left': '0'});
         currentImage = imageButtonId;
     });
+
+    $('#' + currentImage).css({'left': '0'});
 
 });
 function loadProjectImage(){
