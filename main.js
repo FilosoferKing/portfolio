@@ -2,10 +2,15 @@ $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
     $('.nav_container').hide();
-    $('.title h1').hide();
-    $('.title h2').hide();
+    //$('.title h1').hide();
+    //$('.title h2').hide();
     $('.about_click, .skills_click, .projects_click, .contact_click').css({'top': '-50px'});
-    fade_title();
+    //fade_title();
+    $('.nav_container').fadeIn();
+    $('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "7vh"});
+    nav_p_slide_down();
+
+
     /***************************************
      * NAME: Menu button click handler
      * PARAMS: none
@@ -70,24 +75,24 @@ $(document).ready(function () {
  * PURPOSE: Fades in and out name title and loads nav background br
  * FUNCTIONS USED: nav_p_slide_down()
  */
-function fade_title() {
-    $('.menu_button').hide();
-    setTimeout(function () {
-        $('.title h1').fadeIn(2000);
-    }, 1000);
-    setTimeout(function () {
-        $('.title h1').fadeOut(1000)
-    }, 4000);
-    setTimeout(function () {
-        $('title h2').text('Web Developer');
-        $('.title h2').fadeIn(2000).fadeOut(1000);
-    }, 5000);
-    setTimeout(function () {
-        $('.nav_container').fadeIn();
-        $('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "7vh"});
-        nav_p_slide_down()
-    }, 7000)
-};
+//function fade_title() {
+//    $('.menu_button').hide();
+//    setTimeout(function () {
+//        $('.title h1').fadeIn(2000);
+//    }, 1000);
+//    setTimeout(function () {
+//        $('.title h1').fadeOut(1000)
+//    }, 4000);
+//    setTimeout(function () {
+//        $('title h2').text('Web Developer');
+//        $('.title h2').fadeIn(2000).fadeOut(1000);
+//    }, 5000);
+//    setTimeout(function () {
+//        $('.nav_container').fadeIn();
+//        $('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "7vh"});
+//        nav_p_slide_down();
+//    }, 7000)
+//};
 
 /***************************************
  * NAME: nav_p_slide_down
@@ -110,15 +115,4 @@ function nav_p_slide_down() {
     }, 750);
 };
 
-
-$('#carousel_left').on('click', function(){
-
-});
-
-
-function projects_carousel(){
-
-
-
-}
 

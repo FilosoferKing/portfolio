@@ -353,7 +353,7 @@ PAGE: Landing Page
 .word1{
     display: inline-block;
     margin-right: 1vw;
-    transform: scaleY(.25);
+    transform: scaleY(1);
 }
 
 .word1 .char1 {
@@ -363,7 +363,7 @@ PAGE: Landing Page
 .word2{
     display: inline-block;
     margin-left: 1vw;
-    transform: scaleY(.25);
+    transform: scaleY(1);
 }
 
 .word2 .char1 {
@@ -470,7 +470,7 @@ PAGE: Projects Page
     top: 0;
     left: 0;
     padding-top: 33.33%;
-    #overflow: hidden;
+    overflow: hidden;
 }
 
 .imageDiv {
