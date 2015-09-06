@@ -17,6 +17,14 @@ $(document).ready(function(){
         displayNextImage(imageDirection);
     });
 
+    $('.circle_click').on('click', function(){
+        var imageButtonId = $(this).attr('id');
+        console.log("Button clicked - Id: ", imageButtonId);
+        $('#' + currentImage).css({'left': '100%'});
+        $('.projectImagesContainer #' + imageButtonId).css({'left': '0'});
+        currentImage = imageButtonId;
+    });
+
     $('#' + currentImage).css({'left': '0'});
 
 });
