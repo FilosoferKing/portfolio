@@ -465,87 +465,22 @@ PAGE: Projects Page
     padding: 0;
 }
 
-.project_container {
+.projectImagesContainer {
     position: relative;
     top: 0;
     left: 0;
-    height: 800px;
-    width: 800px;
-    padding: 0;
-
+    padding-top: 33.33%;
+    overflow: hidden;
 }
 
-.projects_div {
+.imageDiv {
     position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-
-.img_frame {
-    position: absolute;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%);
-    padding: 0;
-    #overflow: hidden;
-}
-
-.maroun_records_img {
-    background: transparent url('img/marounrecords.png') no-repeat 50% 50%;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-
-}
-
-.memory_match_img {
-    background: transparent url('img/memorymatch.png') no-repeat 50% 50%;
-    background-size: cover;
+    top: 0;
+    left: 100%;
     width: 100%;
     height: 100%;
 }
 
-.sgt_img {
-    background: transparent url('img/sgt.png') no-repeat 50% 50%;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
 
-.calculator_img {
-    background: transparent url('img/calculator.png') no-repeat 50% 50%;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
 
-.twailerz_img {
-    background: transparent url('img/twailerz.png') no-repeat 50% 50%;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.tic_tac_toe_img {
-    background: transparent url('img/tic-tac-toe.png') no-repeat 50% 50%;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.to_do_list_img {
-    background: transparent url('img/skilloutline.png') no-repeat 50% 50%;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.final_project_img {
-    background: transparent url('img/projectoutline.png') no-repeat 50% 50%;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
 

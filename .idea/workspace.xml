@@ -4,11 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/main.js" line="113" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b400f1d-919c-45e8-9df1-ca926dc19bd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-    </list>
+    <list default="true" id="0b400f1d-919c-45e8-9df1-ca926dc19bd6" name="Default" comment="" />
     <ignored path="portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
