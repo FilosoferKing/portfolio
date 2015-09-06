@@ -2,13 +2,13 @@ $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
     $('.nav_container').hide();
-    $('.menu_button').hide();
+    //$('.menu_button').hide();
     //$('.title h1').hide();
     //$('.title h2').hide();
     $('.about_click, .skills_click, .projects_click, .contact_click').css({'top': '-50px'});
     fade_title();
     $('.nav_container').fadeIn();
-    $('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "8vh"});
+    //$('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "8vh"});
     nav_p_slide_down();
 
 
@@ -23,7 +23,7 @@ $(document).ready(function () {
     $('.menu_button').on('click', function () {
         if (menu_toggle == false) {
             $('.nav_menu').css({"visibility": "visible"});
-            $('.nav_container').css({"background-color": "rgba(0, 0, 0, .25)", "top": "0", "height": "8vh"});
+            //$('.nav_container').css({"background-color": "rgba(0, 0, 0, .25)", "top": "0", "height": "8vh"});
             menu_toggle = true;
         } else {
             $('.nav_menu').css({"visibility": "hidden"});
