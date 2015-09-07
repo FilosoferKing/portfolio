@@ -36,12 +36,14 @@ Navigation menu
 .nav_menu {
     top: 0;
     z-index: 10;
-    height: 10vh;
+    height: 6vh;
     padding: 0;
 }
 
 .about, .skills, .projects, .contact {
-    height: 7vh;
+    position: relative;
+    height: 6vh;
+    bottom: 0;
 }
 
 .about_click, .skills_click, .projects_click, .contact_click {
@@ -53,6 +55,30 @@ Navigation menu
     height: 100%;
     #background: rgba(255, 255, 255, 1);
     overflow: hidden;
+    opacity: 0;
+    transition-duration: 2s;
+}
+
+.left_nav, .right_nav {
+    background-color: rgba(0, 0, 0, .1);
+    padding: 0;
+    z-index: 1000;
+}
+
+.left_nav {
+    position: relative;
+    transform: scaleX(0);
+    transition-duration: 1s;
+    transform-origin: 100% 0;
+    transition-timing-function: linear;
+}
+
+.right_nav {
+    position: relative;
+    transform: scaleX(0);
+    transition-duration: 1s;
+    transform-origin: 0 100%;
+    transition-timing-function: linear;
 }
 
 .logo_name {
@@ -109,6 +135,7 @@ Navigation menu
     opacity: 1;
 
 }
+
 
 .about:hover .about_click p {
     color: #FFC719;
@@ -240,6 +267,27 @@ Navigation menu
     color: #FFC719;
 }
 
+.js_hover .menu_click::before {
+
+}
+
+.js_hover .menu_click::after {
+    top: 20%;
+    left: 25%;
+    height: 60%;
+    width: 50%;
+    #background-color: rgba(0, 0, 0, .25);
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transition-duration: .25s;
+    opacity: 1;
+
+}
+
+.js_hover .menu_click p {
+    color: #FFC719;
+}
+
 .nav_menu p {
     position: relative;
     text-align: center;
@@ -250,8 +298,17 @@ Navigation menu
     color: #fff;
 }
 
-.left_nav, .right_nav {
-    padding: 0;
+.trigger_container{
+    position: relative;
+}
+.trigger_point{
+    height: 0px;
+    width: 100%;
+    border: 1px solid lime;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    z-index:5000;
 }
 
 /*******************************************************************
@@ -304,14 +361,116 @@ PAGE: Landing Page
 /*}*/
 
 /***********Title*******************/
+.title {
+    padding: 1%;
+}
+
 .title h1 {
     position: relative;
-    top: 10vh;
+    top: 0;
     font-weight: 100;
     font-size: 7vw;
     text-align: center;
     opacity: .5;
 }
+
+.title h2 {
+    position: relative;
+    font-weight: 100;
+    font-size: 3vw;
+    text-align: center;
+    opacity: .75;
+}
+
+
+.word1{
+    display: inline-block;
+    margin-right: 1vw;
+}
+
+.word1 .char1 {
+    display: inline-block;
+    transform: scaleY(0);
+    transition-duration: 1.5s;
+}
+
+.word1 .char2 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .1s;
+}
+
+.word1 .char3 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .2s;
+}
+
+.word1 .char4 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .3s;
+}
+
+.word1 .char5 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .4s;
+}
+
+.word1 .char6 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .5s;
+}
+
+.word2{
+    display: inline-block;
+    margin-left: 1vw;
+}
+
+.word2 .char1 {
+    display: inline-block;
+    margin-left: 1vw;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+}
+
+.word2 .char2 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .1s;
+}
+
+.word2 .char3 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .2s;
+}
+
+.word2 .char4 {
+    display: inline-block;
+    transform: scaleY(0) scaleX(0);
+    transition-duration: 1s;
+    transition-delay: .3s;
+}
+
+.word2 .char5 {
+    display: inline-block;
+    transform: scaleY(0);
+    transition-duration: 1s;
+    transition-delay: .4s;
+}
+
+
+
 
 /********************************
 PAGE: About Page
@@ -328,12 +487,24 @@ hr {
     background-color: #000;
     height: 1px;
     width: 25%;
+    border: .5px solid #000;
 }
 
 .info_left p {
     font-size: 1.25vw;
 }
 
+
+/*.the_man::before {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*content: '';*/
+    /*background-color: rgba(255, 199, 25, .5);*/
+
+/*}*/
 
 .self_image {
     /*height: 100vh;*/
@@ -392,128 +563,29 @@ PAGE: Projects Page
     padding: 0;
 }
 
-.project_container {
+.projectImagesContainer {
     position: relative;
-    padding: 0;
-
-}
-
-
-.img_frame {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    padding: 0;
+    top: 0;
+    left: 0;
+    padding-top: 33.33%;
     overflow: hidden;
 }
 
-.img_frame::before {
+.imageDiv {
     position: absolute;
-    top: -50%;
-    left: 0;
+    top: 0;
+    left: 100%;
     width: 100%;
     height: 100%;
-    content: '';
+}
+
+.circle_click {
+    width: 25px;
+    height: 25px;
     background-color: #000;
-    opacity: .5;
-    z-index: 2;
+    border-radius: 50%;
 }
 
-.img_frame::after {
-    position: absolute;
-    bottom: -50%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: 'Maroun Records';
-    background-color: #000;
-    opacity: .5;
-    z-index: 2;
-}
 
-.projects_top:hover .img_frame::before {
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background-color: #000;
-    opacity: .95;
-    z-index: 2;
-    transition-duration: 1s;
-}
 
-.projects_top:hover .img_frame::after {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background-color: #000;
-    opacity: .95;
-    z-index: 2;
-    transition-duration: 1s;
-}
-
-.projects_top, .projects_bottom {
-    padding: 0;
-}
-
-.maroun_records_img {
-    background: transparent url('img/marounrecords.png') no-repeat 50% 50%;
-    background-size: cover;
-    padding-top: 25%;
-    border: 5px solid #000;
-}
-
-.memory_match_img {
-    background: transparent url('img/memorymatch.png') no-repeat 50% 50%;
-    background-size: cover;
-    padding-top: 25%;
-    border: 5px solid #000;
-}
-
-.sgt_img {
-    background: transparent url('img/sgt.png') no-repeat 50% 50%;
-    background-size: cover;
-    padding-top: 25%;
-    border: 5px solid #000;
-}
-
-.calculator_img {
-    background: transparent url('img/calculator.png') no-repeat 50% 50%;
-    background-size: cover;
-    padding-top: 25%;
-    border: 5px solid #000;
-}
-
-.twailerz_img {
-    background: transparent url('img/twailerz.png') no-repeat 50% 50%;
-    background-size: cover;
-    padding-top: 25%;
-    border: 5px solid #000;
-}
-
-.tic_tac_toe_img {
-    background: transparent url('img/tic-tac-toe.png') no-repeat 50% 50%;
-    background-size: cover;
-    padding-top: 25%;
-    border: 5px solid #000;
-}
-
-.to_do_list_img {
-    background: transparent url('img/to-do-list.png') no-repeat 50% 50%;
-    background-size: cover;
-    padding-top: 25%;
-    border: 5px solid #000;
-}
-
-.final_project_img {
-    background: transparent url('img/finalproject.png') no-repeat 50% 50%;
-    background-size: cover;
-    padding-top: 25%;
-    border: 5px solid #000;
-}
 

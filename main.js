@@ -1,8 +1,30 @@
 $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
+
     $('.nav_container').hide();
-    $('.title h1').hide();
-    $('.about_click, .skills_click, .projects_click, .contact_click').css({'top': '-50px'});
+    $('.menu_button').hide();
+    $('.title h2').hide();
+    //$('.title h1').hide();
+    //$('.title h2').hide();
+    setTimeout(function(){
+        $('.title h2').fadeIn(1000);
+    }, 1750);
+    setTimeout(function(){
+    $('.about_click, .skills_click, .projects_click, .contact_click').css({'opacity': '1'});
+    }, 4250);
+    setTimeout(function(){
+        $('.title h2').fadeOut(500);
+    }, 2750);
+    setTimeout(function(){
+        $('.left_nav').css({'transform': 'scaleX(1)'});
+        $('.right_nav').css({'transform': 'scaleX(1)'});
+    }, 3250);
+    fade_title();
+    $('.nav_container').fadeIn();
+    //$('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "8vh"});
+    nav_p_slide_down();
+
+
     /***************************************
      * NAME: Menu button click handler
      * PARAMS: none
@@ -14,7 +36,7 @@ $(document).ready(function () {
     $('.menu_button').on('click', function () {
         if (menu_toggle == false) {
             $('.nav_menu').css({"visibility": "visible"});
-            $('.nav_container').css({"background-color": "rgba(0, 0, 0, .25)", "top": "0", "height": "7vh"});
+            //$('.nav_container').css({"background-color": "rgba(0, 0, 0, .25)", "top": "0", "height": "8vh"});
             menu_toggle = true;
         } else {
             $('.nav_menu').css({"visibility": "hidden"});
@@ -24,53 +46,83 @@ $(document).ready(function () {
     });
 
     /***************************************
-     * NAME: fade_title
+     * NAME: Scroll handler
      * PARAMS: none
      * GLOBAL VARIABLES: none
-     * LOCAL VARIABLES: none
-     * PURPOSE: Fades in and out name title and loads nav background br
-     * FUNCTIONS USED: nav_p_slide_down()
+     * LOCAL VARIABLES: bottomPosition, sectionArray, trigger_position, highlighted_section
+     * PURPOSE: activates nav menu section based on what page section is being displayed
+     * FUNCTIONS USED: none
      */
-    function fade_title() {
-        $('.menu_button').hide();
-        setTimeout(function () {
-            $('.title h1').fadeIn(2000);
-        }, 1000);
-        setTimeout(function () {
-            $('.title h1').fadeOut(1000)
-        }, 4000);
-        setTimeout(function () {
-            $('.title h1').text('Web Developer').css({'font-size': '6vw'});
-            $('.title h1').fadeIn(2000).fadeOut(1000);
-        }, 5000);
-        setTimeout(function () {
-            $('.nav_container').fadeIn();
-            $('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "7vh"});
-            nav_p_slide_down()
-        }, 7000)
-    }
+    $(document).scroll(function () {
+        var bottomPosition = $(window).scrollTop() + $(window).height();
+        console.log('Bottom position: ', bottomPosition);
 
-    fade_title();
+        var sectionArray = [];
 
-    /***************************************
-     * NAME: nav_p_slide_down
-     * PARAMS: none
-     * GLOBAL VARIABLES: none
-     * LOCAL VARIABLES: none
-     * PURPOSE: slides in nav p elements from top of page into menu bar
-     * FUNCTIONS USED:
-     */
-    function nav_p_slide_down(){
-        $('.about_click').animate({'top': '50%'}, 1000);
-        setTimeout(function(){
-            $('.skills_click').animate({'top': '50%'}, 1000);
-        }, 250);
-        setTimeout(function(){
-            $('.projects_click').animate({'top': '50%'}, 1000);
-        }, 500);
-        setTimeout(function(){
-            $('.contact_click').animate({'top': '50%'}, 1000);
-        }, 750);
-    }
-git
-});
+        $('.trigger_point').each(function () {
+            var trigger_position = $(this).offset().top;
+            console.log('Target position: ', trigger_position);
+            if (trigger_position <= bottomPosition) {
+                sectionArray[sectionArray.length] = this;
+                console.log('SectionArray ', sectionArray);
+            }
+        });
+
+        $('.about, .projects, .skills, .contact').removeClass('js_hover');
+
+        if (sectionArray.length) {
+            var highlighted_section = $(sectionArray[sectionArray.length - 1]).attr('data-indicator');
+            console.log('Data-indicator: ', highlighted_section);
+            $(highlighted_section).addClass('js_hover');
+        }
+    });
+
+/***************************************
+ * NAME: fade_title
+ * PARAMS: none
+ * GLOBAL VARIABLES: none
+ * LOCAL VARIABLES: none
+ * PURPOSE: Fades in and out name title and loads nav background br
+ * FUNCTIONS USED: nav_p_slide_down()
+ */
+function fade_title() {
+    setTimeout(function () {
+        $('.word1 .char1').css({'transform': 'scaleY(1.5)'});
+        $('.word1 .char2').css({'transform': 'scaleY(1) scaleX(1)'});
+        $('.word1 .char3').css({'transform': 'scaleY(1) scaleX(1)'});
+        $('.word1 .char4').css({'transform': 'scaleY(1) scaleX(1)'});
+        $('.word1 .char5').css({'transform': 'scaleY(1) scaleX(1)'});
+        $('.word1 .char6').css({'transform': 'scaleY(1) scaleX(1)'});
+    }, 500);
+
+    setTimeout(function(){
+        $('.word2 .char1').css({'transform': 'scaleY(1) scaleX(1)'});
+        $('.word2 .char2').css({'transform': 'scaleY(1) scaleX(1)'});
+        $('.word2 .char3').css({'transform': 'scaleY(1) scaleX(1)'});
+        $('.word2 .char4').css({'transform': 'scaleY(1) scaleX(1)'});
+        $('.word2 .char5').css({'transform': 'scaleY(1.5)'});
+    }, 1100);
+};
+
+/***************************************
+ * NAME: nav_p_slide_down
+ * PARAMS: none
+ * GLOBAL VARIABLES: none
+ * LOCAL VARIABLES: none
+ * PURPOSE: slides in nav p elements from top of page into menu bar
+ * FUNCTIONS USED:
+ */
+function nav_p_slide_down() {
+    $('.about_click').animate({'top': '50%'}, 1000);
+    setTimeout(function () {
+        $('.skills_click').animate({'top': '50%'}, 1000);
+    }, 250);
+    setTimeout(function () {
+        $('.projects_click').animate({'top': '50%'}, 1000);
+    }, 500);
+    setTimeout(function () {
+        $('.contact_click').animate({'top': '50%'}, 1000);
+    }, 750);
+};
+
+
