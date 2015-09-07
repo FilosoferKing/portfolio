@@ -1,5 +1,6 @@
 var projectImageArray = ['marounrecords.png', 'memorymatch.png', 'sgt.png', 'calculator.png', 'twailerz.png', 'tic-tac-toe.png', 'skilloutline.png', 'projectoutline.png'];
-
+var currentImage = 0;
+var stagedImage = 1;
 
 $(document).ready(function(){
 
@@ -15,6 +16,8 @@ $(document).ready(function(){
         console.log("Right button clicked");
         var imageDirection = $(this).attr('id');
         displayNextImage(imageDirection);
+        //$('.projectImagesContainer #' + currentImage).css({'transform': 'rotateY(180deg)', 'transition-duration': '.5s'});
+        //$('.projectImagesContainer #' + currentImage).css({'transform': 'rotateY(360deg)', 'transition-duration': '1s'});
     });
 
     $('.circle_click').on('click', function(){
@@ -26,6 +29,7 @@ $(document).ready(function(){
     });
 
     $('#' + currentImage).css({'left': '0'});
+    $('#' + stagedImage).css({'left': '0', 'transform': 'rotateY(180deg)'});
 
 });
 function loadProjectImage(){
@@ -39,13 +43,8 @@ function loadProjectImage(){
     }
 }
 
-var currentImage = 0;
-
-var stagedImage = '';
-
 function displayNextImage(direction){
-    stagedImage = parseInt(currentImage) + parseInt(direction);
-    console.log('Staged image: ', stagedImage);
+    //stagedImage = parseInt(currentImage) + parseInt(direction);
     if(direction == -1 && currentImage == 0){
         stagedImage = 7;
         console.log('Current Image Left at 0: ', currentImage);
@@ -62,19 +61,35 @@ function displayNextImage(direction){
     }
 
     if(direction == 1 && currentImage == projectImageArray.length - 1){
-        currentImage = 0;
-        stagedImage = parseInt(currentImage);
+        //stagedImage = 0;
+        console.log('Staged image: ', stagedImage);
         console.log('Current Image Right at 7: ', currentImage);
-        $('#' + stagedImage).css({'left': '0'});
-        //$('#' + currentImage).css({'left': '100%'});
-        currentImage = stagedImage;
+        $('#' + currentImage).css({'transform': 'rotateY(90)',  'transition-duration': '.5s'});
+        $('#' + stagedImage).css({'left': '0', 'transform': 'rotateY(360deg)',  'transition-duration': '1s'});
+        currentImage = 0;
+        stagedImage = parseInt(currentImage) + 1;
         console.log('New current image at 7: ', currentImage);
     } else if(direction == 1) {
+        console.log('Staged image: ', stagedImage);
         console.log('Current Image Right: ', currentImage);
-        $('#' + stagedImage).css({'left': '0'});
-        $('#' + currentImage).css({'left': '100%'});
+        $('#' + stagedImage).css({'transform': 'rotateY(360deg)', 'transition-duration': '1s'});
+        $('#' + currentImage).css({'transform': 'rotateY(90deg)', 'transition-duration': '.5s'});
         currentImage = stagedImage;
+        setTimeout(function(){
+            if(stagedImage <= 6) {
+                stagedImage += 1;
+                $('#' + stagedImage).css({'left': '0', 'transform': 'rotateY(180deg)',  'transition-duration': '0s'});
+                $('#' + currentImage).css({'transform': 'rotateY(0)',  'transition-duration': '0s'});
+            } else {
+                stagedImage = 0;
+                $('#' + stagedImage).css({'z-index': '-1', 'left': '0', 'transform': 'rotateY(180deg)',  'transition-duration': '0s'});
+                //$('#' + currentImage).css({'transform': 'rotateY(0)',  'transition-duration': '0s'});
+            }
+
+            console.log('New staged image: ', stagedImage);
+        }, 1000);
         console.log('New current image right: ', currentImage);
+
     }
 
 }
