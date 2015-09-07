@@ -3,9 +3,22 @@ $(document).ready(function () {
 
     $('.nav_container').hide();
     $('.menu_button').hide();
+    $('.title h2').hide();
     //$('.title h1').hide();
     //$('.title h2').hide();
-    $('.about_click, .skills_click, .projects_click, .contact_click').css({'top': '-50px'});
+    setTimeout(function(){
+        $('.title h2').fadeIn(1000);
+    }, 1750);
+    setTimeout(function(){
+    $('.about_click, .skills_click, .projects_click, .contact_click').css({'opacity': '1'});
+    }, 4250);
+    setTimeout(function(){
+        $('.title h2').fadeOut(500);
+    }, 2750);
+    setTimeout(function(){
+        $('.left_nav').css({'transform': 'scaleX(1)'});
+        $('.right_nav').css({'transform': 'scaleX(1)'});
+    }, 3250);
     fade_title();
     $('.nav_container').fadeIn();
     //$('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "8vh"});
@@ -83,15 +96,15 @@ function fade_title() {
         $('.word1 .char4').css({'transform': 'scaleY(1) scaleX(1)'});
         $('.word1 .char5').css({'transform': 'scaleY(1) scaleX(1)'});
         $('.word1 .char6').css({'transform': 'scaleY(1) scaleX(1)'});
-    }, 1000);
+    }, 500);
 
     setTimeout(function(){
-        $('.word2 .char1').css({'transform': 'scaleY(1.5)'});
+        $('.word2 .char1').css({'transform': 'scaleY(1) scaleX(1)'});
         $('.word2 .char2').css({'transform': 'scaleY(1) scaleX(1)'});
         $('.word2 .char3').css({'transform': 'scaleY(1) scaleX(1)'});
         $('.word2 .char4').css({'transform': 'scaleY(1) scaleX(1)'});
-        $('.word2 .char5').css({'transform': 'scaleY(1) scaleX(1)'});
-    }, 1600);
+        $('.word2 .char5').css({'transform': 'scaleY(1.5)'});
+    }, 1100);
 };
 
 /***************************************
