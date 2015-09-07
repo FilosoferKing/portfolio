@@ -72,5 +72,5 @@ $(document).ready(function () {
             $('.contact_click').animate({'top': '50%'}, 1000);
         }, 750);
     }
-
+git
 });
