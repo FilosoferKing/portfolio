@@ -20,8 +20,8 @@ $(document).ready(function(){
     $('.circle_click').on('click', function(){
         var imageButtonId = $(this).attr('id');
         console.log("Button clicked - Id: ", imageButtonId);
-        $('#' + currentImage).animate({'left': '-100%'});
-        $('.projectImagesContainer #' + imageButtonId).animate({'left': '0'});
+        $('#' + currentImage).animate({'left': '-100%'}, 500);
+        $('.projectImagesContainer #' + imageButtonId).delay(500).animate({'left': '0'}, 500);
         currentImage = imageButtonId;
     });
 
@@ -49,14 +49,14 @@ function displayNextImage(direction){
     if(direction == -1 && currentImage == 0){
         stagedImage = 7;
         console.log('Current Image Left at 0: ', currentImage);
-        $('#' + stagedImage).animate({'left': '0'});
-        $('#' + currentImage).animate({'left': '-100%'});
+        $('#' + stagedImage).delay(500).animate({'left': '0'}, 500);
+        $('#' + currentImage).animate({'left': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image left at 0: ', currentImage);
     } else if(direction == -1) {
         console.log('Current Image Left: ', currentImage);
-        $('#' + stagedImage).animate({'left': '0'});
-        $('#' + currentImage).animate({'left': '-100%'});
+        $('#' + stagedImage).delay(500).animate({'left': '0'}, 500);
+        $('#' + currentImage).animate({'left': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image left: ', currentImage);
     }
@@ -65,14 +65,14 @@ function displayNextImage(direction){
 
         console.log('Current Image Right at 7: ', currentImage);
         stagedImage = 0;
-        $('#' + stagedImage).animate({'left': '0'});
-        $('#' + currentImage).animate({'left': '-100%'});
+        $('#' + stagedImage).delay(500).animate({'left': '0'}, 500);
+        $('#' + currentImage).animate({'left': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image at 7: ', currentImage);
     } else if(direction == 1) {
         console.log('Current Image Right: ', currentImage);
-        $('#' + stagedImage).animate({'left': '0'});
-        $('#' + currentImage).animate({'left': '-100%'});
+        $('#' + stagedImage).delay(500).animate({'left': '0'}, 500);
+        $('#' + currentImage).animate({'left': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image right: ', currentImage);
     }
