@@ -20,8 +20,8 @@ $(document).ready(function(){
     $('.circle_click').on('click', function(){
         var imageButtonId = $(this).attr('id');
         console.log("Button clicked - Id: ", imageButtonId);
-        $('#' + currentImage).css({'left': '100%'});
-        $('.projectImagesContainer #' + imageButtonId).css({'left': '0'});
+        $('#' + currentImage).animate({'left': '-100%'});
+        $('.projectImagesContainer #' + imageButtonId).animate({'left': '0'});
         currentImage = imageButtonId;
     });
 
@@ -49,30 +49,30 @@ function displayNextImage(direction){
     if(direction == -1 && currentImage == 0){
         stagedImage = 7;
         console.log('Current Image Left at 0: ', currentImage);
-        $('#' + stagedImage).css({'left': '0'});
-        $('#' + currentImage).css({'left': '-100%'});
+        $('#' + stagedImage).animate({'left': '0'});
+        $('#' + currentImage).animate({'left': '-100%'});
         currentImage = stagedImage;
         console.log('New current image left at 0: ', currentImage);
     } else if(direction == -1) {
         console.log('Current Image Left: ', currentImage);
-        $('#' + stagedImage).css({'left': '0'});
-        $('#' + currentImage).css({'left': '-100%'});
+        $('#' + stagedImage).animate({'left': '0'});
+        $('#' + currentImage).animate({'left': '-100%'});
         currentImage = stagedImage;
         console.log('New current image left: ', currentImage);
     }
 
     if(direction == 1 && currentImage == projectImageArray.length - 1){
-        currentImage = 0;
-        stagedImage = parseInt(currentImage);
+
         console.log('Current Image Right at 7: ', currentImage);
-        $('#' + stagedImage).css({'left': '0'});
-        //$('#' + currentImage).css({'left': '100%'});
+        stagedImage = 0;
+        $('#' + stagedImage).animate({'left': '0'});
+        $('#' + currentImage).animate({'left': '-100%'});
         currentImage = stagedImage;
         console.log('New current image at 7: ', currentImage);
     } else if(direction == 1) {
         console.log('Current Image Right: ', currentImage);
-        $('#' + stagedImage).css({'left': '0'});
-        $('#' + currentImage).css({'left': '100%'});
+        $('#' + stagedImage).animate({'left': '0'});
+        $('#' + currentImage).animate({'left': '-100%'});
         currentImage = stagedImage;
         console.log('New current image right: ', currentImage);
     }

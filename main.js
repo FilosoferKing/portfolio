@@ -87,7 +87,7 @@ $(document).ready(function () {
      */
     function fade_title() {
         setTimeout(function () {
-            $('.word1 .char1').css({'transform': 'scaleY(1.5)'});
+            $('.word1 .char1').css({'transform': 'scaleY(1.5)scaleX(1.5)'});
             $('.word1 .char2').css({'transform': 'scaleY(1) scaleX(1)'});
             $('.word1 .char3').css({'transform': 'scaleY(1) scaleX(1)'});
             $('.word1 .char4').css({'transform': 'scaleY(1) scaleX(1)'});
