@@ -1,28 +1,49 @@
 var projectImageArray = ['marounrecords.png', 'memorymatch.png', 'sgt.png', 'calculator.png', 'twailerz.png', 'tic-tac-toe.png', 'skilloutline.png', 'projectoutline.png'];
-
+var currentImage = 0;
+var stagedImage = '';
+var clickEnabled = true;
 
 $(document).ready(function(){
 
    loadProjectImage();
 
-    $('.carouselLeft').on('click', function(){
-        console.log("Left button clicked");
-        var imageDirection = $(this).attr('id');
-        displayNextImage(imageDirection);
+    $('.carouselLeft').on('click', function () {
+        if(clickEnabled == true) {
+            clickEnabled = false;
+            console.log("Left button clicked");
+            var imageDirection = $(this).attr('id');
+            displayNextImage(imageDirection);
+            setTimeout(function(){
+                clickEnabled = true;
+            }, 1000);
+        }
     });
+
 
     $('.carouselRight').on('click', function(){
-        console.log("Right button clicked");
-        var imageDirection = $(this).attr('id');
-        displayNextImage(imageDirection);
+        if(clickEnabled == true) {
+            clickEnabled = false;
+            console.log("Right button clicked");
+            var imageDirection = $(this).attr('id');
+            displayNextImage(imageDirection);
+            setTimeout(function () {
+                clickEnabled = true;
+            }, 1000);
+        }
     });
 
-    $('.circle_click').on('click', function(){
-        var imageButtonId = $(this).attr('id');
-        console.log("Button clicked - Id: ", imageButtonId);
-        $('#' + currentImage).animate({'left': '-100%'}, 500);
-        $('.projectImagesContainer #' + imageButtonId).delay(500).animate({'left': '0'}, 500);
-        currentImage = imageButtonId;
+    $('.circle_click').on('click', function () {
+        if(clickEnabled == true) {
+            clickEnabled = false;
+            var imageButtonId = $(this).attr('id');
+            console.log("Button clicked - Id: ", imageButtonId);
+            $('#' + currentImage).animate({'left': '-100%'}, 500);
+            $('.projectImagesContainer #' + imageButtonId).delay(500).animate({'left': '0'}, 500);
+            currentImage = imageButtonId;
+            setTimeout(function () {
+                clickEnabled = true;
+            }, 1000);
+        }
     });
 
     $('#' + currentImage).css({'left': '0'});
@@ -38,10 +59,6 @@ function loadProjectImage(){
         $(projectImageDiv).appendTo('.projectImagesContainer');
     }
 }
-
-var currentImage = 0;
-
-var stagedImage = '';
 
 function displayNextImage(direction){
     stagedImage = parseInt(currentImage) + parseInt(direction);
