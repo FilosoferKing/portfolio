@@ -561,14 +561,18 @@ PAGE: Projects Page
 .projects_container {
     position: relative;
     padding: 0;
+    height: 100vh;
+    background-color: #FFC719;
 }
 
 .projectImagesContainer {
-    position: relative;
-    top: 0;
+    position: absolute;
+    top: 50%;
     left: 0;
-    padding-top: 33.33%;
+    transform: translateY(-50%);
+    padding-top: 41.6%;
     overflow: hidden;
+    background-color: #000;
 }
 
 .imageDiv {
@@ -584,6 +588,10 @@ PAGE: Projects Page
     height: 25px;
     background-color: #000;
     border-radius: 50%;
+}
+
+.projectInfo {
+
 }
 
 
