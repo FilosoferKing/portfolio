@@ -94,7 +94,7 @@ Navigation menu
     font-weight: 300;
 }
 
-.nav_menu .logo_name  span {
+.nav_menu .logo_name span {
     font-size: 1.5vw;
     font-weight: 300;
 }
@@ -136,7 +136,6 @@ Navigation menu
     opacity: 1;
 
 }
-
 
 .about:hover .about_click p {
     color: #FFC719;
@@ -299,17 +298,18 @@ Navigation menu
     color: #fff;
 }
 
-.trigger_container{
+.trigger_container {
     position: relative;
 }
-.trigger_point{
+
+.trigger_point {
     height: 0px;
     width: 100%;
     #border: 1px solid lime;
     position: absolute;
     left: 0px;
     top: 50%;
-    z-index:5000;
+    z-index: 5000;
 }
 
 /*******************************************************************
@@ -334,31 +334,31 @@ PAGE: Landing Page
 }
 
 /*.landing_div::before {*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*content: '';*/
-    /*background: #000 url('img/land.jpg') no-repeat 50% 50%;*/
-    /*background-size: cover;*/
-    /*opacity: .1;*/
-    /*background:*/
+/*position: absolute;*/
+/*top: 0;*/
+/*left: 0;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*content: '';*/
+/*background: #000 url('img/land.jpg') no-repeat 50% 50%;*/
+/*background-size: cover;*/
+/*opacity: .1;*/
+/*background:*/
 /*}*/
 
 /*.landing_div::after {*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*height: 7vh;*/
-    /*content: 'TREVOR LINAN';*/
-    /*text-align: center;*/
-    /*color: #fff;*/
-    /*font-size: 10vw;*/
-    /*font-weight: 200;*/
-    /*background-color: #ff00ff;*/
-    /*opacity: .25;*/
+/*position: absolute;*/
+/*top: 0;*/
+/*left: 0;*/
+/*width: 100%;*/
+/*height: 7vh;*/
+/*content: 'TREVOR LINAN';*/
+/*text-align: center;*/
+/*color: #fff;*/
+/*font-size: 10vw;*/
+/*font-weight: 200;*/
+/*background-color: #ff00ff;*/
+/*opacity: .25;*/
 /*}*/
 
 /***********Title*******************/
@@ -383,8 +383,7 @@ PAGE: Landing Page
     opacity: .75;
 }
 
-
-.word1{
+.word1 {
     display: inline-block;
     margin-right: 1vw;
 }
@@ -430,7 +429,7 @@ PAGE: Landing Page
     transition-delay: .5s;
 }
 
-.word2{
+.word2 {
     display: inline-block;
     margin-left: 1vw;
 }
@@ -470,9 +469,6 @@ PAGE: Landing Page
     transition-delay: .4s;
 }
 
-
-
-
 /********************************
 PAGE: About Page
 *********************************/
@@ -495,15 +491,14 @@ hr {
     font-size: 1.25vw;
 }
 
-
 /*.the_man::before {*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*content: '';*/
-    /*background-color: rgba(255, 199, 25, .5);*/
+/*position: absolute;*/
+/*top: 0;*/
+/*left: 0;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*content: '';*/
+/*background-color: rgba(255, 199, 25, .5);*/
 
 /*}*/
 
@@ -537,16 +532,16 @@ hr {
 }
 
 /*.image::after {*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 50%;*/
-    /*height: 100%;*/
-    /*content: '';*/
-    /*background-color: #fff;*/
-    /*/!*background: linear-gradient(to left,*!/*/
-    /*/!*rgba(255,255,255, 0),*!/*/
-    /*/!*rgba(255,255,255, 1) 10%);*!/*/
+/*position: absolute;*/
+/*top: 0;*/
+/*left: 0;*/
+/*width: 50%;*/
+/*height: 100%;*/
+/*content: '';*/
+/*background-color: #fff;*/
+/*/!*background: linear-gradient(to left,*!/*/
+/*/!*rgba(255,255,255, 0),*!/*/
+/*/!*rgba(255,255,255, 1) 10%);*!/*/
 
 /*}*/
 
@@ -555,7 +550,6 @@ hr {
     font-weight: 300;
     font-size: 2vw;
 }
-
 
 /********************************
 PAGE: Projects Page
@@ -607,14 +601,14 @@ PAGE: Projects Page
 .projectImagesContainer p {
     position: absolute;
     width: 100%;
-    bottom: 25%;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    font-size: 1em;
+    font-size: 2em;
     font-weight: 300;
     color: #000;
-    z-index: 2;
+    z-index: 100;
 }
 
 .imageDiv {
@@ -638,7 +632,7 @@ PAGE: Projects Page
     padding: 0;
 }
 
-#mrlogo, #mwlogo, #calclogo, #sgtlogo, #twlogo, #tttlogo, #tasklogo  {
+#mrlogo, #mwlogo, #calclogo, #sgtlogo, #twlogo, #tttlogo, #tasklogo {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -677,12 +671,12 @@ PAGE: Projects Page
     background-size: contain;
 }
 
-#skilloutline {
+#taskit {
     background: #fff url("img/skilloutline.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
-#projectoutline {
+#final {
     background: #fff url("img/projectoutline.png") no-repeat 50% 50%;
     background-size: contain;
 }
@@ -740,16 +734,18 @@ PAGE: Projects Page
     bottom: 0;
     left: 0;
     text-align: center;
-    font-size: 1.25vw;
+    font-size: 1vw;
     font-weight: 500;
     color: #000;
-    content: 'Maroun Records is a website for underground artists of all creative backgrounds to be a medium for them to share and monetize their work.';
+    content: attr(built);
     width: 100%;
     height: 35%;
     background-color: #fff;
     opacity: 1;
     transition-duration: .5s;
-    padding: 10px;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .imageDiv:hover .projectsDisplayImage {
