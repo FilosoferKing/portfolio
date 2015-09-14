@@ -476,7 +476,6 @@ PAGE: About Page
     position: relative;
     padding: 0;
     color: #000;
-    background-color: #fff;
     z-index: 5;
 }
 
@@ -556,11 +555,25 @@ PAGE: Skills Page
 *********************************/
 .skills_container {
     position: relative;
+
+
 }
 
-.skills {
-    position: relative;
+.skills_row {
+    min-height: 300px;
+    height: 100vh;
+    background-size: cover;
+}
 
+.skills_row::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: '';
+    width: 150vw;
+    height: 60%;
+    transform: rotateZ(-10deg) translateX(-50%);
+    background-color: #FFC719;
 }
 
 .skills_title h1 {
@@ -603,7 +616,7 @@ PAGE: Projects Page
 .projects_container {
     #position: relative;
     #padding: 0;
-    background-color: #5D5D5D;
+    #background-color: #5D5D5D;
 }
 
 .project_title h1 {
