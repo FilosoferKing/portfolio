@@ -312,6 +312,7 @@ Navigation menu
     z-index: 5000;
 }
 
+
 /*******************************************************************
 index.html
 *******************************************************************/
@@ -555,75 +556,90 @@ PAGE: Skills Page
 *********************************/
 .skills_container {
     position: relative;
+    top: 0;
+    right: 25%;
+    width: 150vw;
+    height: 100%;
+    transform: rotateZ(-10deg);
+    background-color: #F5F5F5;
 
+}
 
+.skills_container a {
+    position: relative;
+    display: block;
+    top: -250px;
 }
 
 .skills_row {
-    min-height: 300px;
-    height: 100vh;
-    background-size: cover;
-}
-
-.skills_row::before {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 50%;
-    content: '';
-    width: 150vw;
+    width: 100vw;
     height: 60%;
-    transform: rotateZ(-10deg) translateX(-50%);
-    background-color: #FFC719;
+    transform: translateX(-50%);
+    #background-color: #FFC719;
+    background-size: 200%;
 }
 
 .skills_title h1 {
-    text-align: center;
-    font-weight: 300;
+    text-align: left;
+    font-weight: 700;
     font-size: 2vw;
-    margin: 5vh 0;
+    margin: 5vh 0 0 15vw;
 }
 
-.skills_top h3, .skills_bottom h3 {
+.skills_row h3 {
     text-align: center;
     font-weight: 400;
 }
 
-.skills_top, .skills_bottom {
-    padding-bottom: 10vh;
-}
-
-.skills_row hr {
-    position: relative;
-    background-color: #FFC719;
-    height: 2px;
-    width: 100%;
-    border: .5px solid #FFC719;
-    opacity: 1;
-}
+/*.skills_row hr {*/
+    /*position: relative;*/
+    /*background-color: #FFC719;*/
+    /*height: 2px;*/
+    /*width: 100%;*/
+    /*border: .5px solid #FFC719;*/
+    /*opacity: 1;*/
+/*}*/
 
 .skills_row img {
     position: relative;
     width: 100%;
     left: 0;
     height: auto;
-
 }
+
+.skills_row div {
+    transform: rotateZ(10deg);
+    padding-bottom: 5vh;
+}
+
+
+.skills_row .php,
+.skills_row .mysql,
+.skills_row .git,
+.skills_row .github,
+.skills_row .photo {
+    position: relative;
+    transform: translateX(-18%) rotateZ(10deg);
+}
+
 
 /********************************
 PAGE: Projects Page
 *********************************/
 
 .projects_container {
-    #position: relative;
-    #padding: 0;
-    #background-color: #5D5D5D;
+    position: relative;
+
 }
 
 .project_title h1 {
-    text-align: center;
-    font-weight: 300;
+    text-align: right;
+    font-weight: 700;
     font-size: 2vw;
-    margin: 5vh 0;
+    margin: 5vh 20vw 5vh 0;
 }
 
 .projectImagesContainer {
