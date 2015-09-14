@@ -25,14 +25,15 @@
           rel='stylesheet' type='text/css'>
 </head>
 <body>
+
 <!--================Fixed Nav Menu=================-->
-<div class="col-xs-12 nav_container">
-    <div class="col-xs-12 col-sm-12 top_nav">
+<div class="col-xs-12 nav_container container">
+    <div class="col-xs-12 col-sm-12 top_nav row">
         <div class="col-xs-1 col-xs-offset-11 menu_div">
             <span class="glyphicon glyphicon-menu-hamburger menu_button"></span>
         </div>
     </div>
-    <div class="col-xs-12 nav_menu">
+    <div class="col-xs-12 nav_menu row">
         <div class="col-xs-12 title">
             <h1>
             <span class="word1">
@@ -93,7 +94,7 @@
 <!--=================End Nav Menu====================-->
 
 <!--====================Landing Page====================-->
-<div class="col-xs-12 landing_div">
+<div class="col-xs-12 landing_div container">
     <a name="landing"></a>
 
     <!--<div class="col-xs-12 title">-->
@@ -126,70 +127,104 @@
     <div class="trigger_point" data-section="#about_div" data-indicator=".about"></div>
     <a name="about"></a>
 
-    <div class="col-xs-5 info_left">
-        <div class="col-xs-12 the_man">
-            <h1>THE MAN</h1>
-            <hr>
+
+        <div class="col-xs-5 info_left">
+            <div class="col-xs-12 the_man">
+                <h1>THE MAN</h1>
+                <hr>
+            </div>
+            <p>From father to web developer and everything in between, the focus of my motivation
+                is the betterment of myself and the betterment of others. The struggle to improve
+                and motivate is a never ending progression in which I look forward to everyday. Some
+                days I fall short and some days I triumph, but regardless of the result, I learn from
+                it and move forward. This is the thought process I strive for because the reality is
+                that in a world were experience and perspective are so vast, keeping my own ambitions
+                and expectations at a slightly extraordinary yet obtainable level is the key to getting
+                where I want to be. </p>
         </div>
-        <p>From father to web developer and everything in between, the focus of my motivation
-            is the betterment of myself and the betterment of others. The struggle to improve
-            and motivate is a never ending progression in which I look forward to everyday. Some
-            days I fall short and some days I triumph, but regardless of the result, I learn from
-            it and move forward. This is the thought process I strive for because the reality is
-            that in a world were experience and perspective are so vast, keeping my own ambitions
-            and expectations at a slightly extraordinary yet obtainable level is the key to getting
-            where I want to be. </p>
-    </div>
-    <div class="col-xs-12 col-sm-2 self_image">
-        <div class="col-xs-12 col-sm-12 image_box">
-            <div class="col-xs-12 col-sm-12 image">
-                <img src="img/trevcutabout.jpg" alt="Trevor close up">
+        <div class="col-xs-12 col-sm-2 self_image">
+            <div class="col-xs-12 col-sm-12 image_box">
+                <div class="col-xs-12 col-sm-12 image">
+                    <img src="img/trevcutabout.jpg" alt="Trevor close up">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-xs-5 info_right">
-        <h1>THE WEB DEVELOPER</h1>
-        <hr>
-    </div>
+        <div class="col-xs-5 info_right">
+            <h1>THE WEB DEVELOPER</h1>
+            <hr>
+        </div>
+
 </div>
 
 <!--=================END About Me========================-->
 
+<!--======================Skills=======================-->
+
+<div class="col-xs-12 skills_container container">
+    <div class="trigger_point" data-section="#skills_div" data-indicator=".skills"></div>
+    <a name="skills"></a>
+
+    <div class="col-xs-12 skills_row row">
+        <div class="col-sm-12 skills_title"></div>
+        <div class="col-sm-10 col-sm-offset-2 skills_top">
+            <div class="col-sm-2 html"><img src="img/logos/html.png" alt="html"></div>
+            <div class="col-sm-2 css"><img src="img/logos/css.png" alt="css"></div>
+            <div class="col-sm-2 js"><img src="img/logos/js.png" alt="javascript"></div>
+            <div class="col-sm-2 jquery"><img src="img/logos/jquery.png" alt="jquery"></div>
+            <div class="col-sm-2  bootstrap"><img src="img/logos/bootstrap.png" alt="bootstrap"></div>
+        </div>
+        <div class="col-sm-10 col-sm-offset-2 skill_bottom">
+            <div class="col-sm-2 php"><img src="img/logos/php.png" alt="php"></div>
+            <div class="col-sm-2 mysql"><img src="img/logos/mysql.png" alt="mysql"></div>
+            <div class="col-sm-2 git"><img src="img/logos/git.png" alt="git"></div>
+            <div class="col-sm-2 github"><img src="img/logos/github.png" alt="github"></div>
+            <div class="col-sm-2 photo"><img src="img/logos/ps.png" alt="photoshop"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<!--=================END Skillse========================-->
+
 <!--======================Projects=======================-->
 
-<div class="col-xs-12 projects_container">
+<div class="col-xs-12 projects_container container">
     <div class="trigger_point" data-section="#projects_div" data-indicator=".projects"></div>
     <a name="projects"></a>
 
-    <div class="col-xs-12 project_title">
+    <div class="col-xs-12 project_title row">
         <h1>PROJECTS</h1>
     </div>
 
 
-    <div class="col-xs-12 col-sm-12 projectImagesContainer container">
+    <div class="col-xs-12 col-sm-12 projectImagesContainer row">
         <div class="col-sm-12 projects_top">
-            <div id="marounrecords" class="col-xs-12 col-sm-3 imageDiv" text="Maroun Records is a website for underground artists of all creative backgrounds to be a medium for them to share and monetize their work." built="Built with: HTML, CSS, JavaScript/jQuery. Click for description">
+            <div id="marounrecords" class="col-xs-12 col-sm-3 imageDiv"
+                 text="Maroun Records is a website for underground artists of all creative backgrounds to be a medium for them to share and monetize their work."
+                 built="Built with: HTML, CSS, JavaScript/jQuery. Click for description">
                 <h1>Maroun Records</h1>
                 <hr>
-                <img id="mrlogo" class="projectsDisplayImage" src="img/marounrecordsdisplayimg.png"
+                <img id="mrlogo" class="projectsDisplayImage" src="img/projects/marounrecordsdisplayimg.png"
                      alt="maroun records logo image">
             </div>
-            <div id="memorymatch" class="col-xs-12 col-sm-3 imageDiv" text="This is a Star Wars themed." built="Built with: HTML, CSS, JavaScript/jQuery. Click for description">
+            <div id="memorymatch" class="col-xs-12 col-sm-3 imageDiv" text="This is a Star Wars themed."
+                 built="Built with: HTML, CSS, JavaScript/jQuery. Click for description">
                 <h1>Memory Match</h1>
                 <hr>
-                <img id="mwlogo" class="projectsDisplayImage" src="img/matchwarsdisplayimage.png"
+                <img id="mwlogo" class="projectsDisplayImage" src="img/projects/matchwarsdisplayimage.png"
                      alt="match wars logo image">
             </div>
             <div id="calculator" class="col-xs-12 col-sm-3 imageDiv" text="This is a calculator.">
                 <h1>Calculator</h1>
                 <hr>
-                <img id="calclogo" class="projectsDisplayImage" src="img/calculatordisplayimg.png"
+                <img id="calclogo" class="projectsDisplayImage" src="img/projects/calculatordisplayimg.png"
                      alt="calculator logo image">
             </div>
             <div id="sgt" class="col-xs-12 col-sm-3 imageDiv" text="This is a student grade table.">
                 <h1>Student Grade Table</h1>
                 <hr>
-                <img id="sgtlogo" class="projectsDisplayImage" src="img/sgttdisplayimg.png"
+                <img id="sgtlogo" class="projectsDisplayImage" src="img/projects/sgttdisplayimg.png"
                      alt="student grade table logo image">
             </div>
         </div>
@@ -197,19 +232,20 @@
             <div id="twailerz" class="col-xs-12 col-sm-3 imageDiv" text="This is a resource for finding latest tweets.">
                 <h1>Twailerz</h1>
                 <hr>
-                <img id="twlogo" class="projectsDisplayImage" src="img/twailerzdisplayimg.png"
+                <img id="twlogo" class="projectsDisplayImage" src="img/projects/twailerzdisplayimg.png"
                      alt="twailerz logo image">
             </div>
             <div id="tictactoe" class="col-xs-12 col-sm-3 imageDiv" text="This is a tictactoe game.">
                 <h1>Tic-Tac-Toe</h1>
                 <hr>
-                <img id="tttlogo" class="projectsDisplayImage" src="img/tictactoedisplayimg.png"
+                <img id="tttlogo" class="projectsDisplayImage" src="img/projects/tictactoedisplayimg.png"
                      alt="tic tac toe logo image">
             </div>
             <div id="taskit" class="col-xs-12 col-sm-3 imageDiv" text="This is a to-do list.">
                 <h1>Task It!</h1>
                 <hr>
-                <img id="tasklogo" class="projectsDisplayImage" src="img/taskitdisplayimg.png" alt="task it logo image">
+                <img id="tasklogo" class="projectsDisplayImage" src="img/projects/taskitdisplayimg.png"
+                     alt="task it logo image">
             </div>
             <div id="final" class="col-xs-12 col-sm-3 imageDiv" text="This is my final project.">
                 <h1>Grade Table</h1>
@@ -219,6 +255,7 @@
     </div>
 
 </div>
+
 
 <script src="main.js"></script>
 <!--<script src="projectslide.js"></script>-->

@@ -552,12 +552,30 @@ hr {
 }
 
 /********************************
+PAGE: Skills Page
+*********************************/
+.skills_container {
+    position: relative;
+}
+
+.skills {
+    position: relative;
+
+}
+
+.skills_row img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/********************************
 PAGE: Projects Page
 *********************************/
 
 .projects_container {
-    position: relative;
-    padding: 0;
+    #position: relative;
+    #padding: 0;
     background-color: #5D5D5D;
 }
 
@@ -570,12 +588,11 @@ PAGE: Projects Page
 
 .projectImagesContainer {
     position: relative;
-    padding: 0;
 }
 
 .projectImagesContainer h1 {
     position: absolute;
-    width: 100%;
+    #width: 100%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -613,23 +630,23 @@ PAGE: Projects Page
 
 .imageDiv {
     position: relative;
-    width: 22.5%;
+    #width: 22.5%;
     padding-top: 22.5%;
     z-index: 5;
     border: 2px solid #FFC719;
-    margin: 1.25%;
+    #margin: 1.25%;
     overflow: hidden;
     border-radius: 50%;
 }
 
 .projects_top {
     #background-color: #FFC719;
-    padding: 0;
+    #padding: 0;
 }
 
 .projects_bottom {
     #background-color: #FFC719;
-    padding: 0;
+    #padding: 0;
 }
 
 #mrlogo, #mwlogo, #calclogo, #sgtlogo, #twlogo, #tttlogo, #tasklogo {
@@ -642,37 +659,37 @@ PAGE: Projects Page
 }
 
 #marounrecords {
-    background: transparent url("img/marounrecords.png") no-repeat 50% 50%;
+    background: transparent url("img/projects/marounrecords.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #memorymatch {
-    background: #fff url("img/memorymatch.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/memorymatch.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #calculator {
-    background: #fff url("img/calculator.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/calculator.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #sgt {
-    background: #fff url("img/sgt.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/sgt.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #twailerz {
-    background: #fff url("img/twailerz.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/twailerz.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #tictactoe {
-    background: #fff url("img/tic-tac-toe.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/tic-tac-toe.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #taskit {
-    background: #fff url("img/skilloutline.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/skilloutline.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
