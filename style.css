@@ -563,10 +563,37 @@ PAGE: Skills Page
 
 }
 
+.skills_title h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2vw;
+    margin: 5vh 0;
+}
+
+.skills_top h3, .skills_bottom h3 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.skills_top, .skills_bottom {
+    padding-bottom: 10vh;
+}
+
+.skills_row hr {
+    position: relative;
+    background-color: #FFC719;
+    height: 2px;
+    width: 100%;
+    border: .5px solid #FFC719;
+    opacity: 1;
+}
+
 .skills_row img {
     position: relative;
     width: 100%;
+    left: 0;
     height: auto;
+
 }
 
 /********************************
