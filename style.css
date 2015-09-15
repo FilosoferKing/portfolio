@@ -326,7 +326,7 @@ PAGE: Landing Page
     left: 0;
     max-width: 100%;
     height: 100vh;
-    background: #000 url('img/land.jpg') no-repeat 50% 50%;
+    background: #000 url('img/landalt1.jpg') no-repeat 50% 50%;
     background-size: cover;
     color: #fff;
     padding: 0;
@@ -478,6 +478,8 @@ PAGE: About Page
     padding: 0;
     color: #000;
     z-index: 5;
+    background: #0f0f0f url('img/generalbg.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
 }
 
 hr {
@@ -558,9 +560,8 @@ PAGE: Skills Page
     position: relative;
     top: 0;
     right: 25%;
-    width: 150vw;
+    width: 100vw;
     height: 100%;
-    transform: rotateZ(-10deg);
     background-color: #F5F5F5;
 
 }
@@ -575,7 +576,7 @@ PAGE: Skills Page
     position: relative;
     top: 0;
     left: 50%;
-    width: 100vw;
+    #width: 100vw;
     height: 60%;
     transform: translateX(-50%);
     #background-color: #FFC719;
@@ -583,10 +584,11 @@ PAGE: Skills Page
 }
 
 .skills_title h1 {
-    text-align: left;
+    position: absolute;
     font-weight: 700;
     font-size: 2vw;
     margin: 5vh 0 0 15vw;
+    left: 15%;
 }
 
 .skills_row h3 {
@@ -610,20 +612,20 @@ PAGE: Skills Page
     height: auto;
 }
 
+#skillsChart {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: auto;
+}
+
 .skills_row div {
-    transform: rotateZ(10deg);
+
     padding-bottom: 5vh;
 }
 
-
-.skills_row .php,
-.skills_row .mysql,
-.skills_row .git,
-.skills_row .github,
-.skills_row .photo {
-    position: relative;
-    transform: translateX(-18%) rotateZ(10deg);
-}
 
 
 /********************************
