@@ -357,6 +357,11 @@ PAGE: Landing Page
 
 }
 
+#tl {
+    width: 100%;
+    opacity: .75;
+}
+
 /*.landing_div::before {*/
 /*position: absolute;*/
 /*top: 0;*/
