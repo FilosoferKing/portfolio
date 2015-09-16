@@ -195,15 +195,15 @@ function changeProjectDescription(id) {
 function intro_greeting(){
 
     setTimeout(function(){
-    $('.title h1').text('Hi.');
+    $('.title h1').text('HI.');
     }, 500);
     setTimeout(function(){
 
-        $('.title h1').text('My name is');
+        $('.title h1').text('MY NAME IS');
     }, 1500);
     setTimeout(function(){
 
-        $('.title h1').text('Trevor');
+        $('.title h1').text('TREVOR');
         $('.land_about').css({'right': '0', 'background': 'rgba(56, 77, 86, .75)'});
         setTimeout(function(){
         $('.land_skills').css({'right': '0', 'background-color': 'rgba(229, 229, 229, .75)'});
