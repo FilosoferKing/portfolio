@@ -331,7 +331,30 @@ PAGE: Landing Page
     color: #fff;
     padding: 0;
     z-index: -2;
-    line-height: 45vh;
+
+}
+
+.landing_div .land_menu a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    font-weight: 200;
+}
+
+.landing_div .land_menu p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    font-weight: 200;
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+
 }
 
 /*.landing_div::before {*/
@@ -364,10 +387,59 @@ PAGE: Landing Page
 
 .land_menu {
     position: relative;
+    right: 0;
     height: 100vh;
     padding-right: 0;
-    background-color: #000;
-    opacity: .5;
+    padding-left: 0;
+}
+
+.land_about,
+.land_skills,
+.land_projects,
+.land_connect {
+    position: relative;
+    height: 25%;
+    right: -100%;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+/*.land_about::before {*/
+    /*position: absolute;*/
+    /*top: 100%;*/
+    /*left: -81%;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*content: '';*/
+    /*border: 2px solid #fff;*/
+    /*transform: rotateZ(-45deg);*/
+/*}*/
+
+.land_text {
+    position: relative;
+    height: 100vh;
+}
+
+.land_text::before {
+    position: absolute;
+    content: '';
+    opacity: 0;
+}
+
+.land_text::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: #000 url('img/land.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 0;
+}
+
+.landing_div:hover .land_text::before {
+   opacity: .5;
+    transform: scale(1);
 }
 
 
@@ -379,7 +451,7 @@ PAGE: Landing Page
 
 .title h1 {
     position: relative;
-    transform: translateY(100%);
+    transform: translateY(0);
 
     font-weight: 200;
     font-size: 10vw;
@@ -573,7 +645,7 @@ PAGE: Skills Page
 *********************************/
 .skills_container {
     position: relative;
-    width: 100vw;
+    #width: 100vw;
     height: 100%;
     background: #0f0f0f url('img/altbg.jpg') no-repeat 50% 50%;
     background-size: 100% auto;
@@ -588,13 +660,13 @@ PAGE: Skills Page
 
 .skills_row {
     position: relative;
-    top: 0;
-    left: 50%;
+    #top: 0;
+    #left: 0;
     #width: 100vw;
-    height: 60%;
-    transform: translateX(-50%);
+    #height: 60%;
+    #transform: translateX(-50%);
     #background-color: #FFC719;
-    background-size: 200%;
+
 }
 
 .skills_title h1 {
@@ -628,7 +700,7 @@ PAGE: Skills Page
 
 #skillsChart {
     position: absolute;
-    width: 100%;
+    #width: 100%;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
