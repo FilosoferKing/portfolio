@@ -37,6 +37,8 @@ $(document).ready(function () {
     });
 
 
+    intro_greeting();
+
     /***************************************
      * NAME: Menu button click handler
      * PARAMS: none
@@ -188,6 +190,21 @@ function changeProjectDescription(id) {
             replaceText;
             break;
     }
+}
+
+function intro_greeting(){
+
+    setTimeout(function(){
+    $('.title h1').text('Hi.');
+    }, 500);
+    setTimeout(function(){
+
+        $('.title h1').text('My name is');
+    }, 1500);
+    setTimeout(function(){
+
+        $('.name_title').css({'opacity': '1'});
+    }, 2500);
 }
 
 

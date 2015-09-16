@@ -2,7 +2,7 @@
 GENERAL
 *******************************************************************/
 body {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     padding: 0;
 }
 
@@ -326,7 +326,7 @@ PAGE: Landing Page
     left: 0;
     max-width: 100%;
     height: 100vh;
-    background: #000 url('img/landalt1.jpg') no-repeat 50% 50%;
+    background: #000 url('img/altbg.jpg') no-repeat 50% 50%;
     background-size: cover;
     color: #fff;
     padding: 0;
@@ -362,6 +362,16 @@ PAGE: Landing Page
 /*opacity: .25;*/
 /*}*/
 
+.land_menu {
+    position: relative;
+    height: 100vh;
+    padding-right: 0;
+    background-color: #000;
+    opacity: .5;
+}
+
+
+
 /***********Title*******************/
 .title {
     padding: 1%;
@@ -369,11 +379,16 @@ PAGE: Landing Page
 
 .title h1 {
     position: relative;
-    top: 0;
-    font-weight: 100;
-    font-size: 7vw;
+    transform: translateY(100%);
+
+    font-weight: 200;
+    font-size: 10vw;
     text-align: center;
-    opacity: .5;
+    opacity: 1;
+}
+
+.name_title {
+    opacity: 0;
 }
 
 .title h2 {
@@ -476,10 +491,10 @@ PAGE: About Page
 .about_div {
     position: relative;
     padding: 0;
-    color: #000;
+    color: #fff;
     z-index: 5;
-    background: #0f0f0f url('img/generalbg.png') no-repeat 50% 50%;
-    background-size: 100% 100%;
+    background: #0f0f0f url('img/revaltbg.jpg') no-repeat 50% 50%;
+    background-size: 100% auto;
 }
 
 hr {
@@ -558,12 +573,11 @@ PAGE: Skills Page
 *********************************/
 .skills_container {
     position: relative;
-    top: 0;
-    right: 25%;
     width: 100vw;
     height: 100%;
-    background-color: #F5F5F5;
-
+    background: #0f0f0f url('img/altbg.jpg') no-repeat 50% 50%;
+    background-size: 100% auto;
+    color: #fff;
 }
 
 .skills_container a {
@@ -634,7 +648,9 @@ PAGE: Projects Page
 
 .projects_container {
     position: relative;
-
+    background: #0f0f0f url('img/revaltbg.jpg') no-repeat 50% 50%;
+    background-size: 100% auto;
+    color: #fff;
 }
 
 .project_title h1 {
