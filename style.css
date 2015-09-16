@@ -2,7 +2,7 @@
 GENERAL
 *******************************************************************/
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     padding: 0;
 }
 
@@ -423,24 +423,17 @@ PAGE: Landing Page
 .land_text::before {
     position: absolute;
     content: '';
-    opacity: 0;
-}
-
-.land_text::before {
+    opacity: .5;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-
     background: #000 url('img/land.jpg') no-repeat 50% 50%;
     background-size: cover;
-    opacity: 0;
+    transition-duration: 2s;
+    transition-delay: 1s;
 }
 
-.landing_div:hover .land_text::before {
-   opacity: .5;
-    transform: scale(1);
-}
 
 
 
@@ -460,7 +453,7 @@ PAGE: Landing Page
 }
 
 .name_title {
-    opacity: 0;
+    opacity: 1;
 }
 
 .title h2 {
