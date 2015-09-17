@@ -37,8 +37,6 @@ $(document).ready(function () {
     });
 
 
-    intro_greeting();
-
     /***************************************
      * NAME: Menu button click handler
      * PARAMS: none
@@ -190,35 +188,6 @@ function changeProjectDescription(id) {
             replaceText;
             break;
     }
-}
-
-function intro_greeting(){
-
-    setTimeout(function(){
-    $('.title h1').text('HI.');
-    }, 500);
-    setTimeout(function(){
-
-        $('.title h1').text('MY NAME IS');
-    }, 1500);
-    setTimeout(function(){
-
-        $('.title h1').text('TREVOR');
-
-    }, 2500);
-
-    $('.land_about').css({'top': '0'});
-    setTimeout(function(){
-        $('.land_skills').css({'top': '0'});
-    }, 500);
-    setTimeout(function(){
-        $('.land_projects').css({'top': '0'});
-    }, 1000);
-    setTimeout(function(){
-        $('.land_connect').css({'top': '0'});
-    }, 1500);
-
-
 }
 
 
