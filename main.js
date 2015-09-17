@@ -36,6 +36,7 @@ $(document).ready(function () {
         changeProjectDescription(projectId);
     });
 
+    intro_reveal();
 
     /***************************************
      * NAME: Menu button click handler
@@ -188,6 +189,28 @@ function changeProjectDescription(id) {
             replaceText;
             break;
     }
+}
+
+function intro_reveal(){
+    setTimeout(function(){
+        $('.title h1').css({'opacity': '1', 'transition-duration': '1s'});
+    }, 500);
+    setTimeout(function(){
+        $('.title h3').css({'opacity': '1', 'transition-duration': '1s'});
+    }, 1000);
+    setTimeout(function(){
+        $('.land_about').css({'opacity': '1', 'transition-duration': '1s'});
+    }, 1500);
+    setTimeout(function(){
+        $('.land_skills').css({'opacity': '1', 'transition-duration': '1s'});
+    }, 2000);
+    setTimeout(function(){
+        $('.land_projects').css({'opacity': '1', 'transition-duration': '1s'});
+    }, 2500);
+    setTimeout(function(){
+        $('.land_connect').css({'opacity': '1', 'transition-duration': '1s'});
+    }, 3000);
+
 }
 
 
