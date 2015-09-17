@@ -1,8 +1,9 @@
 $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
-    //$('.nav_container').hide();
-    //$('.menu_button').hide();
+
+    $('.nav_menu').hide();
+    $('.menu_button').hide();
 
     setTimeout(function () {
         $('.title h2').fadeIn(1000);
@@ -72,10 +73,10 @@ $(document).scroll(function () {
 
     $('.trigger_point').each(function () {
         var trigger_position = $(this).offset().top;
-        //console.log('Target position: ', trigger_position);
+        console.log('Target position: ', trigger_position);
         if (trigger_position <= bottomPosition) {
             sectionArray[sectionArray.length] = this;
-            //console.log('SectionArray ', sectionArray);
+            console.log('SectionArray ', sectionArray);
         }
     });
 
@@ -83,15 +84,23 @@ $(document).scroll(function () {
 
     if (sectionArray.length) {
         var highlighted_section = $(sectionArray[sectionArray.length - 1]).attr('data-indicator');
-        //console.log('Data-indicator: ', highlighted_section);
+        console.log('Data-indicator: ', highlighted_section);
         $(highlighted_section).addClass('js_hover');
 
-        $('.title').hide();
         $('.menu_button').fadeIn(1000);
         $('.nav_menu').css({"display": "none"});
 
+
+        /*If menu button clicked is same as current page, hide navigation menu*/
+        $('.menu_click').on('click', function () {
+            if (highlighted_section == $(this).attr('click')){
+
+                $('.nav_menu').css({"display": "none"});
+            }
+        });
+
     } else {
-        $('.nav_menu').css({"display": "block"});
+        $('.nav_menu').css({"display": "none"});
         $('.title').fadeIn(1000);
         $('.menu_button').fadeOut(1000);
     }
@@ -149,16 +158,16 @@ function intro_reveal(){
         $('.title h3').css({'opacity': '1', 'transition-duration': '1s'});
     }, 1000);
     setTimeout(function(){
-        $('.land_about').css({'opacity': '1', 'transition-duration': '1s'});
+        $('.land_about').animate({'opacity': '1'}, 1000);
     }, 1500);
     setTimeout(function(){
-        $('.land_skills').css({'opacity': '1', 'transition-duration': '1s'});
+        $('.land_skills').animate({'opacity': '1'}, 1000);
     }, 2000);
     setTimeout(function(){
-        $('.land_projects').css({'opacity': '1', 'transition-duration': '1s'});
+        $('.land_projects').animate({'opacity': '1'}, 1000);
     }, 2500);
     setTimeout(function(){
-        $('.land_connect').css({'opacity': '1', 'transition-duration': '1s'});
+        $('.land_connect').animate({'opacity': '1'}, 1000);
     }, 3000);
 
 }
