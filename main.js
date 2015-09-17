@@ -20,7 +20,7 @@ $(document).ready(function () {
         $('.right_nav').css({'transform': 'scaleX(1)'});
     }, 3250);
     fade_title();
-    $('.nav_container').fadeIn();
+    //$('.nav_container').fadeIn();
     //$('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "8vh"});
     nav_p_slide_down();
 

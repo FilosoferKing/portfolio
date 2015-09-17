@@ -1,9 +1,21 @@
 /*******************************************************************
 GENERAL
 *******************************************************************/
+/***Theme Colors***
+#384D56
+#E5E5E5
+#FCA311
+#538459
+*****************/
+
 body {
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
+}
+
+@font-face {
+    font-family: chalk;
+    src: url('img/chalk.ttf');
 }
 
 /********************************
@@ -312,6 +324,7 @@ Navigation menu
     z-index: 5000;
 }
 
+
 /*******************************************************************
 index.html
 *******************************************************************/
@@ -325,12 +338,40 @@ PAGE: Landing Page
     left: 0;
     max-width: 100%;
     height: 100vh;
-    background: #000 url('img/land.jpg') no-repeat 50% 50%;
+    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
     background-size: cover;
     color: #fff;
     padding: 0;
     z-index: -2;
-    line-height: 45vh;
+    font-family: chalk;
+}
+
+.landing_div .land_menu a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    font-weight: 200;
+}
+
+.landing_div .land_menu p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    font-weight: 200;
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+
+}
+
+#tl {
+    width: 100%;
+    opacity: .75;
 }
 
 /*.landing_div::before {*/
@@ -361,26 +402,124 @@ PAGE: Landing Page
 /*opacity: .25;*/
 /*}*/
 
+.land_menu {
+    position: relative;
+    right: 0;
+    height: 100vh;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.land_about,
+.land_skills,
+.land_projects,
+.land_connect {
+    position: relative;
+    height: 25%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.land_about {
+    background: transparent url('img/aboutchalk.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.land_about:hover {
+    background: transparent url('img/aboutchalkunder.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.land_skills {
+    background: transparent url('img/skillschalk.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.land_skills:hover {
+    background: transparent url('img/skillschalkunder.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.land_projects {
+    background: transparent url('img/projectschalk.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.land_projects:hover {
+    background: transparent url('img/projectschalkunder.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.land_connect {
+    background: transparent url('img/connectchalk.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.land_connect:hover {
+    background: transparent url('img/connectchalkunder.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.land_about::before,
+.land_skills::before,
+.land_projects::before,
+.land_connect::before {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+}
+
+
+.land_text::before {
+    position: absolute;
+    content: '';
+    opacity: .5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000 url('img/trevlandbg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    transition-duration: 2s;
+    transition-delay: 1s;
+}
+
+.land_text {
+    position: relative;
+    height: 100vh;
+}
+
+
+
 /***********Title*******************/
 .title {
     padding: 1%;
+    height: 100vh;
 }
 
-.title h1 {
+.land_text .title h1 {
     position: relative;
+    left: 0;
     top: 0;
-    font-weight: 100;
-    font-size: 7vw;
-    text-align: center;
-    opacity: .5;
+    font-weight: 200;
+    font-size: 2vw;
+    opacity: 1;
 }
 
-.title h2 {
+.name_title {
+    opacity: 1;
+}
+
+.title h3 {
     position: relative;
-    font-weight: 100;
-    font-size: 3vw;
-    text-align: center;
-    opacity: .75;
+    left: 3vw;
+    font-weight: 200;
+    font-size: 1vw;
+    opacity: 1;
 }
 
 .word1 {
@@ -475,9 +614,10 @@ PAGE: About Page
 .about_div {
     position: relative;
     padding: 0;
-    color: #000;
-    background-color: #fff;
+    color: #fff;
     z-index: 5;
+    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
 }
 
 hr {
@@ -552,30 +692,104 @@ hr {
 }
 
 /********************************
+PAGE: Skills Page
+*********************************/
+.skills_container {
+    position: relative;
+    #width: 100vw;
+    height: 100%;
+    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    color: #fff;
+}
+
+.skills_container a {
+    position: relative;
+    display: block;
+    top: -250px;
+}
+
+.skills_row {
+    position: relative;
+    #top: 0;
+    #left: 0;
+    #width: 100vw;
+    #height: 60%;
+    #transform: translateX(-50%);
+    #background-color: #FFC719;
+
+}
+
+.skills_title h1 {
+    position: absolute;
+    font-weight: 700;
+    font-size: 2vw;
+    margin: 5vh 0 0 15vw;
+    left: 15%;
+}
+
+.skills_row h3 {
+    text-align: center;
+    font-weight: 400;
+}
+
+/*.skills_row hr {*/
+    /*position: relative;*/
+    /*background-color: #FFC719;*/
+    /*height: 2px;*/
+    /*width: 100%;*/
+    /*border: .5px solid #FFC719;*/
+    /*opacity: 1;*/
+/*}*/
+
+.skills_row img {
+    position: relative;
+    width: 100%;
+    left: 0;
+    height: auto;
+}
+
+#skillsChart {
+    position: absolute;
+    #width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: auto;
+}
+
+.skills_row div {
+
+    padding-bottom: 5vh;
+}
+
+
+
+/********************************
 PAGE: Projects Page
 *********************************/
 
 .projects_container {
     position: relative;
-    padding: 0;
-    background-color: #5D5D5D;
+    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    color: #fff;
 }
 
 .project_title h1 {
-    text-align: center;
-    font-weight: 300;
+    text-align: right;
+    font-weight: 700;
     font-size: 2vw;
-    margin: 5vh 0;
+    margin: 5vh 20vw 5vh 0;
 }
 
 .projectImagesContainer {
     position: relative;
-    padding: 0;
 }
 
 .projectImagesContainer h1 {
     position: absolute;
-    width: 100%;
+    #width: 100%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -613,23 +827,23 @@ PAGE: Projects Page
 
 .imageDiv {
     position: relative;
-    width: 22.5%;
+    #width: 22.5%;
     padding-top: 22.5%;
     z-index: 5;
     border: 2px solid #FFC719;
-    margin: 1.25%;
+    #margin: 1.25%;
     overflow: hidden;
     border-radius: 50%;
 }
 
 .projects_top {
     #background-color: #FFC719;
-    padding: 0;
+    #padding: 0;
 }
 
 .projects_bottom {
     #background-color: #FFC719;
-    padding: 0;
+    #padding: 0;
 }
 
 #mrlogo, #mwlogo, #calclogo, #sgtlogo, #twlogo, #tttlogo, #tasklogo {
@@ -642,37 +856,37 @@ PAGE: Projects Page
 }
 
 #marounrecords {
-    background: transparent url("img/marounrecords.png") no-repeat 50% 50%;
+    background: transparent url("img/projects/marounrecords.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #memorymatch {
-    background: #fff url("img/memorymatch.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/memorymatch.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #calculator {
-    background: #fff url("img/calculator.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/calculator.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #sgt {
-    background: #fff url("img/sgt.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/sgt.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #twailerz {
-    background: #fff url("img/twailerz.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/twailerz.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #tictactoe {
-    background: #fff url("img/tic-tac-toe.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/tic-tac-toe.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
 #taskit {
-    background: #fff url("img/skilloutline.png") no-repeat 50% 50%;
+    background: #fff url("img/projects/skilloutline.png") no-repeat 50% 50%;
     background-size: contain;
 }
 
