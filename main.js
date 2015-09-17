@@ -204,17 +204,19 @@ function intro_greeting(){
     setTimeout(function(){
 
         $('.title h1').text('TREVOR');
-        $('.land_about').css({'right': '0', 'background': 'rgba(56, 77, 86, .75)'});
-        setTimeout(function(){
-        $('.land_skills').css({'right': '0', 'background-color': 'rgba(229, 229, 229, .75)'});
-        }, 500);
-        setTimeout(function(){
-        $('.land_projects').css({'right': '0', 'background-color': 'rgba(252, 163, 17, .75)'});
-        }, 1000);
-        setTimeout(function(){
-        $('.land_connect').css({'right': '0', 'background-color': 'rgba(83, 132, 89, .75)'});
-        }, 1500);
+
     }, 2500);
+
+    $('.land_about').css({'top': '0'});
+    setTimeout(function(){
+        $('.land_skills').css({'top': '0'});
+    }, 500);
+    setTimeout(function(){
+        $('.land_projects').css({'top': '0'});
+    }, 1000);
+    setTimeout(function(){
+        $('.land_connect').css({'top': '0'});
+    }, 1500);
 
 
 }

@@ -1,6 +1,13 @@
 /*******************************************************************
 GENERAL
 *******************************************************************/
+/***Theme Colors***
+#384D56
+#E5E5E5
+#FCA311
+#538459
+*****************/
+
 body {
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
@@ -331,7 +338,7 @@ PAGE: Landing Page
     left: 0;
     max-width: 100%;
     height: 100vh;
-    background: #000 url('img/altbg.jpg') no-repeat 50% 50%;
+    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
     background-size: cover;
     color: #fff;
     padding: 0;
@@ -456,26 +463,45 @@ PAGE: Landing Page
 .land_connect {
     position: relative;
     height: 25%;
-    right: -100%;
+    top: 0;
+    left: 0;
     transition-duration: 1s;
     transition-timing-function: ease-out;
+    overflow: hidden;
 }
 
-/*.land_about::before {*/
-    /*position: absolute;*/
-    /*top: 100%;*/
-    /*left: -81%;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*content: '';*/
-    /*border: 2px solid #fff;*/
-    /*transform: rotateZ(-45deg);*/
-/*}*/
-
-.land_text {
-    position: relative;
-    height: 100vh;
+.land_about {
+    background: transparent url('img/aboutchalk.png') no-repeat 50% 50%;
+    background-size: contain;
 }
+
+.land_skills {
+    background: transparent url('img/skillschalk.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.land_projects {
+    background: transparent url('img/projectschalk.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.land_connect {
+    background: transparent url('img/connectchalk.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.land_about::before,
+.land_skills::before,
+.land_projects::before,
+.land_connect::before {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+}
+
 
 .land_text::before {
     position: absolute;
@@ -485,12 +511,16 @@ PAGE: Landing Page
     left: 0;
     right: 0;
     bottom: 0;
-    background: #000 url('img/land.jpg') no-repeat 50% 50%;
+    background: #000 url('img/trevlandbg.jpg') no-repeat 50% 50%;
     background-size: cover;
     transition-duration: 2s;
     transition-delay: 1s;
 }
 
+.land_text {
+    position: relative;
+    height: 100vh;
+}
 
 
 
@@ -499,10 +529,12 @@ PAGE: Landing Page
     padding: 1%;
 }
 
-.title h1 {
-    position: relative;
-    transform: translateY(0);
-
+.land_text .title h1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100vh;
     font-weight: 200;
     font-size: 6vw;
     text-align: center;
@@ -615,8 +647,8 @@ PAGE: About Page
     padding: 0;
     color: #fff;
     z-index: 5;
-    background: #0f0f0f url('img/revaltbg.jpg') no-repeat 50% 50%;
-    background-size: 100% auto;
+    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
 }
 
 hr {
@@ -697,8 +729,8 @@ PAGE: Skills Page
     position: relative;
     #width: 100vw;
     height: 100%;
-    background: #0f0f0f url('img/altbg.jpg') no-repeat 50% 50%;
-    background-size: 100% auto;
+    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
     color: #fff;
 }
 
@@ -770,8 +802,8 @@ PAGE: Projects Page
 
 .projects_container {
     position: relative;
-    background: #0f0f0f url('img/revaltbg.jpg') no-repeat 50% 50%;
-    background-size: 100% auto;
+    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
     color: #fff;
 }
 
