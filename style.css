@@ -27,7 +27,9 @@ Navigation menu
 .nav_container {
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 100;
+    max-width: 100%;
     width: 100vw;
     height: 0;
     color: #fff;
@@ -36,7 +38,7 @@ Navigation menu
 }
 
 .menu_button {
-    opacity: 0;
+    opacity: 1;
     position: fixed;
     top: 10px;
     right: 10px;
@@ -69,6 +71,29 @@ Navigation menu
 
  }
 
+.nav_menu .land_text .title h1 {
+    position: relative;
+    left: 50%;
+    top: 40%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-weight: 200;
+    font-size: 4vw;
+    opacity: 0;
+}
+
+.nav_menu .land_text .title h3 {
+    position: relative;
+    left: 50%;
+    top: 40%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    #left: 3vw;
+    font-weight: 200;
+    font-size: 2vw;
+    opacity: 0;
+}
+
 /*.top_nav {*/
     /*position: absolute;*/
     /*left: 0;*/
@@ -77,12 +102,14 @@ Navigation menu
 
 .nav_menu {
     top: 0;
+    left: 0;
     z-index: 10;
     height: 100vh;
     padding: 0;
     background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
     background-size: cover;
 }
+
 
 /*.about, .skills, .projects, .contact {*/
     /*position: relative;*/
@@ -368,6 +395,7 @@ PAGE: Landing Page
     top: 0;
     left: 0;
     max-width: 100%;
+    width: 100vw;
     height: 100vh;
     /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
     /*background-size: cover;*/
@@ -401,11 +429,11 @@ PAGE: Landing Page
 }
 
 .land_menu {
+    opacity: 0;
     position: relative;
-    right: 0;
+    left: 0;
     height: 100vh;
-    padding-right: 0;
-    padding-left: 0;
+    padding: 0;
 }
 
 .land_about,
@@ -417,7 +445,7 @@ PAGE: Landing Page
     top: 0;
     left: 0;
     overflow: hidden;
-    opacity: 0;
+    #opacity: 0;
 }
 
 .land_about {
@@ -489,17 +517,18 @@ PAGE: Landing Page
 .land_text {
     position: relative;
     height: 100vh;
+    padding: 0;
 }
 
 /***********Title*******************/
 .title {
-    padding: 1%;
+    padding: 0;
     height: 100vh;
 }
 
 .land_text .title h1 {
     position: relative;
-    left: 50%;
+    left: 150%;
     top: 40%;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -514,7 +543,7 @@ PAGE: Landing Page
 
 .title h3 {
     position: relative;
-    left: 50%;
+    left: 150%;
     top: 40%;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -530,11 +559,11 @@ PAGE: About Page
 .about_div {
     position: relative;
     padding: 0;
+    margin: 10vh 0;
     color: #fff;
     z-index: 5;
-    /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
-    /*background-size: cover;*/
-    font-family: chalk;
+    background: transparent url('img/aboutmeimg.png') no-repeat 50% 50%;
+    background-size: contain;
 }
 
 hr {
@@ -544,9 +573,8 @@ hr {
     border: .5px solid #000;
 }
 
-.info_left p {
+.info_left p, .info_right p {
     font-size: 1.25vw;
-    font-family: 'Josefin Sans', sans-serif;
 }
 
 .self_image {
@@ -582,6 +610,7 @@ hr {
     text-align: center;
     font-weight: 300;
     font-size: 2vw;
+    font-family: chalk;
 }
 
 /********************************

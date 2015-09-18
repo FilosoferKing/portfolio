@@ -92,26 +92,28 @@ $(document).scroll(function () {
 
         /*If menu button clicked is same as current page, hide navigation menu*/
         $('.menu_click').on('click', function () {
+            console.log(highlighted_section);
             if (highlighted_section == $(this).attr('click')){
                 $('.nav_menu').css({"display": "none"});
             }
         });
 
+
     } else {
         $('.nav_menu').css({"display": "none"});
         $('.title').fadeIn(1000);
-        if ($(window).width() > 768) {
-            $('.menu_button').css({'opacity': '0'});
-        } else {
-            $('.menu_button').css({'opacity': '1'});
-        }
-        $(window).resize(function() {
-            if ($(window).width() > 768) {
-                $('.menu_button').css({'opacity': '0'});
-            } else {
-                $('.menu_button').css({'opacity': '1'});
-            }
-        });
+        //if ($(window).width() > 768) {
+        //    $('.menu_button').css({'opacity': '0'});
+        //} else {
+        //    $('.menu_button').css({'opacity': '1'});
+        //}
+        //$(window).resize(function() {
+        //    if ($(window).width() > 768) {
+        //        $('.menu_button').css({'opacity': '0'});
+        //    } else {
+        //        $('.menu_button').css({'opacity': '1'});
+        //    }
+        //});
     }
 });
 
@@ -166,18 +168,18 @@ function intro_reveal(){
     setTimeout(function(){
         $('.title h3').css({'opacity': '1', 'transition-duration': '1s'});
     }, 1000);
-    setTimeout(function(){
-        $('.land_about').animate({'opacity': '1'}, 1000);
-    }, 1500);
-    setTimeout(function(){
-        $('.land_skills').animate({'opacity': '1'}, 1000);
-    }, 2000);
-    setTimeout(function(){
-        $('.land_projects').animate({'opacity': '1'}, 1000);
-    }, 2500);
-    setTimeout(function(){
-        $('.land_connect').animate({'opacity': '1'}, 1000);
-    }, 3000);
+    //setTimeout(function(){
+    //    $('.land_about').animate({'opacity': '1'}, 1000);
+    //}, 1500);
+    //setTimeout(function(){
+    //    $('.land_skills').animate({'opacity': '1'}, 1000);
+    //}, 2000);
+    //setTimeout(function(){
+    //    $('.land_projects').animate({'opacity': '1'}, 1000);
+    //}, 2500);
+    //setTimeout(function(){
+    //    $('.land_connect').animate({'opacity': '1'}, 1000);
+    //}, 3000);
 
 }
 
