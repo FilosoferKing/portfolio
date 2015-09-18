@@ -20,11 +20,11 @@
         Landing Page
     ************************************/
 
-    .land_text::before {
-        background: transparent url('img/trevlandbgtrans.png') no-repeat 50% 50%;
-        background-size: cover;
-        opacity: .25;
-    }
+    /*.land_text::before {*/
+        /*background: transparent url('img/trevlandbgtrans.png') no-repeat 50% 50%;*/
+        /*background-size: cover;*/
+        /*opacity: .25;*/
+    /*}*/
 
     .land_text .title h1 {
         position: absolute;

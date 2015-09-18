@@ -496,10 +496,12 @@ PAGE: Landing Page
 
 .land_text .title h1 {
     position: relative;
-    left: 0;
-    top: 0;
+    left: 50%;
+    top: 40%;
+    text-align: center;
+    transform: translate(-50%, -50%);
     font-weight: 200;
-    font-size: 2vw;
+    font-size: 4vw;
     opacity: 0;
 }
 
@@ -509,9 +511,13 @@ PAGE: Landing Page
 
 .title h3 {
     position: relative;
-    left: 3vw;
+    left: 50%;
+    top: 40%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    #left: 3vw;
     font-weight: 200;
-    font-size: 1vw;
+    font-size: 2vw;
     opacity: 0;
 }
 
