@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 
     $('.nav_menu').hide();
-    $('.menu_button').hide();
+
 
     setTimeout(function () {
         $('.title h2').fadeIn(1000);
@@ -73,28 +73,26 @@ $(document).scroll(function () {
 
     $('.trigger_point').each(function () {
         var trigger_position = $(this).offset().top;
-        console.log('Target position: ', trigger_position);
+        //console.log('Target position: ', trigger_position);
         if (trigger_position <= bottomPosition) {
             sectionArray[sectionArray.length] = this;
-            console.log('SectionArray ', sectionArray);
+            //console.log('SectionArray ', sectionArray);
         }
     });
 
-    $('.about, .projects, .skills, .contact').removeClass('js_hover');
+    //$('.about, .projects, .skills, .contact').removeClass('js_hover');
 
     if (sectionArray.length) {
         var highlighted_section = $(sectionArray[sectionArray.length - 1]).attr('data-indicator');
-        console.log('Data-indicator: ', highlighted_section);
+        //console.log('Data-indicator: ', highlighted_section);
         $(highlighted_section).addClass('js_hover');
 
-        $('.menu_button').fadeIn(1000);
+        $('.menu_button').css({'opacity': '1'});
         $('.nav_menu').css({"display": "none"});
-
 
         /*If menu button clicked is same as current page, hide navigation menu*/
         $('.menu_click').on('click', function () {
             if (highlighted_section == $(this).attr('click')){
-
                 $('.nav_menu').css({"display": "none"});
             }
         });
@@ -102,7 +100,18 @@ $(document).scroll(function () {
     } else {
         $('.nav_menu').css({"display": "none"});
         $('.title').fadeIn(1000);
-        $('.menu_button').fadeOut(1000);
+        if ($(window).width() > 768) {
+            $('.menu_button').css({'opacity': '0'});
+        } else {
+            $('.menu_button').css({'opacity': '1'});
+        }
+        $(window).resize(function() {
+            if ($(window).width() > 768) {
+                $('.menu_button').css({'opacity': '0'});
+            } else {
+                $('.menu_button').css({'opacity': '1'});
+            }
+        });
     }
 });
 
