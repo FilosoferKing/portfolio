@@ -11,6 +11,9 @@ GENERAL
 body {
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
+    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 @font-face {
@@ -366,8 +369,8 @@ PAGE: Landing Page
     left: 0;
     max-width: 100%;
     height: 100vh;
-    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
-    background-size: cover;
+    /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
+    /*background-size: cover;*/
     color: #fff;
     padding: 0;
     z-index: -2;
@@ -529,8 +532,9 @@ PAGE: About Page
     padding: 0;
     color: #fff;
     z-index: 5;
-    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
-    background-size: cover;
+    /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
+    /*background-size: cover;*/
+    font-family: chalk;
 }
 
 hr {
@@ -542,6 +546,7 @@ hr {
 
 .info_left p {
     font-size: 1.25vw;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .self_image {
@@ -568,7 +573,7 @@ hr {
 }
 
 .info_left, .info_right {
-    height: 100vh;
+    #height: 100vh;
     padding-left: 4vw;
     padding-right: 4vw;
 }
@@ -586,8 +591,8 @@ PAGE: Skills Page
     position: relative;
     #width: 100vw;
     height: 100%;
-    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
-    background-size: cover;
+    /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
+    /*background-size: cover;*/
     color: #fff;
 }
 
@@ -657,8 +662,8 @@ PAGE: Projects Page
 
 .projects_container {
     position: relative;
-    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
-    background-size: cover;
+    /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
+    /*background-size: cover;*/
     color: #fff;
 }
 
