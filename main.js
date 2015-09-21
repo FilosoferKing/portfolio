@@ -115,6 +115,10 @@ $(document).scroll(function () {
         //    }
         //});
     }
+
+    $('.html').on('click', function(){
+        animateWater();
+    })
 });
 
 /***************************************
@@ -181,6 +185,10 @@ function intro_reveal(){
     //    $('.land_connect').animate({'opacity': '1'}, 1000);
     //}, 3000);
 
+}
+
+function animateWater(){
+    $('.skills_row').addClass('htmlAnimate');
 }
 
 
