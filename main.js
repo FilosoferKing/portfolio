@@ -98,6 +98,12 @@ $(document).scroll(function () {
             }
         });
 
+        if (highlighted_section == '.about'){
+            console.log("This is about! Boom");
+            $('.info_left').addClass('info_left_circle');
+            $('.info_right').addClass('info_right_circle');
+        }
+
 
     } else {
         $('.nav_menu').css({"display": "none"});
@@ -171,7 +177,7 @@ function intro_reveal(){
     }, 500);
     setTimeout(function(){
         $('.title h3').css({'opacity': '1', 'transition-duration': '2s'});
-    }, 3000);
+    }, 1000);
     //setTimeout(function(){
     //    $('.land_about').animate({'opacity': '1'}, 1000);
     //}, 1500);

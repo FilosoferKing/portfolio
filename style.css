@@ -9,6 +9,7 @@ GENERAL
 *****************/
 
 body {
+    position: relative;
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
     background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
@@ -558,28 +559,28 @@ PAGE: Landing Page
     height: 100vh;
 }
 
-.landing_title::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    background-color: #B4B4B4;
-    opacity: .25;
+/*.landing_title::before {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*content: '';*/
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    /*padding: 0;*/
+    /*background-color: #B4B4B4;*/
+    /*opacity: .25;*/
 
-    animation-name: nameWrap;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-}
+    /*animation-name: nameWrap;*/
+    /*animation-duration: 1s;*/
+    /*animation-timing-function: ease-out;*/
+    /*animation-delay: 2s;*/
+    /*animation-fill-mode: forwards;*/
+/*}*/
 
-@keyframes nameWrap {
-    0% {top: 0; height: 100vh;}
-    100% {top: 34%; height: 15vh;}
-}
+/*@keyframes nameWrap {*/
+    /*0% {top: 0; height: 100vh;}*/
+    /*100% {top: 34%; height: 15vh;}*/
+/*}*/
 
 .land_text .title h1 {
     position: relative;
@@ -621,7 +622,7 @@ PAGE: About Page
     color: #fff;
     z-index: 0;
     #background: rgba(56, 77, 86, 1);
-    background: #fff;
+    background: rgba(255, 255, 255, .85);
 }
 
 .about_div::before {
@@ -637,10 +638,10 @@ PAGE: About Page
 }
 
 hr {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, .85);
     height: 1px;
-    width: 100%;
-    border: .5px solid #fff;
+    width: 50%;
+    border: .5px solid rgba(255, 255, 255, .85);
 }
 
 .self_image {
@@ -666,18 +667,36 @@ hr {
     transform: translateX(-50%);
 }
 
-.info_left::after, .info_right::after {
+.info_left , .info_right {
+    #overflow: hidden;
+    padding: 3vh 0;
+}
+
+
+.info_left_circle::after, .info_right_circle::after {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
-    height: 100%;
+    transform: translateX(-50%) rotateZ(0deg);
+    width: 0;
+    height: 0;
     content: '';
-    border-radius: 10px;
-    background-color: rgba(56, 77, 86, .9);
+    border-radius: 50%;
+    background-color: rgba(56, 77, 86, 1);
     box-shadow: 0 0 5px 2px rgba(56, 77, 86, 1);
     z-index: -1;
+    transition-duration: 1s;
+
+    animation-name: expandCircle;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expandCircle {
+    0% {top: 50%; left: 50%; width: 0; height: 0; transform: translateX(-50%) rotateZ(-360deg); background-color: rgba(56, 77, 86, 0);}
+    75% {background-color: rgba(56, 77, 86, 0);}
+    100% {top: -5%; left: 50%; width: 95%; height: 120%; transform: translateX(-50%) rotateZ(0); background-color: rgba(56, 77, 86, 1);}
 }
 
 .info_left h1, .info_right h1 {
@@ -699,8 +718,8 @@ hr {
     font-size: 1.25vw;
     position: relative;
     #height: 100vh;
-    padding-left: 4vw;
-    padding-right: 4vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .about_title h1 {
@@ -748,7 +767,7 @@ PAGE: Skills Page
     position: relative;
     font-size: 2vw;
     text-align: center;
-    padding: 5vh 0;
+    padding: 2vh 0;
     font-family: chalk;
 }
 
@@ -775,24 +794,23 @@ PAGE: Skills Page
 
 .skillsChart {
     position: relative;
-    padding: 5vh 0;
+    padding-bottom: 2vh;
+
 }
 
 .skillsChart h2 {
-    width: 100%;
     color: #fff;
-    font-size: 2.5vw;
+    font-size: 1.25vw;
     text-align: center;
     font-family: chalk;
-    margin-left: 5vw;
+
 }
 
 .skillsChart p {
     width: 100%;
     color: #fff;
-    font-size: 1vw;
+    font-size: .75vw;
     text-align: center;
-    margin-left: 5vw;
 }
 
 /*#384D56*/
@@ -800,30 +818,37 @@ PAGE: Skills Page
 /*#FCA311*/
 /*#538459*/
 
-.skillsChart h2:nth-child(4) {
-    color: #384D56;
-}
-
-.skillsChart h2:nth-child(3) {
-    color: #FCA311;
+.skillsChart h2:nth-child(1) {
+    background-color: #384D56;
+    padding: 5px;
 }
 
 .skillsChart h2:nth-child(2) {
-    color: #B4B4B4;
+    background-color: #FCA311;
+    padding: 5px;
 }
 
-.skillsChart h2:nth-child(1) {
-    color: #538459;
+.skillsChart h2:nth-child(3) {
+    background-color: #B4B4B4;
+    padding: 5px;
+
+}
+
+.skillsChart h2:nth-child(4) {
+    background-color: #538459;
+    padding: 5px;
+
 }
 
 .skills_row div {
+    padding-bottom: 5vh;
 }
 
 
 /**TEST**/
 
 .skills_row div img {
-    border-radius: 10px;
+    border-radius: 50%;
     #border: 2px solid #fff;
     box-shadow: 0 0 20px 5px #000 inset;
     width: 100%;
@@ -832,52 +857,52 @@ PAGE: Skills Page
 }
 
 .html img {
-    border: 2px solid #538459;
+    border: 5px solid #538459;
     #background: transparent url('img/logos/green.png') no-repeat 50% 50%;
 }
 
 .css img {
-    border: 2px solid #B4B4B4;
+    border: 5px solid #B4B4B4;
     #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
 }
 
 .js img {
-    border: 2px solid #FCA311;
+    border: 5px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .jquery img {
-    border: 2px solid #FCA311;
+    border: 5px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .bootstrap img {
-    border: 2px solid #FCA311;
+    border: 5px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .php img {
-    border: 2px solid #FCA311;
+    border: 5px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .mysql img {
-    border: 2px solid #FCA311;
+    border: 5px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .git img {
-    border: 2px solid #FCA311;
+    border: 5px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .github img {
-    border: 2px solid #B4B4B4;
+    border: 5px solid #B4B4B4;
     #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
 }
 
 .ps img {
-    border: 2px solid #B4B4B4;
+    border: 5px solid #B4B4B4;
     #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
 }
 
@@ -936,6 +961,7 @@ PAGE: Projects Page
 
 .projects_container {
     position: relative;
+    top: 60vh;
     /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
     /*background-size: cover;*/
     color: #fff;
