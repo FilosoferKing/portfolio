@@ -694,7 +694,7 @@ hr {
 }
 
 @keyframes expandCircle {
-    0% {top: 50%; left: 50%; width: 0; height: 0; transform: translateX(-50%) rotateZ(-360deg); background-color: rgba(56, 77, 86, 0);}
+    0% {top: 50%; left: 50%; width: 0; height: 0; transform: translateX(-50%) rotateZ(-90deg); background-color: rgba(56, 77, 86, 0);}
     75% {background-color: rgba(56, 77, 86, 0);}
     100% {top: -5%; left: 50%; width: 95%; height: 120%; transform: translateX(-50%) rotateZ(0); background-color: rgba(56, 77, 86, 1);}
 }
@@ -854,55 +854,67 @@ PAGE: Skills Page
     width: 100%;
     opacity: 1;
     background-color: rgba(0, 0, 0, .5);
+
+    animation-name: circleSpin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
+@keyframes circleSpin {
+    0% {transform: rotateZ(-360deg);}
+    100% {transform: rotateZ(0); opacity: 1;}
+}
+
+
 .html img {
-    border: 5px solid #538459;
+    border: 10px solid #538459;
+    box-shadow: 0 0 10px 2px #000;
     #background: transparent url('img/logos/green.png') no-repeat 50% 50%;
 }
 
 .css img {
-    border: 5px solid #B4B4B4;
+    border: 10px solid #B4B4B4;
     #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
 }
 
 .js img {
-    border: 5px solid #FCA311;
+    border: 10px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .jquery img {
-    border: 5px solid #FCA311;
+    border: 10px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .bootstrap img {
-    border: 5px solid #FCA311;
+    border: 10px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .php img {
-    border: 5px solid #FCA311;
+    border: 10px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .mysql img {
-    border: 5px solid #FCA311;
+    border: 10px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .git img {
-    border: 5px solid #FCA311;
+    border: 10px solid #FCA311;
     #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
 }
 
 .github img {
-    border: 5px solid #B4B4B4;
+    border: 10px solid #B4B4B4;
     #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
 }
 
 .ps img {
-    border: 5px solid #B4B4B4;
+    border: 10px solid #B4B4B4;
     #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
 }
 

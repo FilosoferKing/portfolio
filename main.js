@@ -102,6 +102,16 @@ $(document).scroll(function () {
             console.log("This is about! Boom");
             $('.info_left').addClass('info_left_circle');
             $('.info_right').addClass('info_right_circle');
+        } else {
+            $('.info_left').removeClass('info_left_circle');
+            $('.info_right').removeClass('info_right_circle');
+        }
+
+        if (highlighted_section == '.skills'){
+            console.log("This is skills!! Boom");
+            $('.skills_row div img').css({'animation-name': 'circleSpin'});
+        } else {
+            $('.skills_row div img').css({'animation-name': 'none'});
         }
 
 
