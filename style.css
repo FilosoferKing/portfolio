@@ -450,43 +450,63 @@ PAGE: Landing Page
 }
 
 .land_about {
-    background: transparent url('img/aboutchalk.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/aboutchalk.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
 }
 
 .land_about:hover {
-    background: transparent url('img/aboutchalkunder.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/aboutchalkunder.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
+}
+
+.land_about:hover p {
+    color: #384D56;
+    font-size: 3.5vw;
 }
 
 .land_skills {
-    background: transparent url('img/skillschalk.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/skillschalk.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
 }
 
 .land_skills:hover {
-    background: transparent url('img/skillschalkunder.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/skillschalkunder.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
+}
+
+.land_skills:hover p {
+    color: #B4B4B4;
+    font-size: 3.5vw;
 }
 
 .land_projects {
-    background: transparent url('img/projectschalk.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/projectschalk.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
 }
 
 .land_projects:hover {
-    background: transparent url('img/projectschalkunder.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/projectschalkunder.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
+}
+
+.land_projects:hover p {
+    color: #FCA311;
+    font-size: 3.5vw;
 }
 
 .land_connect {
-    background: transparent url('img/connectchalk.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/connectchalk.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
 }
 
 .land_connect:hover {
-    background: transparent url('img/connectchalkunder.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/connectchalkunder.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
+}
+
+.land_connect:hover p {
+    color: #538459;
+    font-size: 3.5vw;
 }
 
 .land_about::before,
@@ -561,11 +581,22 @@ PAGE: About Page
     position: relative;
     top: 0;
     left: 0;
-    padding: 10vh 0;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
     #margin: 10vh 0;
     color: #fff;
     z-index: 5;
-    background: rgba(56, 77, 86, .5) url('img/aboutmeimg.png') no-repeat 50% 50%;
+    background: rgba(56, 77, 86, 1);
+}
+
+.about_div::before {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100vw;
+    height: 65vh;
+    content: '';
+    background: transparent url('img/aboutmeimg.png') no-repeat 50% 50%;
     background-size: cover;
 }
 
@@ -574,10 +605,6 @@ hr {
     height: 1px;
     width: 25%;
     border: .5px solid #000;
-}
-
-.info_left p, .info_right p {
-    font-size: 1.25vw;
 }
 
 .self_image {
@@ -604,12 +631,44 @@ hr {
 }
 
 .info_left, .info_right {
+    position: relative;
     #height: 100vh;
     padding-left: 4vw;
     padding-right: 4vw;
+
+}
+
+.info_left::after, .info_right::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    #border-radius: 50%;
+    background-color: rgba(255, 255, 255, .10);
+    z-index: -1;
 }
 
 .info_left h1, .info_right h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2vw;
+}
+
+.info_left h3, .info_right h3 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5vw;
+}
+
+.info_left p, .info_right p {
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.25vw;
+}
+
+.about_title h1 {
     text-align: center;
     font-weight: 300;
     font-size: 2vw;
@@ -621,6 +680,7 @@ PAGE: Skills Page
 *********************************/
 .skills_container {
     position: relative;
+    top: 55vh;
     #width: 100vw;
     height: 100%;
     /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
