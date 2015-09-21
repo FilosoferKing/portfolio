@@ -581,7 +581,7 @@ PAGE: About Page
     position: relative;
     top: 0;
     left: 0;
-    padding-top: 5vh;
+    padding-top: 3vh;
     padding-bottom: 10vh;
     #margin: 10vh 0;
     color: #fff;
@@ -593,7 +593,7 @@ PAGE: About Page
     position: absolute;
     top: 80%;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 65vh;
     content: '';
     background: transparent url('img/aboutmeimg.png') no-repeat 50% 50%;
@@ -641,11 +641,12 @@ hr {
 .info_left::after, .info_right::after {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
     height: 100%;
     content: '';
-    #border-radius: 50%;
+    border-radius: 15px;
     background-color: rgba(255, 255, 255, .10);
     z-index: -1;
 }
@@ -673,6 +674,7 @@ hr {
     font-weight: 300;
     font-size: 2vw;
     font-family: chalk;
+    padding-bottom: 3vh;
 }
 
 /********************************
