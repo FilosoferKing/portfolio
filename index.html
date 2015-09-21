@@ -33,23 +33,29 @@
         <span class="glyphicon glyphicon-menu-hamburger menu_button"></span>
     </div>
 
-    <div class="col-xs-12 nav_menu row">
-        <div class="col-xs-12 land_about menu_click" click=".about">
+
+    <div class="col-xs-12 nav_menu">
+        <div class="hidden-xs col-sm-6 land_text">
+            <div class="col-sm-12 title">
+
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 land_about menu_click" click=".about">
             <a href="#about">
                 <p>ABOUT</p>
             </a>
         </div>
-        <div class="col-xs-12 land_skills menu_click" click=".skills">
+        <div class="col-xs-12 col-sm-6 land_skills menu_click" click=".skills">
             <a href="#skills">
                 <p>SKILLS</p>
             </a>
         </div>
-        <div class="col-xs-12 land_projects menu_click" click=".projects">
+        <div class="col-xs-12 col-sm-6 land_projects menu_click" click=".projects">
             <a href="#projects">
                 <p>PROJECTS</p>
             </a>
         </div>
-        <div class="col-xs-12 land_connect menu_click" click=".connect">
+        <div class="col-xs-12 col-sm-6 land_connect menu_click" click=".connect">
             <a href="#connect">
                 <p>CONNECT</p>
             </a>
@@ -99,7 +105,7 @@
     <a name="landing"></a>
 
     <div class="col-sm-6 land_text">
-        <div class="col-xs-12 title">
+        <div class="col-xs-12 title landing_title">
             <h1>TREVOR LINAN</h1>
 
             <h3>WEB DEVELOPER</h3>
@@ -138,11 +144,15 @@
     <div class="trigger_point" data-section="#about_div" data-indicator=".about"></div>
     <a name="about"></a>
 
-    <div class="col-xs-5 info_left">
+    <div class="col-xs-12 about_title">
+        <h1>THE PATH I WALK</h1>
+    </div>
+    <div class="col-xs-12 col-sm-6 info_left">
         <div class="col-xs-12 the_man">
             <h1>THE MAN</h1>
-            <hr>
         </div>
+        <hr>
+        <!--<h3>My Philosophy &amp; Web Development</h3>-->
         <p>From father to web developer and everything in between, the focus of my motivation
             is the betterment of myself and the betterment of others. The struggle to improve
             and motivate is a never ending progression in which I look forward to everyday. Some
@@ -150,18 +160,23 @@
             it and move forward. This is the thought process I strive for because the reality is
             that in a world were experience and perspective are so vast, keeping my own ambitions
             and expectations at a slightly extraordinary yet obtainable level is the key to getting
-            where I want to be. </p>
+            where I want to be.</p>
     </div>
-    <div class="col-xs-12 col-sm-2 self_image">
-        <div class="col-xs-12 col-sm-12 image_box">
-            <div class="col-xs-12 col-sm-12 image">
-                <img src="img/trevcutabout.jpg" alt="Trevor close up">
-            </div>
+
+    <div class="col-xs-12 col-sm-6 info_right">
+        <div class="col-xs-12 the_man">
+            <h1>THE WEB DEVELOPER</h1>
         </div>
-    </div>
-    <div class="col-xs-5 info_right">
-        <h1>THE WEB DEVELOPER</h1>
         <hr>
+        <!--<h3>My Philosophy &amp; Web Development</h3>-->
+        <p>From father to web developer and everything in between, the focus of my motivation
+            is the betterment of myself and the betterment of others. The struggle to improve
+            and motivate is a never ending progression in which I look forward to everyday. Some
+            days I fall short and some days I triumph, but regardless of the result, I learn from
+            it and move forward. This is the thought process I strive for because the reality is
+            that in a world were experience and perspective are so vast, keeping my own ambitions
+            and expectations at a slightly extraordinary yet obtainable level is the key to getting
+            where I want to be.</p>
     </div>
 
 </div>
@@ -176,70 +191,54 @@
     <div class="col-sm-12 skills_title">
         <h1>SKILLS</h1>
     </div>
-    <div class="col-xs-12 row">
-        <div class="col-xs-12 col-sm-4 skills_chart">
-            <img id="skillsChart" src="img/logos/skillschart.png" alt="skills rating chart">
+    <div class="col-xs-12 skills_div row">
+        <div class="col-xs-12 col-sm-12 skillsChart">
+            <h2 class="col-sm-2 col-sm-offset-2">ROOKIE</h2>
+            <h2 class="col-sm-2">AVERAGE</h2>
+            <h2 class="col-sm-2">PRETTY GOOD</h2>
+            <h2 class="col-sm-2">BOOM</h2>
+            <p class="col-xs-12">*Self-appointed</p>
         </div>
-        <div class="col-xs-12 col-sm-8 skills_row ">
-            <div class="col-xs-6 col-lg-2 col-lg-offset-2 html">
-                <img src="img/logos/html.png" alt="html">
-
+        <div class="col-xs-12 col-sm-12 skills_row">
+            <div class="col-xs-6 col-lg-1 col-lg-offset-1 html ">
+               <img src="img/logos/html.png" alt="html">
                 <h3>HTML5</h3>
-                <hr>
             </div>
-            <div class="col-xs-6 col-lg-2 css">
+            <div class="col-xs-6 col-lg-1 css">
                 <img src="img/logos/css.png" alt="css">
-
                 <h3>CSS3</h3>
-                <hr>
             </div>
-            <div class="col-xs-6 col-lg-2 js">
+            <div class="col-xs-6 col-lg-1 js">
                 <img src="img/logos/js.png" alt="javascript">
-
                 <h3>JavaScript</h3>
-                <hr>
             </div>
-            <div class="col-xs-6 col-lg-2 jquery">
+            <div class="col-xs-6 col-lg-1 jquery">
                 <img src="img/logos/jquery.png" alt="jquery">
-
                 <h3>jQuery</h3>
-                <hr>
             </div>
-            <div class="col-xs-6 col-lg-2 bootstrap">
+            <div class="col-xs-6 col-lg-1 bootstrap">
                 <img src="img/logos/bootstrap.png" alt="bootstrap">
-
                 <h3>Bootstrap</h3>
-                <hr>
             </div>
-            <div class="col-xs-6 col-lg-2 col-lg-offset-2 php">
+            <div class="col-xs-6 col-lg-1 php">
                 <img src="img/logos/php.png" alt="php">
-
                 <h3>PHP</h3>
-                <hr>
             </div>
-            <div class="col-xs-6 col-lg-2 mysql">
+            <div class="col-xs-6 col-lg-1 mysql">
                 <img src="img/logos/mysql.png" alt="mysql">
-
                 <h3>MySQL</h3>
-                <hr>
             </div>
-            <div class="col-xs-6 col-lg-2 git">
+            <div class="col-xs-6 col-lg-1 git">
                 <img src="img/logos/git.png" alt="git">
-
                 <h3>GIT</h3>
-                <hr>
             </div>
-            <div class="col-xs-6 col-lg-2 github">
+            <div class="col-xs-6 col-lg-1 github">
                 <img src="img/logos/github.png" alt="github">
-
                 <h3>Github</h3>
-                <hr>
             </div>
-            <div class="col-xs-6 col-lg-2 photo">
+            <div class="col-xs-6 col-lg-1 ps">
                 <img src="img/logos/ps.png" alt="photoshop">
-
                 <h3>Photoshop</h3>
-                <hr>
             </div>
 
         </div>

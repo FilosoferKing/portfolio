@@ -3,14 +3,18 @@ GENERAL
 *******************************************************************/
 /***Theme Colors***
 #384D56
-#E5E5E5
+#B4B4B4
 #FCA311
 #538459
 *****************/
 
 body {
+    position: relative;
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
+    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 @font-face {
@@ -24,7 +28,9 @@ Navigation menu
 .nav_container {
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 100;
+    max-width: 100%;
     width: 100vw;
     height: 0;
     color: #fff;
@@ -33,7 +39,7 @@ Navigation menu
 }
 
 .menu_button {
-    opacity: 0;
+    opacity: 1;
     position: fixed;
     top: 10px;
     right: 10px;
@@ -66,6 +72,29 @@ Navigation menu
 
  }
 
+.nav_menu .land_text .title h1 {
+    position: relative;
+    left: 50%;
+    top: 40%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-weight: 200;
+    font-size: 4vw;
+    opacity: 0;
+}
+
+.nav_menu .land_text .title h3 {
+    position: relative;
+    left: 50%;
+    top: 40%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    #left: 3vw;
+    font-weight: 200;
+    font-size: 2vw;
+    opacity: 0;
+}
+
 /*.top_nav {*/
     /*position: absolute;*/
     /*left: 0;*/
@@ -73,13 +102,16 @@ Navigation menu
 /*}*/
 
 .nav_menu {
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 10;
     height: 100vh;
     padding: 0;
     background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
     background-size: cover;
 }
+
 
 /*.about, .skills, .projects, .contact {*/
     /*position: relative;*/
@@ -343,11 +375,11 @@ Navigation menu
 }
 
 .trigger_point {
-    height: 0px;
+    height: 0;
     width: 100%;
     #border: 1px solid lime;
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 50%;
     z-index: 5000;
 }
@@ -365,9 +397,10 @@ PAGE: Landing Page
     top: 0;
     left: 0;
     max-width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
-    background-size: cover;
+    /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
+    /*background-size: cover;*/
     color: #fff;
     padding: 0;
     z-index: -2;
@@ -398,11 +431,22 @@ PAGE: Landing Page
 }
 
 .land_menu {
+    opacity: 0;
     position: relative;
-    right: 0;
+    left: 0;
     height: 100vh;
-    padding-right: 0;
-    padding-left: 0;
+    padding: 0;
+}
+
+.land_menu::after {
+    position: absolute;
+    content: '';
+    opacity: .65;
+    top: 0;
+    left: 0;
+    background-color: #B4B4B4;
+    transition-duration: 2s;
+    transition-delay: 1s;
 }
 
 .land_about,
@@ -414,47 +458,67 @@ PAGE: Landing Page
     top: 0;
     left: 0;
     overflow: hidden;
-    opacity: 0;
+    #opacity: 0;
 }
 
 .land_about {
-    background: transparent url('img/aboutchalk.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/aboutchalk.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
 }
 
 .land_about:hover {
-    background: transparent url('img/aboutchalkunder.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/aboutchalkunder.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
+}
+
+.land_about:hover p {
+    color: #384D56;
+    font-size: 3.5vw;
 }
 
 .land_skills {
-    background: transparent url('img/skillschalk.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/skillschalk.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
 }
 
 .land_skills:hover {
-    background: transparent url('img/skillschalkunder.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/skillschalkunder.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
+}
+
+.land_skills:hover p {
+    color: #B4B4B4;
+    font-size: 3.5vw;
 }
 
 .land_projects {
-    background: transparent url('img/projectschalk.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/projectschalk.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
 }
 
 .land_projects:hover {
-    background: transparent url('img/projectschalkunder.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/projectschalkunder.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
+}
+
+.land_projects:hover p {
+    color: #FCA311;
+    font-size: 3.5vw;
 }
 
 .land_connect {
-    background: transparent url('img/connectchalk.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/connectchalk.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
 }
 
 .land_connect:hover {
-    background: transparent url('img/connectchalkunder.png') no-repeat 50% 50%;
-    background-size: contain;
+    /*background: transparent url('img/connectchalkunder.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
+}
+
+.land_connect:hover p {
+    color: #538459;
+    font-size: 3.5vw;
 }
 
 .land_about::before,
@@ -486,17 +550,41 @@ PAGE: Landing Page
 .land_text {
     position: relative;
     height: 100vh;
+    padding: 0;
 }
 
 /***********Title*******************/
 .title {
-    padding: 1%;
+    padding: 0;
     height: 100vh;
 }
 
+/*.landing_title::before {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*content: '';*/
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    /*padding: 0;*/
+    /*background-color: #B4B4B4;*/
+    /*opacity: .25;*/
+
+    /*animation-name: nameWrap;*/
+    /*animation-duration: 1s;*/
+    /*animation-timing-function: ease-out;*/
+    /*animation-delay: 2s;*/
+    /*animation-fill-mode: forwards;*/
+/*}*/
+
+/*@keyframes nameWrap {*/
+    /*0% {top: 0; height: 100vh;}*/
+    /*100% {top: 34%; height: 15vh;}*/
+/*}*/
+
 .land_text .title h1 {
     position: relative;
-    left: 50%;
+    left: 100%;
     top: 40%;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -511,7 +599,7 @@ PAGE: Landing Page
 
 .title h3 {
     position: relative;
-    left: 50%;
+    left: 100%;
     top: 40%;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -526,22 +614,34 @@ PAGE: About Page
 *********************************/
 .about_div {
     position: relative;
-    padding: 0;
+    top: 0;
+    left: 0;
+    padding-top: 3vh;
+    padding-bottom: 10vh;
+    #margin: 10vh 0;
     color: #fff;
-    z-index: 5;
-    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
+    z-index: 0;
+    #background: rgba(56, 77, 86, 1);
+    background: rgba(255, 255, 255, .85);
+}
+
+.about_div::before {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    content: '';
+    background: transparent url('img/aboutmeimg.png') no-repeat 50% 50%;
     background-size: cover;
+    z-index: 0;
 }
 
 hr {
-    background-color: #000;
+    background-color: rgba(255, 255, 255, .85);
     height: 1px;
-    width: 25%;
-    border: .5px solid #000;
-}
-
-.info_left p {
-    font-size: 1.25vw;
+    width: 50%;
+    border: .5px solid rgba(255, 255, 255, .85);
 }
 
 .self_image {
@@ -567,27 +667,82 @@ hr {
     transform: translateX(-50%);
 }
 
-.info_left, .info_right {
-    height: 100vh;
-    padding-left: 4vw;
-    padding-right: 4vw;
+.info_left , .info_right {
+    #overflow: hidden;
+    padding: 3vh 0;
+}
+
+
+.info_left_circle::after, .info_right_circle::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(0deg);
+    width: 0;
+    height: 0;
+    content: '';
+    border-radius: 50%;
+    background-color: rgba(56, 77, 86, 1);
+    box-shadow: 0 0 5px 2px rgba(56, 77, 86, 1);
+    z-index: -1;
+    transition-duration: 1s;
+
+    animation-name: expandCircle;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expandCircle {
+    0% {top: 50%; left: 50%; width: 0; height: 0; transform: translateX(-50%) rotateZ(-90deg); background-color: rgba(56, 77, 86, 0);}
+    75% {background-color: rgba(56, 77, 86, 0);}
+    100% {top: -5%; left: 50%; width: 95%; height: 120%; transform: translateX(-50%) rotateZ(0); background-color: rgba(56, 77, 86, 1);}
 }
 
 .info_left h1, .info_right h1 {
     text-align: center;
     font-weight: 300;
-    font-size: 2vw;
+    font-size: 1.75vw;
+    text-shadow: 0 1px 2px #000;
 }
+
+.info_left h3, .info_right h3 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5vw;
+}
+
+.info_left p, .info_right p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.25vw;
+    position: relative;
+    #height: 100vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.about_title h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2vw;
+    font-family: chalk;
+    padding-bottom: 3vh;
+    color: rgba(56, 77, 86, 1);
+}
+
 
 /********************************
 PAGE: Skills Page
 *********************************/
 .skills_container {
     position: relative;
+    top: 60vh;
     #width: 100vw;
     height: 100%;
-    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
-    background-size: cover;
+    /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
+    /*background-size: cover;*/
+    background-color: rgba(180, 180, 180, .75);
     color: #fff;
 }
 
@@ -609,11 +764,11 @@ PAGE: Skills Page
 }
 
 .skills_title h1 {
-    position: absolute;
-    font-weight: 700;
+    position: relative;
     font-size: 2vw;
-    margin: 5vh 0 0 15vw;
-    left: 15%;
+    text-align: center;
+    padding: 2vh 0;
+    font-family: chalk;
 }
 
 .skills_row h3 {
@@ -637,18 +792,179 @@ PAGE: Skills Page
     height: auto;
 }
 
-#skillsChart {
-    position: absolute;
-    #width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    height: auto;
+.skillsChart {
+    position: relative;
+    padding-bottom: 2vh;
+
+}
+
+.skillsChart h2 {
+    color: #fff;
+    font-size: 1.25vw;
+    text-align: center;
+    font-family: chalk;
+
+}
+
+.skillsChart p {
+    width: 100%;
+    color: #fff;
+    font-size: .75vw;
+    text-align: center;
+}
+
+/*#384D56*/
+/*#B4B4B4*/
+/*#FCA311*/
+/*#538459*/
+
+.skillsChart h2:nth-child(1) {
+    background-color: #384D56;
+    padding: 5px;
+}
+
+.skillsChart h2:nth-child(2) {
+    background-color: #FCA311;
+    padding: 5px;
+}
+
+.skillsChart h2:nth-child(3) {
+    background-color: #B4B4B4;
+    padding: 5px;
+
+}
+
+.skillsChart h2:nth-child(4) {
+    background-color: #538459;
+    padding: 5px;
+
 }
 
 .skills_row div {
-
     padding-bottom: 5vh;
+}
+
+
+/**TEST**/
+
+.skills_row div img {
+    border-radius: 50%;
+    #border: 2px solid #fff;
+    box-shadow: 0 0 20px 5px #000 inset;
+    width: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .5);
+
+    animation-name: circleSpin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes circleSpin {
+    0% {transform: rotateZ(-360deg);}
+    100% {transform: rotateZ(0); opacity: 1;}
+}
+
+
+.html img {
+    border: 10px solid #538459;
+    box-shadow: 0 0 10px 2px #000;
+    #background: transparent url('img/logos/green.png') no-repeat 50% 50%;
+}
+
+.css img {
+    border: 10px solid #B4B4B4;
+    #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
+}
+
+.js img {
+    border: 10px solid #FCA311;
+    #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
+}
+
+.jquery img {
+    border: 10px solid #FCA311;
+    #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
+}
+
+.bootstrap img {
+    border: 10px solid #FCA311;
+    #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
+}
+
+.php img {
+    border: 10px solid #FCA311;
+    #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
+}
+
+.mysql img {
+    border: 10px solid #FCA311;
+    #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
+}
+
+.git img {
+    border: 10px solid #FCA311;
+    #background: transparent url('img/logos/yellow.png') no-repeat 50% 50%;
+}
+
+.github img {
+    border: 10px solid #B4B4B4;
+    #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
+}
+
+.ps img {
+    border: 10px solid #B4B4B4;
+    #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
+}
+
+.htmlAnimate {
+    overflow: hidden;
+    #padding-top: 5%;
+    #border-radius: 50%;
+    border-radius: 50%;
+}
+
+.htmlAnimate::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: #384D56;
+    border-radius: 50%;
+    #background: transparent url('img/logos/water.png') no-repeat 50% 50%;
+    #background-size: cover;
+    z-index: -1;
+    opacity: .5;
+
+    -webkit-animation-name: waterRise;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    animation-name: waterRise;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+
+}
+
+@-webkit-keyframes waterRise {
+    0% {top: 100%; transform: translateX(-50%) rotateZ(0); width: 120%;}
+    25% {transform: rotateZ(-5deg); width: 120%;}
+    50% {transform: rotateZ(5deg); width: 120%;}
+    75% {transform: rotateZ(-5deg); width: 120%;}
+    100% {top: 0; transform: rotateZ(0); width: 100%;}
+}
+
+@keyframes waterRise {
+    0% {top: 100%; transform:translateX(-50%)  rotateZ(0); width: 120%;}
+    25% {transform: translateX(-50%) rotateZ(-1deg) skewX(5deg); width: 120%;}
+    50% {transform: translateX(-50%) rotateZ(1deg) skewX(-5deg); width: 120%;}
+    75% {transform: translateX(-50%) rotateZ(-1deg) skewX(5deg); width: 120%;}
+    100% {top: 0; transform: translateX(-50%)  rotateZ(0); width: 100%;}
 }
 
 /********************************
@@ -657,8 +973,9 @@ PAGE: Projects Page
 
 .projects_container {
     position: relative;
-    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
-    background-size: cover;
+    top: 60vh;
+    /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
+    /*background-size: cover;*/
     color: #fff;
 }
 

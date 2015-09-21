@@ -87,6 +87,74 @@
         font-size: 4vw;
     }
 
+    .about_div::before {
+        top: 85%;
+    }
+
+    .about_title h1 {
+        font-size: 1.75em;
+        width: 100%;
+    }
+
+    .info_left h1, .info_right h1 {
+        font-size: 1.5em;
+    }
+
+    .info_left p, .info_right p {
+        font-size: 1.25em;
+    }
+
+    .info_left_circle::after, .info_right_circle::after {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) rotateZ(0deg);
+        width: 0;
+        height: 0;
+        content: '';
+        border-radius: 5px;
+        background-color: rgba(56, 77, 86, 1);
+        box-shadow: 0 0 5px 2px rgba(56, 77, 86, 1);
+        z-index: -1;
+        transition-duration: 1s;
+
+        animation-name: expandCircle;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes expandCircle {
+        0% {top: 50%; left: 50%; width: 0; height: 0; transform: translateX(-50%) rotateZ(-360deg); background-color: rgba(56, 77, 86, 0);}
+        75% {background-color: rgba(56, 77, 86, 0);}
+        100% {top: 0%; left: 50%; width: 95%; height: 100%; transform: translateX(-50%) rotateZ(0); background-color: rgba(56, 77, 86, 1);}
+    }
+
+    /************************************
+    Skills Me
+    ************************************/
+    .skills_container .skills_div {
+        padding: 0;
+        margin: 0;
+    }
+
+    .skills_row {
+        padding: 0;
+    }
+
+    .skillsChart h2 {
+        font-size: 1.5em;
+    }
+
+    .skills_title h1 {
+        font-size: 1.75em;
+    }
+
+    .skillsChart p {
+        font-size: 1em;
+    }
+
+
     /************************************
     Project Page
     ************************************/
