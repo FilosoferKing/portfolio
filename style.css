@@ -437,6 +437,17 @@ PAGE: Landing Page
     padding: 0;
 }
 
+.land_menu::after {
+    position: absolute;
+    content: '';
+    opacity: .65;
+    top: 0;
+    left: 0;
+    background-color: #B4B4B4;
+    transition-duration: 2s;
+    transition-delay: 1s;
+}
+
 .land_about,
 .land_skills,
 .land_projects,
@@ -547,9 +558,32 @@ PAGE: Landing Page
     height: 100vh;
 }
 
+.landing_title::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    background-color: #B4B4B4;
+    opacity: .25;
+
+    animation-name: nameWrap;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nameWrap {
+    0% {top: 0; height: 100vh;}
+    100% {top: 34%; height: 15vh;}
+}
+
 .land_text .title h1 {
     position: relative;
-    left: 150%;
+    left: 100%;
     top: 40%;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -564,7 +598,7 @@ PAGE: Landing Page
 
 .title h3 {
     position: relative;
-    left: 150%;
+    left: 100%;
     top: 40%;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -585,26 +619,28 @@ PAGE: About Page
     padding-bottom: 10vh;
     #margin: 10vh 0;
     color: #fff;
-    z-index: 5;
-    background: rgba(56, 77, 86, 1);
+    z-index: 0;
+    #background: rgba(56, 77, 86, 1);
+    background: #fff;
 }
 
 .about_div::before {
     position: absolute;
-    top: 80%;
+    top: 55%;
     left: 0;
     width: 100%;
-    height: 65vh;
+    height: 90vh;
     content: '';
     background: transparent url('img/aboutmeimg.png') no-repeat 50% 50%;
     background-size: cover;
+    z-index: 0;
 }
 
 hr {
-    background-color: #000;
+    background-color: #fff;
     height: 1px;
-    width: 25%;
-    border: .5px solid #000;
+    width: 100%;
+    border: .5px solid #fff;
 }
 
 .self_image {
@@ -630,14 +666,6 @@ hr {
     transform: translateX(-50%);
 }
 
-.info_left, .info_right {
-    position: relative;
-    #height: 100vh;
-    padding-left: 4vw;
-    padding-right: 4vw;
-
-}
-
 .info_left::after, .info_right::after {
     position: absolute;
     top: 0;
@@ -646,15 +674,17 @@ hr {
     width: 95%;
     height: 100%;
     content: '';
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, .10);
+    border-radius: 10px;
+    background-color: rgba(56, 77, 86, .9);
+    box-shadow: 0 0 5px 2px rgba(56, 77, 86, 1);
     z-index: -1;
 }
 
 .info_left h1, .info_right h1 {
     text-align: center;
     font-weight: 300;
-    font-size: 2vw;
+    font-size: 1.75vw;
+    text-shadow: 0 1px 2px #000;
 }
 
 .info_left h3, .info_right h3 {
@@ -665,8 +695,12 @@ hr {
 
 .info_left p, .info_right p {
     text-align: center;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 1.25vw;
+    position: relative;
+    #height: 100vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
 }
 
 .about_title h1 {
@@ -675,14 +709,16 @@ hr {
     font-size: 2vw;
     font-family: chalk;
     padding-bottom: 3vh;
+    color: rgba(56, 77, 86, 1);
 }
+
 
 /********************************
 PAGE: Skills Page
 *********************************/
 .skills_container {
     position: relative;
-    top: 55vh;
+    top: 60vh;
     #width: 100vw;
     height: 100%;
     /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/

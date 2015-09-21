@@ -170,8 +170,8 @@ function intro_reveal(){
         $('.title h1').css({'opacity': '1', 'transition-duration': '1s'});
     }, 500);
     setTimeout(function(){
-        $('.title h3').css({'opacity': '1', 'transition-duration': '1s'});
-    }, 1000);
+        $('.title h3').css({'opacity': '1', 'transition-duration': '2s'});
+    }, 3000);
     //setTimeout(function(){
     //    $('.land_about').animate({'opacity': '1'}, 1000);
     //}, 1500);
