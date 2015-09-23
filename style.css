@@ -979,7 +979,7 @@ PAGE: Projects Page
     /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
     /*background-size: cover;*/
     color: #fff;
-    background-color: rgba(83, 132, 89, .75);
+    #background-color: rgba(83, 132, 89, .75);
 }
 
 .projectImagesContainer {
@@ -1003,6 +1003,7 @@ PAGE: Projects Page
     text-align: center;
     padding: 4vh 0;
     font-family: chalk;
+    color: rgba(83, 132, 89, 1);
 }
 
 .imageDiv {
@@ -1017,7 +1018,7 @@ PAGE: Projects Page
     #border: 1px solid #000;
 }
 
-.imageDiv h1 {
+.imageDiv h1:nth-child(1) {
     position: absolute;
     top: 45%;
     text-align: center;
@@ -1028,108 +1029,157 @@ PAGE: Projects Page
     color: #fff;
 }
 
-/*.imageDiv:hover {*/
-    /*position: relative;*/
-    /*border-radius: 50%;*/
+.imageDiv:hover h1:nth-child(1) {
+    opacity: 0;
+    transition-duration: .25s;
+}
+
+.imageDiv h1:nth-child(2) {
+    position: absolute;
+    top: 80%;
+    text-align: center;
+    width: 100%;
+    font-size: 2vw;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0;
+    text-shadow: 1px 2px #000;
+}
+
+.imageDiv:hover h1:nth-child(2) {
+    opacity: 1;
+    transition-duration: .25s;
+}
+
+
+
+/*.imageDiv::after {*/
+    /*position: absolute;*/
+    /*top: -140%;*/
+    /*left: 110%;*/
+    /*width: 200%;*/
+    /*height: 200%;*/
+    /*content: '';*/
+    /*background-color: rgba(255, 255, 255, .9);*/
+    /*transform: rotateZ(-45deg);*/
+/*}*/
+
+/*.imageDiv:hover::after {*/
+    /*position: absolute;*/
+    /*top: 140%;*/
+    /*left: -140%;*/
+    /*width: 100%;*/
+    /*height: 200%;*/
+    /*content: '';*/
+    /*background-color: rgba(255, 255, 255, .5);*/
+    /*transform: rotateZ(-45deg);*/
+    /*transition-duration: 1.5s;*/
+/*}*/
+
+/*#marounrecords::before {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*content: '';*/
+    /*background: rgba(56, 77, 86, .9) url('img/projects/marounrecordsdisplayimg.png') no-repeat 50% 50%;*/
+    /*background-size: contain;*/
+/*}*/
+
+/*#marounrecords:hover::before {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*content: '';*/
+    /*background: none;*/
     /*transition-duration: 1s;*/
-
-    /*animation-name: expandProjectImage;*/
-    /*animation-duration: 1s;*/
-    /*animation-timing-function: linear;*/
-    /*animation-fill-mode: forwards;*/
 /*}*/
 
-/*@keyframes expandProjectImage {*/
-    /*0%{transform: skew(-1deg, -1deg);}*/
-    /*50%{transform: skew(1deg, 1deg);}*/
-    /*100%{transform: skew(0, 0);}*/
-/*}*/
 
-.imageDiv::after {
-    position: absolute;
-    top: -140%;
-    left: 110%;
-    width: 200%;
-    height: 200%;
-    content: '';
-    background-color: rgba(255, 255, 255, .9);
-    transform: rotateZ(-45deg);
-}
 
-.imageDiv:hover::after {
-    position: absolute;
-    top: 140%;
-    left: -140%;
-    width: 100%;
-    height: 200%;
-    content: '';
-    background-color: rgba(255, 255, 255, .5);
-    transform: rotateZ(-45deg);
-    transition-duration: 1.5s;
-}
-
-.imageDiv::before {
+#marounrecords::before {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     content: '';
-    background-color: rgba(56, 77, 86, .5);
+    background: transparent url('img/projects/mrchalkbw.png') no-repeat 50% 50%;
+    background-size: contain;
+    opacity: .25;
 }
 
-.imageDiv:hover::before {
+#marounrecords:hover::before {
+    background: transparent url('img/projects/mrchalk.png') no-repeat 50% 50%;
+    background-size: contain;
+    transition-duration: .5s;
+    opacity: 1;
+}
+
+
+#memorymatch::before {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     content: '';
-    background-color: rgba(56, 77, 86, 0);
-    transition-duration: 1s;
+    background: transparent url('img/projects/mmchalkbw.png') no-repeat 50% 50%;
+    background-size: contain;
+    opacity: .25;
+}
+
+#memorymatch:hover::before {
+    background: transparent url('img/projects/mmchalk.png') no-repeat 50% 50%;
+    background-size: contain;
+    transition-duration: .5s;
+    opacity: 1;
 }
 
 
-
-#marounrecords {
-    background: transparent url('img/projects/marounrecordsbw.png') no-repeat 50% 50%;
-    background-size: cover;
+#calculator::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: transparent url('img/projects/calcchalkbw.png') no-repeat 50% 50%;
+    background-size: contain;
+    opacity: .25;
 }
 
-#memorymatch {
-    background: transparent url('img/projects/memorymatchbw.png') no-repeat 50% 50%;
-    background-size: cover;
+#calculator:hover::before {
+    background: transparent url('img/projects/calcchalk.png') no-repeat 50% 50%;
+    background-size: contain;
+    transition-duration: .5s;
+    opacity: 1;
 }
 
-#calculator {
-    background: transparent url('img/projects/calculatorbw.png') no-repeat 50% 50%;
-    background-size: cover;
+
+#sgt::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: transparent url('img/projects/sgtchalkbw.png') no-repeat 50% 50%;
+    background-size: contain;
+    opacity: .25;
 }
 
-#sgt {
-    background: transparent url('img/projects/sgtbw.png') no-repeat 50% 50%;
-    background-size: cover;
+#sgt:hover::before {
+    background: transparent url('img/projects/sgtchalk.png') no-repeat 50% 50%;
+    background-size: contain;
+    transition-duration: .5s;
+    opacity: 1;
 }
 
-#twailerz {
-    background: transparent url('img/projects/twailerzbw.png') no-repeat 50% 50%;
-    background-size: cover;
-}
 
-#tictactoe {
-    background: transparent url('img/projects/tic-tact-toebw.png') no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#taskit {
-    background: transparent url('img/projects/taskitbw.png') no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#final {
-    background: transparent url('img/projects/taskitdisplayimg.png') no-repeat 50% 50%;
-    background-size: cover;
-}
 
 .projects {
 }
