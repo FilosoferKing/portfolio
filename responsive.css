@@ -159,7 +159,13 @@
     Project Page
     ************************************/
 
+    .imageDiv {
+        padding-top: 100%;
+    }
 
+    .project_title h1 {
+        font-size: 1.75em;
+    }
 
 }
 
