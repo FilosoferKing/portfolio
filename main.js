@@ -5,6 +5,8 @@ $(document).ready(function () {
     $('.nav_menu').hide();
 
 
+
+
     setTimeout(function () {
         $('.title h2').fadeIn(1000);
     }, 1750);
@@ -102,9 +104,11 @@ $(document).scroll(function () {
             console.log("This is about! Boom");
             $('.info_left').addClass('info_left_circle');
             $('.info_right').addClass('info_right_circle');
+            $('.info_left h1, .info_left p, .info_right h1, .info_right p, hr').css({'opacity': '1', 'transition-delay': '1s', 'transition-duration': '.5s'});
         } else {
             $('.info_left').removeClass('info_left_circle');
             $('.info_right').removeClass('info_right_circle');
+            $('.info_left h1, .info_left p, .info_right h1, .info_right p, hr').css({'opacity': '0', 'transition-delay': '0s', 'transition-duration': '0s'});
         }
 
         if (highlighted_section == '.skills'){

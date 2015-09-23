@@ -642,6 +642,7 @@ hr {
     height: 1px;
     width: 50%;
     border: .5px solid rgba(255, 255, 255, .85);
+    opacity: 0;
 }
 
 .self_image {
@@ -704,6 +705,7 @@ hr {
     font-weight: 300;
     font-size: 1.75vw;
     text-shadow: 0 1px 2px #000;
+    opacity: 0;
 }
 
 .info_left h3, .info_right h3 {
@@ -720,6 +722,7 @@ hr {
     #height: 100vh;
     padding-left: 5vw;
     padding-right: 5vw;
+    opacity: 0;
 }
 
 .about_title h1 {
@@ -1025,7 +1028,7 @@ PAGE: Projects Page
     width: 100%;
     transform: translateY(-50%);
     font-family: chalk;
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: rgba(252, 163, 17, 1);
 }
 
@@ -1036,7 +1039,7 @@ PAGE: Projects Page
 
 .imageDiv button {
     position: absolute;
-    top: 80%;
+    top: 45%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.5vw;
