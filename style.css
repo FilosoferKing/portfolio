@@ -1003,7 +1003,7 @@ PAGE: Projects Page
     text-align: center;
     padding: 4vh 0;
     font-family: chalk;
-    color: rgba(83, 132, 89, 1);
+    color: fff;
 }
 
 .imageDiv {
@@ -1026,7 +1026,7 @@ PAGE: Projects Page
     transform: translateY(-50%);
     font-family: chalk;
     font-size: 2vw;
-    color: #fff;
+    color: rgba(252, 163, 17, 1);
 }
 
 .imageDiv:hover h1:nth-child(1) {
@@ -1034,19 +1034,22 @@ PAGE: Projects Page
     transition-duration: .25s;
 }
 
-.imageDiv h1:nth-child(2) {
+.imageDiv button {
     position: absolute;
     top: 80%;
-    text-align: center;
-    width: 100%;
-    font-size: 2vw;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5vw;
     font-weight: 300;
     color: #fff;
     opacity: 0;
     text-shadow: 1px 2px #000;
+    border: none;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 10px;
 }
 
-.imageDiv:hover h1:nth-child(2) {
+.imageDiv:hover button {
     opacity: 1;
     transition-duration: .25s;
 }
