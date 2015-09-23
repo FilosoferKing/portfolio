@@ -974,220 +974,166 @@ PAGE: Projects Page
 .projects_container {
     position: relative;
     top: 60vh;
+    padding-left: 0;
+    padding-right: 0;
     /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/
     /*background-size: cover;*/
     color: #fff;
-}
-
-.project_title h1 {
-    text-align: right;
-    font-weight: 700;
-    font-size: 2vw;
-    margin: 5vh 20vw 5vh 0;
+    background-color: rgba(83, 132, 89, .75);
 }
 
 .projectImagesContainer {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.projects {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.project_title {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.project_title h1 {
     position: relative;
-}
-
-.projectImagesContainer h1 {
-    position: absolute;
-    #width: 100%;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
     font-size: 2vw;
-    font-weight: 300;
-    color: #000;
-    opacity: 0;
-}
-
-.imageDiv hr {
-    position: absolute;
-    top: 13%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #FFC719;
-    height: 3px;
-    width: 25%;
-    border: .5px solid #FFC719;
-    opacity: 0;
-}
-
-.projectImagesContainer p {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
-    font-size: 2em;
-    font-weight: 300;
-    color: #000;
-    z-index: 100;
+    padding: 4vh 0;
+    font-family: chalk;
 }
 
 .imageDiv {
     position: relative;
-    #width: 22.5%;
-    padding-top: 22.5%;
-    z-index: 5;
-    border: 2px solid #FFC719;
-    #margin: 1.25%;
+    padding-top: 25%;
+    padding-left: 0;
+    padding-right: 0;
+    opacity: 1;
+    background-position: 60% 50%;
     overflow: hidden;
-    border-radius: 50%;
+    #box-shadow: 0 0 20px 10px #000 inset;
+    #border: 1px solid #000;
 }
 
-.projects_top {
-    #background-color: #FFC719;
-    #padding: 0;
-}
-
-.projects_bottom {
-    #background-color: #FFC719;
-    #padding: 0;
-}
-
-#mrlogo, #mwlogo, #calclogo, #sgtlogo, #twlogo, #tttlogo, #tasklogo {
+.imageDiv h1 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: auto;
+    top: 45%;
+    text-align: center;
+    width: 100%;
+    transform: translateY(-50%);
+    font-family: chalk;
+    font-size: 2vw;
+    color: #fff;
 }
 
-#marounrecords {
-    background: transparent url("img/projects/marounrecords.png") no-repeat 50% 50%;
-    background-size: contain;
+/*.imageDiv:hover {*/
+    /*position: relative;*/
+    /*border-radius: 50%;*/
+    /*transition-duration: 1s;*/
+
+    /*animation-name: expandProjectImage;*/
+    /*animation-duration: 1s;*/
+    /*animation-timing-function: linear;*/
+    /*animation-fill-mode: forwards;*/
+/*}*/
+
+/*@keyframes expandProjectImage {*/
+    /*0%{transform: skew(-1deg, -1deg);}*/
+    /*50%{transform: skew(1deg, 1deg);}*/
+    /*100%{transform: skew(0, 0);}*/
+/*}*/
+
+.imageDiv::after {
+    position: absolute;
+    top: -140%;
+    left: 110%;
+    width: 200%;
+    height: 200%;
+    content: '';
+    background-color: rgba(255, 255, 255, .9);
+    transform: rotateZ(-45deg);
 }
 
-#memorymatch {
-    background: #fff url("img/projects/memorymatch.png") no-repeat 50% 50%;
-    background-size: contain;
-}
-
-#calculator {
-    background: #fff url("img/projects/calculator.png") no-repeat 50% 50%;
-    background-size: contain;
-}
-
-#sgt {
-    background: #fff url("img/projects/sgt.png") no-repeat 50% 50%;
-    background-size: contain;
-}
-
-#twailerz {
-    background: #fff url("img/projects/twailerz.png") no-repeat 50% 50%;
-    background-size: contain;
-}
-
-#tictactoe {
-    background: #fff url("img/projects/tic-tac-toe.png") no-repeat 50% 50%;
-    background-size: contain;
-}
-
-#taskit {
-    background: #fff url("img/projects/skilloutline.png") no-repeat 50% 50%;
-    background-size: contain;
-}
-
-#final {
-    background: #fff url("img/projectoutline.png") no-repeat 50% 50%;
-    background-size: contain;
+.imageDiv:hover::after {
+    position: absolute;
+    top: 140%;
+    left: -140%;
+    width: 100%;
+    height: 200%;
+    content: '';
+    background-color: rgba(255, 255, 255, .5);
+    transform: rotateZ(-45deg);
+    transition-duration: 1.5s;
 }
 
 .imageDiv::before {
     position: absolute;
     top: 0;
     left: 0;
-    content: '';
-    color: #000;
-    text-align: center;
-    font-size: 2vw;
-    font-weight: 200;
     width: 100%;
     height: 100%;
-    background-color: #fff;
-    opacity: 1;
-    #z-index: 0;
+    content: '';
+    background-color: rgba(56, 77, 86, .5);
 }
 
 .imageDiv:hover::before {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     content: '';
-    color: #000;
-    text-align: center;
-    font-size: 2vw;
-    font-weight: 200;
-    width: 100%;
-    height: 25%;
-    background-color: #fff;
-    opacity: 1;
-    z-index: 0;
-    transition-duration: .5s;
-}
-
-.imageDiv::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    font-size: 1vw;
-    font-weight: 300;
-    color: #000;
-    content: '';
-    width: 100%;
-    height: 0;
-    background-color: #fff;
-    opacity: 1;
-}
-
-.imageDiv:hover::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    font-size: 1vw;
-    font-weight: 500;
-    color: #000;
-    content: attr(built);
-    width: 100%;
-    height: 35%;
-    background-color: #fff;
-    opacity: 1;
-    transition-duration: .5s;
-    padding-top: 30px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-.imageDiv:hover .projectsDisplayImage {
-    display: none;
+    background-color: rgba(56, 77, 86, 0);
     transition-duration: 1s;
 }
 
-.imageDiv:hover h1, .imageDiv:hover hr {
-    opacity: 1;
-    transition-duration: 1s;
+
+
+#marounrecords {
+    background: transparent url('img/projects/marounrecordsbw.png') no-repeat 50% 50%;
+    background-size: cover;
 }
 
-.imageDiv:hover {
-    border-radius: 0;
-    transition-duration: .5s;
+#memorymatch {
+    background: transparent url('img/projects/memorymatchbw.png') no-repeat 50% 50%;
+    background-size: cover;
 }
 
-.projectImagesContainer img {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: auto;
+#calculator {
+    background: transparent url('img/projects/calculatorbw.png') no-repeat 50% 50%;
+    background-size: cover;
 }
+
+#sgt {
+    background: transparent url('img/projects/sgtbw.png') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+#twailerz {
+    background: transparent url('img/projects/twailerzbw.png') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+#tictactoe {
+    background: transparent url('img/projects/tic-tact-toebw.png') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+#taskit {
+    background: transparent url('img/projects/taskitbw.png') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+#final {
+    background: transparent url('img/projects/taskitdisplayimg.png') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.projects {
+}
+
 
 
 

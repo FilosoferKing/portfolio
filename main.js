@@ -32,7 +32,7 @@ $(document).ready(function () {
     $('.imageDiv').on('mouseover', function () {
         var projectId = $(this).attr('id');
         console.log('Project id: ', projectId);
-        changeProjectDescription(projectId);
+        //changeProjectDescription(projectId);
     });
 
     intro_reveal();
@@ -132,9 +132,6 @@ $(document).scroll(function () {
         //});
     }
 
-    $('.html').on('click', function(){
-        animateWater();
-    })
 });
 
 /***************************************
@@ -188,24 +185,8 @@ function intro_reveal(){
     setTimeout(function(){
         $('.title h3').css({'opacity': '1', 'transition-duration': '2s'});
     }, 1000);
-    //setTimeout(function(){
-    //    $('.land_about').animate({'opacity': '1'}, 1000);
-    //}, 1500);
-    //setTimeout(function(){
-    //    $('.land_skills').animate({'opacity': '1'}, 1000);
-    //}, 2000);
-    //setTimeout(function(){
-    //    $('.land_projects').animate({'opacity': '1'}, 1000);
-    //}, 2500);
-    //setTimeout(function(){
-    //    $('.land_connect').animate({'opacity': '1'}, 1000);
-    //}, 3000);
-
 }
 
-function animateWater(){
-    $('.skills_row').addClass('htmlAnimate');
-}
 
 
 
