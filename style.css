@@ -1006,7 +1006,7 @@ PAGE: Projects Page
     text-align: center;
     padding: 4vh 0;
     font-family: chalk;
-    color: fff;
+    color: rgba(252, 163, 17, 1);
 }
 
 .imageDiv {
@@ -1027,9 +1027,10 @@ PAGE: Projects Page
     text-align: center;
     width: 100%;
     transform: translateY(-50%);
-    font-family: chalk;
-    font-size: 1.5vw;
-    color: rgba(252, 163, 17, 1);
+    #font-family: chalk;
+    font-size: 1.75vw;
+    #color: rgba(252, 163, 17, 1);
+    color: #fff;
 }
 
 .imageDiv:hover h1:nth-child(1) {
