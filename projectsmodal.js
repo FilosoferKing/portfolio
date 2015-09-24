@@ -2,7 +2,7 @@ var title; //title of project
 var desc; //description of project
 var imgsrc; //src for project image
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     /*Handler for clicking on a specific project*/
     $('.imageDiv').on('click', function () {
@@ -12,7 +12,7 @@ $(document).ready(function(){
     });
 
     /*Handler for exiting project modal*/
-    $('body').on('click', '.exitModal', function(){
+    $('body').on('click', '.exitModal', function () {
         $('.modalContainer').remove();
         $('.menu_button').show(); //shows menu button when modal is exited
     });
@@ -75,7 +75,7 @@ function buildModal(title, desc, imgsrc) {
  * PURPOSE:  loads project information into buildModal() depending on what project is clicked
  * FUNCTIONS USED: buildModal()
  */
-function loadProjectInfo(id){
+function loadProjectInfo(id) {
     switch (id) {
         case 'marounrecords':
             title = 'Maroun Records';

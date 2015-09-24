@@ -1,35 +1,6 @@
 $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
-
-    $('.nav_menu').hide();
-
-
-
-
-    setTimeout(function () {
-        $('.title h2').fadeIn(1000);
-    }, 1750);
-    setTimeout(function () {
-        $('.about_click, .skills_click, .projects_click, .contact_click').css({'opacity': '1'});
-    }, 4250);
-    setTimeout(function () {
-        //$('.title h2').fadeOut(500);
-    }, 2750);
-    setTimeout(function () {
-        $('.left_nav').css({'transform': 'scaleX(1)'});
-        $('.right_nav').css({'transform': 'scaleX(1)'});
-    }, 3250);
-
-    //$('.nav_container').fadeIn();
-    //$('.nav_container').css({"background-color": "rgba(0, 0, 0, .1)", "top": "0", "height": "8vh"});
-
-
-    /*Handler for correcting toggle flag when a nave menu option is clicked.*/
-    $('.menu_click').on('click', function () {
-        menu_toggle = false;
-    });
-
     intro_reveal();
 
     /***************************************
@@ -51,6 +22,12 @@ $(document).ready(function () {
             menu_toggle = false;
         }
     });
+
+    /*Handler for correcting toggle flag when a nav menu option is clicked.*/
+    $('.menu_click').on('click', function () {
+        menu_toggle = false;
+    });
+    
 });
 /***************************************
  * NAME: Scroll handler
@@ -88,23 +65,31 @@ $(document).scroll(function () {
         /*If menu button clicked is same as current page, hide navigation menu*/
         $('.menu_click').on('click', function () {
             console.log(highlighted_section);
-            if (highlighted_section == $(this).attr('click')){
+            if (highlighted_section == $(this).attr('click')) {
                 $('.nav_menu').css({"display": "none"});
             }
         });
 
-        if (highlighted_section == '.about'){
+        if (highlighted_section == '.about') {
             console.log("This is about! Boom");
             $('.info_left').addClass('info_left_circle');
             $('.info_right').addClass('info_right_circle');
-            $('.info_left h1, .info_left p, .info_right h1, .info_right p, hr').css({'opacity': '1', 'transition-delay': '1s', 'transition-duration': '.5s'});
+            $('.info_left h1, .info_left p, .info_right h1, .info_right p, hr').css({
+                'opacity': '1',
+                'transition-delay': '1s',
+                'transition-duration': '.5s'
+            });
         } else {
             $('.info_left').removeClass('info_left_circle');
             $('.info_right').removeClass('info_right_circle');
-            $('.info_left h1, .info_left p, .info_right h1, .info_right p, hr').css({'opacity': '0', 'transition-delay': '0s', 'transition-duration': '0s'});
+            $('.info_left h1, .info_left p, .info_right h1, .info_right p, hr').css({
+                'opacity': '0',
+                'transition-delay': '0s',
+                'transition-duration': '0s'
+            });
         }
 
-        if (highlighted_section == '.skills'){
+        if (highlighted_section == '.skills') {
             console.log("This is skills!! Boom");
             $('.skills_row div img').css({'animation-name': 'circleSpin'});
         } else {
@@ -132,11 +117,11 @@ $(document).scroll(function () {
 });
 
 
-function intro_reveal(){
-    setTimeout(function(){
+function intro_reveal() {
+    setTimeout(function () {
         $('.title h1').css({'opacity': '1', 'transition-duration': '1s'});
     }, 500);
-    setTimeout(function(){
+    setTimeout(function () {
         $('.title h3').css({'opacity': '1', 'transition-duration': '2s'});
     }, 1000);
 }
