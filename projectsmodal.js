@@ -4,27 +4,29 @@ var imgsrc; //src for project image
 
 $(document).ready(function(){
 
-    /*Handler for hovering over a specific project*/
+    /*Handler for clicking on a specific project*/
     $('.imageDiv').on('click', function () {
         var projectId = $(this).attr('id');
         console.log('Project id: ', projectId);
         loadProjectInfo(projectId);
     });
 
+    /*Handler for exiting project modal*/
     $('body').on('click', '.exitModal', function(){
         $('.modalContainer').remove();
+        $('.menu_button').show(); //shows menu button when modal is exited
     });
 
 
 });
 
 /***************************************
- * NAME: changeProjectDescripton
- * PARAMS: id
+ * NAME: buildModal
+ * PARAMS: title, deswc, imgsrc
  * GLOBAL VARIABLES: none
- * LOCAL VARIABLES: replaceText
- * PURPOSE: this replaces the content text of the ::after pseudo div when a specific project is hovered
- * FUNCTIONS USED:
+ * LOCAL VARIABLES:
+ * PURPOSE: gets project information from loadProjectInfo() and builds out modal and appends it to the body
+ * FUNCTIONS USED: none
  */
 function buildModal(title, desc, imgsrc) {
     var modalContainer = $('<div>', {
@@ -61,8 +63,18 @@ function buildModal(title, desc, imgsrc) {
     $(modalInfoContainer).append(projectTitle, projectInfo);
 
     $('body').append(modalContainer);
+
+    $('.menu_button').hide(); //hides the menu button when modal is active
 }
 
+/***************************************
+ * NAME: loadProjectInfo
+ * PARAMS: id
+ * GLOBAL VARIABLES: title, desc, imgsrc
+ * LOCAL VARIABLES: none
+ * PURPOSE:  loads project information into buildModal() depending on what project is clicked
+ * FUNCTIONS USED: buildModal()
+ */
 function loadProjectInfo(id){
     switch (id) {
         case 'marounrecords':
