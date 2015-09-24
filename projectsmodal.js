@@ -11,6 +11,10 @@ $(document).ready(function(){
         loadProjectInfo(projectId);
     });
 
+    $('body').on('click', '.exitModal', function(){
+        $('.modalContainer').remove();
+    });
+
 
 });
 
@@ -26,18 +30,21 @@ function buildModal(title, desc, imgsrc) {
     var modalContainer = $('<div>', {
         class: 'col-xs-12 modalContainer'
     });
+    var exitButton = $('<span>', {
+        class: 'glyphicon glyphicon-remove-circle exitModal'
+    });
     var modalContentContainer = $('<div>', {
-        class: 'col-xs-12 modalContentContainer'
+        class: 'col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 modalContentContainer'
     });
     var modalImageContainer = $('<div>', {
-        class: 'col-xs-12 col-sm-6 modalImageContainer'
+        class: 'col-xs-12 modalImageContainer'
     });
     var projectImage = $('<img>', {
         id: 'projectImage',
         src: imgsrc
     });
     var modalInfoContainer = $('<div>', {
-        class: 'col-xs-12 col-sm-6  modalInfoContainer'
+        class: 'col-xs-12  modalInfoContainer'
     });
     var projectTitle = $('<h1>', {
         id: 'projectTitle',
@@ -48,7 +55,7 @@ function buildModal(title, desc, imgsrc) {
         text: desc
     });
 
-    $(modalContainer).append(modalContentContainer);
+    $(modalContainer).append(modalContentContainer, exitButton);
     $(modalContentContainer).append(modalImageContainer, modalInfoContainer);
     $(modalImageContainer).append(projectImage);
     $(modalInfoContainer).append(projectTitle, projectInfo);
@@ -57,35 +64,54 @@ function buildModal(title, desc, imgsrc) {
 }
 
 function loadProjectInfo(id){
-    //var replaceText = $('.imageDiv:hover::before').css({"content": "attr('built')"});
     switch (id) {
-        case 'marounrecords':;
-            title = 'Memory Match';
+        case 'marounrecords':
+            title = 'Maroun Records';
             desc = 'This is info about the Maroun Records project';
             imgsrc = 'img/projects/marounrecords.png';
             buildModal(title, desc, imgsrc);
-            //replaceText;
             break;
         case 'memorymatch':
-            //replaceText;
+            title = 'Memory Match';
+            desc = 'This is info about the Memory Match project';
+            imgsrc = 'img/projects/memorymatch.png';
+            buildModal(title, desc, imgsrc);
             break;
         case 'calculator':
-            //replaceText;
+            title = 'Calculator';
+            desc = 'This is info about the Calculator project';
+            imgsrc = 'img/projects/calculator.png';
+            buildModal(title, desc, imgsrc);
             break;
         case 'sgt':
-            //replaceText;
+            title = 'Student Grade Table';
+            desc = 'This is info about theStudent Grade Table project';
+            imgsrc = 'img/projects/sgt.png';
+            buildModal(title, desc, imgsrc);
             break;
         case 'twailerz':
-            //replaceText;
+            title = 'Twailerz';
+            desc = 'This is info about the Twailerz project';
+            imgsrc = 'img/projects/twailerz.png';
+            buildModal(title, desc, imgsrc);
             break;
         case 'tictactoe':
-            //replaceText;
+            title = 'Tic Tac Toe';
+            desc = 'This is info about the Tic Tac Toe project';
+            imgsrc = 'img/projects/tic-tac-toe.png';
+            buildModal(title, desc, imgsrc);
             break;
         case 'taskit':
-            //replaceText;
+            title = 'Task It';
+            desc = 'This is info about the Task It project';
+            imgsrc = 'img/projects/taskit.png';
+            buildModal(title, desc, imgsrc);
             break;
         case 'final':
-            //replaceText;
+            title = 'Final';
+            desc = 'This is info about the Final project';
+            imgsrc = 'img/projects/taskit.png';
+            buildModal(title, desc, imgsrc);
             break;
     }
 }
