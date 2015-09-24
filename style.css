@@ -1019,9 +1019,10 @@ PAGE: Projects Page
     overflow: hidden;
     #box-shadow: 0 0 20px 10px #000 inset;
     #border: 1px solid #000;
+    cursor: pointer;
 }
 
-.imageDiv h1:nth-child(1) {
+.imageDiv h1 {
     position: absolute;
     top: 45%;
     text-align: center;
@@ -1033,7 +1034,7 @@ PAGE: Projects Page
     color: #fff;
 }
 
-.imageDiv:hover h1:nth-child(1) {
+.imageDiv:hover h1 {
     opacity: 0;
     transition-duration: .25s;
 }
@@ -1073,7 +1074,8 @@ PAGE: Projects Page
 #marounrecords:hover::before {
     background: transparent url('img/projects/mrchalk.png') no-repeat 50% 50%;
     background-size: contain;
-    transition-duration: .5s;
+    transition-duration: .10s;
+    transform: scale(.95, .95);
     opacity: 1;
 }
 
@@ -1093,7 +1095,8 @@ PAGE: Projects Page
 #memorymatch:hover::before {
     background: transparent url('img/projects/mmchalk.png') no-repeat 50% 50%;
     background-size: contain;
-    transition-duration: .5s;
+    transition-duration: .10s;
+    transform: scale(.95, .95);
     opacity: 1;
 }
 
@@ -1113,7 +1116,8 @@ PAGE: Projects Page
 #calculator:hover::before {
     background: transparent url('img/projects/calcchalk.png') no-repeat 50% 50%;
     background-size: contain;
-    transition-duration: .5s;
+    transition-duration: .10s;
+    transform: scale(.95, .95);
     opacity: 1;
 }
 
@@ -1133,7 +1137,8 @@ PAGE: Projects Page
 #sgt:hover::before {
     background: transparent url('img/projects/sgtchalk.png') no-repeat 50% 50%;
     background-size: contain;
-    transition-duration: .5s;
+    transition-duration: .10s;
+    transform: scale(.95, .95);
     opacity: 1;
 }
 
@@ -1152,7 +1157,8 @@ PAGE: Projects Page
 #twailerz:hover::before {
     background: transparent url('img/projects/twchalk.png') no-repeat 50% 50%;
     background-size: contain;
-    transition-duration: .5s;
+    transition-duration: .10s;
+    transform: scale(.95, .95);
     opacity: 1;
 }
 
@@ -1171,7 +1177,8 @@ PAGE: Projects Page
 #tictactoe:hover::before {
     background: transparent url('img/projects/tttchalk.png') no-repeat 50% 50%;
     background-size: contain;
-    transition-duration: .5s;
+    transition-duration: .10s;
+    transform: scale(.95, .95);
     opacity: 1;
 }
 
@@ -1190,7 +1197,8 @@ PAGE: Projects Page
 #taskit:hover::before {
     background: transparent url('img/projects/taskchalk.png') no-repeat 50% 50%;
     background-size: contain;
-    transition-duration: .5s;
+    transition-duration: .10s;
+    transform: scale(.95, .95);
     opacity: 1;
 }
 
