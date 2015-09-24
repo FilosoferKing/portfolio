@@ -1194,6 +1194,52 @@ PAGE: Projects Page
     opacity: 1;
 }
 
+/********************************
+MODAL
+********************************/
+.modalContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .75);
+    padding: 0;
+    z-index: 1000;
+}
+
+.modalContentContainer {
+    position: relative;
+    top: 20%;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0;
+}
+
+.modalImageContainer {
+    padding: 0;
+}
+
+#projectImage {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.modalProjectInfo {
+
+}
+
+.modalInfoContainer h1 {
+    text-align: center;
+}
+
+.modalInfoContainer p {
+    text-align: center;
+
+}
 
 
 

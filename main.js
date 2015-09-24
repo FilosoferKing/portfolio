@@ -30,13 +30,6 @@ $(document).ready(function () {
         menu_toggle = false;
     });
 
-    /*Handler for hovering over a specific project*/
-    $('.imageDiv').on('mouseover', function () {
-        var projectId = $(this).attr('id');
-        console.log('Project id: ', projectId);
-        //changeProjectDescription(projectId);
-    });
-
     intro_reveal();
 
     /***************************************
@@ -138,49 +131,6 @@ $(document).scroll(function () {
 
 });
 
-/***************************************
- * NAME: changeProjectDescripton
- * PARAMS: id
- * GLOBAL VARIABLES: none
- * LOCAL VARIABLES: replaceText
- * PURPOSE: this replaces the content text of the ::after pseudo div when a specific project is hovered
- * FUNCTIONS USED:
- */
-function changeProjectDescription(id) {
-    //var built = $('<p>', {
-    //    text: $('#' + id).attr('built')
-    //});
-    //var language = $('<p>', {
-    //    text: $('#' + id).attr('lang')
-    //});
-    //var seeDescription = $('<p>', {
-    //    text: $('#' + id).attr('click')
-    //});
-    var replaceText = $('.imageDiv:hover::before').css({"content": "attr('built')"});
-    switch (id) {
-        case memorymatch:
-            replaceText;
-            break;
-        case calculator:
-            replaceText;
-            break;
-        case sgt:
-            replaceText;
-            break;
-        case twailerz:
-            replaceText;
-            break;
-        case tictactoe:
-            replaceText;
-            break;
-        case taskit:
-            replaceText;
-            break;
-        case final:
-            replaceText;
-            break;
-    }
-}
 
 function intro_reveal(){
     setTimeout(function(){
