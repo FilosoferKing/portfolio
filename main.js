@@ -86,7 +86,7 @@ $(document).scroll(function () {
 
             var about_pos = $('.about_div a').position();
             if($(window).scrollTop() > trigger_position - (trigger_position - ((($(window).height() + about_pos.top -10))))){
-                $('.about_title h1').css({'top': '-2vh', 'transform': 'rotateZ(-3deg) translateX(-50%)'});
+                $('.about_title h1').css({'top': '-3vh', 'transform': 'rotateZ(-3deg) translateX(-50%)'});
             } else {
                 $('.about_title h1').css({'top': '-5vh', 'transform': 'rotateZ(0) translateX(-50%)'});
             }
@@ -140,7 +140,7 @@ $(document).scroll(function () {
         $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
         $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
         $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
-        //$('.about_title h1').css({'top': '-5vh', 'transform': 'rotateZ(0) translateX(-50%)'});
+        $('.about_title h1').css({'top': '-15vh', 'transform': 'rotateZ(0) translateX(-50%)'});
     }
 
 });
