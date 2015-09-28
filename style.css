@@ -318,9 +318,9 @@ Navigation menu
     left: 0;
     top: 0;
     text-align: center;
-    transform: translateY(-15%);
+    transform: translateY(-2%);
     font-weight: 300;
-    font-size: 3vw;
+    font-size: 2.25vw;
     opacity: 1;
     color: #fff;
 }
@@ -543,6 +543,7 @@ PAGE: About Page
     position: relative;
     top: 0;
     left: 0;
+    height: 100vh;
     padding-top: 3vh;
     padding-bottom: 10vh;
     #margin: 10vh 0;
@@ -550,18 +551,25 @@ PAGE: About Page
     z-index: 0;
     #background: rgba(56, 77, 86, 1);
     background: rgba(255, 255, 255, .85);
+    overflow: hidden;
 }
 
 .about_div::before {
     position: absolute;
-    top: 55%;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     content: '';
-    background: transparent url('img/aboutmeimg.png') no-repeat 50% 50%;
+    background: transparent url('img/aboutbw.jpg') no-repeat 50% 50%;
     background-size: cover;
     z-index: 0;
+}
+
+.about_div a {
+    position: relative;
+    display: block;
+    top: -10vh;
 }
 
 hr {
@@ -570,6 +578,7 @@ hr {
     width: 50%;
     border: .5px solid rgba(255, 255, 255, .85);
     opacity: 0;
+    z-index: 10;
 }
 
 .self_image {
@@ -588,19 +597,23 @@ hr {
     padding: 0;
 }
 
-.image img {
-    position: relative;
-    height: 100vh;
-    left: 50%;
-    transform: translateX(-50%);
-}
+/*.image img {*/
+    /*position: relative;*/
+    /*height: 100vh;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+/*}*/
 
-.info_left, .info_right {
+.info_right {
+    position: absolute;
     #overflow: hidden;
     padding: 3vh 0;
+    top: 50%;
+    transform: translateY(-70%);
+
 }
 
-.info_left_circle::after, .info_right_circle::after {
+.info_right_circle::after {
     position: absolute;
     top: 0;
     left: 50%;
@@ -610,7 +623,7 @@ hr {
     content: '';
     border-radius: 25px;
     background-color: rgba(56, 77, 86, 1);
-    z-index: -1;
+    z-index: 0;
     transition-duration: 1s;
 
     animation-name: expandCircle;
@@ -637,26 +650,31 @@ hr {
         width: 95%;
         height: 100%;
         transform: translateX(-50%);
-        background-color: rgba(56, 77, 86, 1);
+        background-color: rgba(56, 77, 86, .75);
         box-shadow: 0 0 5px 2px rgba(56, 77, 86, 1);
     }
 }
 
-.info_left h1, .info_right h1 {
+.the_man {
+    z-index: 10;
+}
+
+.info_right h1 {
     text-align: center;
     font-weight: 300;
     font-size: 1.75vw;
     text-shadow: 0 1px 2px #000;
     opacity: 0;
+    z-index: 200;
 }
 
-.info_left h3, .info_right h3 {
+.info_right h3 {
     text-align: center;
     font-weight: 300;
     font-size: 1.5vw;
 }
 
-.info_left p, .info_right p {
+.info_right p {
     text-align: center;
     font-weight: 300;
     font-size: 1.25vw;
@@ -665,15 +683,38 @@ hr {
     padding-left: 5vw;
     padding-right: 5vw;
     opacity: 0;
+    z-index: 10;
 }
 
 .about_title h1 {
+    position: absolute;
+    top: -15vh;
+    left: 50%;
     text-align: center;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 2vw;
-    font-family: chalk;
-    padding-bottom: 3vh;
+    padding: 10px;
     color: rgba(56, 77, 86, 1);
+    transform: rotateZ(-3deg) translateX(-50%);
+    transition-duration: 1s;
+}
+
+.about_title {
+    position: relative;
+}
+
+.about_title h1::before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 110%;
+    height: 20vh;
+    background-color: #B4B4B4;
+    #opacity: .75;
+    border-radius: 10px;
+    z-index: -1;
 }
 
 /********************************
@@ -681,7 +722,7 @@ PAGE: Skills Page
 *********************************/
 .skills_container {
     position: relative;
-    top: 60vh;
+    top: 0;
     #width: 100vw;
     height: 100%;
     background-color: rgba(180, 180, 180, .75);
@@ -938,7 +979,7 @@ PAGE: Projects Page
 
 .projects_container {
     position: relative;
-    top: 60vh;
+    top: 0;
     padding-left: 0;
     padding-right: 0;
     /*background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;*/

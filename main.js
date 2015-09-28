@@ -1,3 +1,4 @@
+var trigger_position;
 $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
@@ -39,16 +40,16 @@ $(document).ready(function () {
  */
 $(document).scroll(function () {
     var bottomPosition = $(window).scrollTop() + $(window).height();
-    //console.log('Bottom position: ', bottomPosition);
+    console.log('Bottom position: ', bottomPosition);
 
     var sectionArray = [];
 
     $('.trigger_point').each(function () {
-        var trigger_position = $(this).offset().top;
-        //console.log('Target position: ', trigger_position);
+        trigger_position = $(this).offset().top;
+        console.log('Target position: ', trigger_position);
         if (trigger_position <= bottomPosition) {
             sectionArray[sectionArray.length] = this;
-            //console.log('SectionArray ', sectionArray);
+            console.log('SectionArray ', sectionArray);
         }
     });
 
@@ -56,7 +57,7 @@ $(document).scroll(function () {
 
     if (sectionArray.length) {
         var highlighted_section = $(sectionArray[sectionArray.length - 1]).attr('data-indicator');
-        //console.log('Data-indicator: ', highlighted_section);
+        console.log('Data-indicator: ', highlighted_section);
         $(highlighted_section).addClass('js_hover');
 
         $('.menu_button').css({'opacity': '1'});
@@ -72,9 +73,8 @@ $(document).scroll(function () {
 
         if (highlighted_section == '.about') {
             console.log("This is about! Boom");
-            $('.info_left').addClass('info_left_circle');
             $('.info_right').addClass('info_right_circle');
-            $('.info_left h1, .info_left p, .info_right h1, .info_right p, hr').css({
+            $('.info_right h1, .info_right p, hr').css({
                 'opacity': '1',
                 'transition-delay': '1s',
                 'transition-duration': '.5s'
@@ -83,10 +83,17 @@ $(document).scroll(function () {
             $('.bottom_angle').removeClass('bottom_land_angle').addClass('bottom_land_angle_alt');
             $('.nav_top_angle').removeClass('nav_container').addClass('nav_container_alt');
             $('.land_text .nav_bar').css({'transform': 'rotateZ(-2deg)', 'top': '3.5vh'});
+
+            var about_pos = $('.about_div a').position();
+            if($(window).scrollTop() > trigger_position - (trigger_position - ((($(window).height() + about_pos.top -10))))){
+                $('.about_title h1').css({'top': '-2vh', 'transform': 'rotateZ(-3deg) translateX(-50%)'});
+            } else {
+                $('.about_title h1').css({'top': '-5vh', 'transform': 'rotateZ(0) translateX(-50%)'});
+            }
+
         } else {
-            $('.info_left').removeClass('info_left_circle');
             $('.info_right').removeClass('info_right_circle');
-            $('.info_left h1, .info_left p, .info_right h1, .info_right p, hr').css({
+            $('.info_right h1, .info_right p, hr').css({
                 'opacity': '0',
                 'transition-delay': '0s',
                 'transition-duration': '0s'
@@ -95,6 +102,8 @@ $(document).scroll(function () {
             $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
             $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
             $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
+
+            $('.about_title h1').css({'top': '-15vh', 'transform': 'rotateZ(-3deg) translateX(-50%)'});
         }
 
         if (highlighted_section == '.skills') {
@@ -131,6 +140,7 @@ $(document).scroll(function () {
         $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
         $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
         $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
+        //$('.about_title h1').css({'top': '-5vh', 'transform': 'rotateZ(0) translateX(-50%)'});
     }
 
 });
