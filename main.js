@@ -82,6 +82,7 @@ $(document).scroll(function () {
 
             $('.bottom_angle').removeClass('bottom_land_angle').addClass('bottom_land_angle_alt');
             $('.nav_top_angle').removeClass('nav_container').addClass('nav_container_alt');
+            $('.land_text .nav_bar').css({'transform': 'rotateZ(-2deg)', 'top': '3.5vh'});
         } else {
             $('.info_left').removeClass('info_left_circle');
             $('.info_right').removeClass('info_right_circle');
@@ -93,18 +94,22 @@ $(document).scroll(function () {
 
             $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
             $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
+            $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
         }
 
         if (highlighted_section == '.skills') {
             console.log("This is skills!! Boom");
             $('.skills_row div img').css({'animation-name': 'circleSpin'});
+
             $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
             $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
+            $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
         } else {
             $('.skills_row div img').css({'animation-name': 'none'});
 
             $('.bottom_angle').removeClass('bottom_land_angle').addClass('bottom_land_angle_alt');
             $('.nav_top_angle').removeClass('nav_container').addClass('nav_container_alt');
+            $('.land_text .nav_bar').css({'transform': 'rotateZ(-2deg)', 'top': '3.5vh'});
         }
 
 
@@ -125,6 +130,7 @@ $(document).scroll(function () {
         //});
         $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
         $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
+        $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
     }
 
 });
@@ -132,7 +138,7 @@ $(document).scroll(function () {
 
 function intro_reveal() {
     setTimeout(function () {
-        $('.title h1').css({'opacity': '1'});
+        //$('.title #tl').css({'opacity': '1'});
     }, 500);
     //setTimeout(function () {
     //    $('.title h3').css({'opacity': '1', 'transition-duration': '2s'});
