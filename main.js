@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
-    //intro_reveal();
+    intro_reveal();
 
     /***************************************
      * NAME: Menu button click handler
@@ -132,11 +132,11 @@ $(document).scroll(function () {
 
 function intro_reveal() {
     setTimeout(function () {
-        $('.title h1').css({'opacity': '1', 'transition-duration': '1s'});
+        $('.title h1').css({'opacity': '1'});
     }, 500);
-    setTimeout(function () {
-        $('.title h3').css({'opacity': '1', 'transition-duration': '2s'});
-    }, 1000);
+    //setTimeout(function () {
+    //    $('.title h3').css({'opacity': '1', 'transition-duration': '2s'});
+    //}, 1000);
 }
 
 
