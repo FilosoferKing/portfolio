@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
-    intro_reveal();
+    //intro_reveal();
 
     /***************************************
      * NAME: Menu button click handler
@@ -79,6 +79,9 @@ $(document).scroll(function () {
                 'transition-delay': '1s',
                 'transition-duration': '.5s'
             });
+
+            $('.bottom_angle').removeClass('bottom_land_angle').addClass('bottom_land_angle_alt');
+            $('.nav_top_angle').removeClass('nav_container').addClass('nav_container_alt');
         } else {
             $('.info_left').removeClass('info_left_circle');
             $('.info_right').removeClass('info_right_circle');
@@ -87,13 +90,21 @@ $(document).scroll(function () {
                 'transition-delay': '0s',
                 'transition-duration': '0s'
             });
+
+            $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
+            $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
         }
 
         if (highlighted_section == '.skills') {
             console.log("This is skills!! Boom");
             $('.skills_row div img').css({'animation-name': 'circleSpin'});
+            $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
+            $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
         } else {
             $('.skills_row div img').css({'animation-name': 'none'});
+
+            $('.bottom_angle').removeClass('bottom_land_angle').addClass('bottom_land_angle_alt');
+            $('.nav_top_angle').removeClass('nav_container').addClass('nav_container_alt');
         }
 
 
@@ -112,6 +123,8 @@ $(document).scroll(function () {
         //        $('.menu_button').css({'opacity': '1'});
         //    }
         //});
+        $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
+        $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
     }
 
 });

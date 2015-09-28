@@ -3,7 +3,7 @@ GENERAL
 *******************************************************************/
 /***Theme Colors***
 #384D56
-#B4B4B4
+#E1E1E1
 #FCA311
 #538459
 *****************/
@@ -12,9 +12,9 @@ body {
     position: relative;
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
-    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
-    background-size: cover;
-    background-attachment: fixed;
+    #background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
+    #background-size: cover;
+    #background-attachment: fixed;
 }
 
 @font-face {
@@ -29,13 +29,76 @@ Navigation menu
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 50;
+    max-width: 100%;
+    width: 100vw;
+    height: 0;
+    color: #384D56;
+    padding: 0;
+}
+
+.nav_container_alt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
     max-width: 100%;
     width: 100vw;
     height: 0;
     color: #fff;
     padding: 0;
-    font-family: chalk;
+}
+
+.nav_container::after {
+    position: absolute;
+    top: -90vh;
+    left: 0;
+    content: '';
+    width: 120vw;
+    height: 100vh;
+    background-color: #384D56;
+    transform: rotateZ(2deg);
+    z-index:1;
+    transition-duration: 1s;
+}
+
+.nav_container::before {
+    position: absolute;
+    top: -89vh;
+    left: 0;
+    content: '';
+    width: 120vw;
+    height: 100vh;
+    background-color: #B4B4B4;
+    transform: rotateZ(3deg);
+    z-index: 0;
+    transition-duration: 1s;
+}
+
+.nav_container_alt::after {
+    position: absolute;
+    top: -90vh;
+    right: 0;
+    content: '';
+    width: 120vw;
+    height: 100vh;
+    background-color: #384D56;
+    transform: rotateZ(-2deg);
+    z-index:1;
+    transition-duration: 1s;
+}
+
+.nav_container_alt::before {
+    position: absolute;
+    top: -89vh;
+    right: 0;
+    content: '';
+    width: 120vw;
+    height: 100vh;
+    background-color: #fff;
+    transform: rotateZ(-3deg);
+    z-index: 0;
+    transition-duration: 1s;
 }
 
 .menu_button {
@@ -50,7 +113,7 @@ Navigation menu
     color: #fff;
 }
 
-.nav_menu a {
+.land_text a {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -60,7 +123,7 @@ Navigation menu
     font-weight: 200;
 }
 
-.nav_menu p {
+.land_text p {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -96,16 +159,86 @@ Navigation menu
     opacity: 0;
 }
 
-.nav_menu {
+.bottom_land_angle {
     position: fixed;
-    top: 0;
+    top: 90%;
     left: 0;
-    z-index: -1;
+    z-index: 2;
+    width: 120vw;
     height: 100vh;
     padding: 0;
-    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
-    background-size: cover;
-    display: none;
+    #background-color: #384D56;
+    transform: rotateZ(0);
+    #display: none;
+}
+
+.bottom_land_angle_alt {
+    position: fixed;
+    top: 90%;
+    right: 0;
+    z-index: 2;
+    width: 120vw;
+    height: 100vh;
+    padding: 0;
+    #background-color: #384D56;
+    transform: rotateZ(0);
+    #display: none;
+}
+
+.bottom_land_angle::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: rotateZ(-3deg);
+    z-index: -2;
+    transition-duration: 1s;
+}
+
+.bottom_land_angle::after {
+    position: absolute;
+    top: 1vh;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #384D56;
+    transform: rotateZ(-2deg);
+    z-index: -2;
+    transition-duration: 1s;
+}
+
+.bottom_land_angle_alt::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: rotateZ(3deg);
+    z-index: -2;
+    transition-duration: 1s;
+}
+
+.bottom_land_angle_alt::after {
+    position: absolute;
+    top: 1vh;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #384D56;
+    transform: rotateZ(2deg);
+    z-index: -2;
+    transition-duration: 1s;
+}
+
+.land_text .nav_bar {
+    position: relative;
 }
 
 /*.js_hover .menu_click::before {*/
@@ -129,6 +262,8 @@ Navigation menu
 /*color: #FFC719;*/
 /*}*/
 
+
+
 .trigger_container {
     position: relative;
 }
@@ -142,6 +277,43 @@ Navigation menu
     top: 50%;
     z-index: 5000;
 }
+
+/***********Title*******************/
+.title {
+    position: relative;
+    padding: 0;
+    height: 100vh;
+    z-index: 100;
+}
+
+.land_text .title h1 {
+    position: relative;
+    left: 0;
+    top: -1%;
+    text-align: center;
+    #transform: translateX(-50%);
+    font-weight: 300;
+    font-size: 3vw;
+    opacity: 1;
+    color: #fff;
+}
+
+.name_title {
+    opacity: 1;
+}
+
+/*.title h3 {*/
+    /*position: relative;*/
+    /*left: 10%;*/
+    /*top: 2%;*/
+    /*#text-align: left;*/
+    /*#transform: translateX(-50%);*/
+    /*#left: 3vw;*/
+    /*font-weight: 300;*/
+    /*font-size: 1vw;*/
+    /*opacity: 1;*/
+    /*color: #000;*/
+/*}*/
 
 /*******************************************************************
 index.html
@@ -160,7 +332,8 @@ PAGE: Landing Page
     color: #fff;
     padding: 0;
     z-index: 0;
-    font-family: chalk;
+    background: #fff url('img/landbw.jpg') no-repeat 50% 50%;
+    background-size: cover;
 }
 
 .landing_div .land_menu a {
@@ -200,7 +373,7 @@ PAGE: Landing Page
     opacity: .65;
     top: 0;
     left: 0;
-    background-color: #B4B4B4;
+    background-color: #E1E1E1;
     transition-duration: 2s;
     transition-delay: 1s;
 }
@@ -210,11 +383,8 @@ PAGE: Landing Page
 .land_projects,
 .land_connect {
     position: relative;
-    height: 25%;
     top: 0;
-    left: -25%;
     overflow: hidden;
-    #opacity: 0;
     z-index: 1000;
 }
 
@@ -244,7 +414,7 @@ PAGE: Landing Page
 }
 
 .land_skills:hover p {
-    color: #B4B4B4;
+    color: #E1E1E1;
     font-size: 3.5vw;
 }
 
@@ -278,70 +448,37 @@ PAGE: Landing Page
     font-size: 3.5vw;
 }
 
-.land_about::before,
-.land_skills::before,
-.land_projects::before,
-.land_connect::before {
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-}
+/*.land_about::before,*/
+/*.land_skills::before,*/
+/*.land_projects::before,*/
+/*.land_connect::before {*/
+    /*position: absolute;*/
+    /*top: -100%;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*content: '';*/
+/*}*/
 
-.land_text::before {
-    position: absolute;
-    content: '';
-    opacity: .65;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: transparent url('img/trevlandbgalttrans.png') no-repeat 50% 50%;
-    background-size: cover;
-    transition-duration: 2s;
-    transition-delay: 1s;
-}
+/*.land_text::before {*/
+    /*position: absolute;*/
+    /*content: '';*/
+    /*opacity: .25;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*#background: transparent url('img/trevlandbgalttrans.png') no-repeat 50% 50%;*/
+    /*background-size: cover;*/
+    /*transition-duration: 2s;*/
+    /*transition-delay: 1s;*/
+/*}*/
 
-.land_text {
-    position: relative;
-    height: 100vh;
-    padding: 0;
-}
-
-/***********Title*******************/
-.title {
-    padding: 0;
-    height: 100vh;
-}
-
-.land_text .title h1 {
-    position: relative;
-    left: 100%;
-    top: 40%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    font-weight: 200;
-    font-size: 4vw;
-    opacity: 0;
-}
-
-.name_title {
-    opacity: 1;
-}
-
-.title h3 {
-    position: relative;
-    left: 100%;
-    top: 40%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    #left: 3vw;
-    font-weight: 200;
-    font-size: 2vw;
-    opacity: 0;
-}
+/*.land_text {*/
+    /*position: relative;*/
+    /*height: 100vh;*/
+    /*padding: 0;*/
+/*}*/
 
 /********************************
 PAGE: About Page
@@ -564,7 +701,7 @@ PAGE: Skills Page
 }
 
 .skillsChart h2:nth-child(3) {
-    background-color: #B4B4B4;
+    background-color: #E1E1E1;
     padding: 5px;
 
 }
@@ -612,7 +749,7 @@ PAGE: Skills Page
 }
 
 .css img {
-    border: 10px solid #B4B4B4;
+    border: 10px solid #E1E1E1;
     #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
 }
 
@@ -647,12 +784,12 @@ PAGE: Skills Page
 }
 
 .github img {
-    border: 10px solid #B4B4B4;
+    border: 10px solid #E1E1E1;
     #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
 }
 
 .ps img {
-    border: 10px solid #B4B4B4;
+    border: 10px solid #E1E1E1;
     #background: transparent url('img/logos/gray.png') no-repeat 50% 50%;
 }
 
