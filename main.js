@@ -4,6 +4,18 @@ $(document).ready(function () {
 
     intro_reveal();
 
+    //$('body').on('click', function(){
+    //    console.log('body click');
+    //    var about_title_div = $('<div>', {
+    //        class: 'col-xs-12 about_title'
+    //    });
+    //    var about_title_h1 = $('<h1>', {
+    //        text: 'THE PATH I WALK'
+    //    });
+    //    about_title_div.append(about_title_h1);
+    //    $('.nav_container').append(about_title_div);
+    //    });
+
     /***************************************
      * NAME: Menu button click handler
      * PARAMS: none
@@ -53,6 +65,7 @@ $(document).scroll(function () {
         }
     });
 
+
     //$('.about, .projects, .skills, .contact').removeClass('js_hover');
 
     if (sectionArray.length) {
@@ -84,15 +97,23 @@ $(document).scroll(function () {
             $('.nav_top_angle').removeClass('nav_container').addClass('nav_container_alt');
             $('.land_text .nav_bar').css({'transform': 'rotateZ(-2deg)', 'top': '3.5vh'});
 
+
+            /***************************************************************************************************
+             * THIS IS NOT WORKING
+             * !!!!!!!!!!!!!!!!!!!!
+             ****************************************************************************************************/
             var about_title_div = $('<div>', {
                 class: 'col-xs-12 about_title'
             });
             var about_title_h1 = $('<h1>', {
                 text: 'THE PATH I WALK'
             });
-
             about_title_div.append(about_title_h1);
             $('.nav_container').append(about_title_div);
+            /***************************************************************************************************
+             * THIS IS NOT WORKING
+             *!!!!!!!!!!!!!!!!!!!!
+             ****************************************************************************************************/
 
 
             //var about_pos = $('.about_div a').position();
