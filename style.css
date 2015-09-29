@@ -686,31 +686,42 @@ hr {
     z-index: 10;
 }
 
-.nav_container .about_title h1 {
+.nav_container_alt .about_title h1 {
     position: absolute;
-    top: 10vh;
+    top: -10vh;
     left: 50%;
     text-align: center;
     font-weight: 500;
-    font-size: 10vw;
+    font-size: 2vw;
     padding: 10px;
     color: rgba(56, 77, 86, 1);
     transform: rotateZ(-3deg) translateX(-50%);
     transition-duration: 1s;
+
+    animation-name: aboutSlideDown;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
-.nav_container .about_title {
+@keyframes aboutSlideDown {
+    0% {top: -5vh;}
+    100% {top: 7vh;}
+}
+
+.nav_container_alt .about_title {
     position: absolute;
 }
 
-.nav_container .about_title h1::before {
+.nav_container_alt .about_title h1::before {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     content: '';
-    width: 110%;
-    height: 20vh;
+    width: 100%;
+    height: 10vh;
     background-color: #B4B4B4;
     #opacity: .75;
     border-radius: 10px;
@@ -743,9 +754,9 @@ PAGE: Skills Page
 
 }
 
-.skills_title h1 {
+.nav_container .skills_title h1 {
     position: absolute;
-    top: -5vh;
+    top: 8vh;
     left: 50%;
     text-align: center;
     font-weight: 500;
@@ -754,20 +765,31 @@ PAGE: Skills Page
     color: rgba(56, 77, 86, 1);
     transform: rotateZ(3deg) translateX(-50%);
     transition-duration: 1s;
+
+    animation-name: skillsSlideDown;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
-.skills_title {
-    position: relative;
+@keyframes skillsSlideDown {
+    0% {top: -5vh;}
+    100% {top: 8vh;}
 }
 
-.skills_title h1::before {
+.nav_container .skills_title {
+    position: absolute;
+}
+
+.nav_container .skills_title h1::before {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     content: '';
-    width: 110%;
-    height: 20vh;
+    width: 100%;
+    height: 10vh;
     background-color: #B4B4B4;
     #opacity: .75;
     border-radius: 10px;
@@ -837,6 +859,7 @@ PAGE: Skills Page
     border-radius: 50%;
     #border: 2px solid #fff;
     box-shadow: 0 0 20px 5px #000 inset;
+    background-color: rgba(56, 77, 86, .85);
     width: 80%;
     opacity: 1;
 
@@ -859,7 +882,6 @@ PAGE: Skills Page
 .html img {
     border: 10px solid #B4B4B4;
     box-shadow: 0 0 10px 2px #000;
-    background-color: rgba(255, 204, 0, .25);
     #background: transparent url('img/logos/green.png') no-repeat 50% 50%;
 }
 

@@ -98,22 +98,18 @@ $(document).scroll(function () {
             $('.land_text .nav_bar').css({'transform': 'rotateZ(-2deg)', 'top': '3.5vh'});
 
 
-            /***************************************************************************************************
-             * THIS IS NOT WORKING
-             * !!!!!!!!!!!!!!!!!!!!
-             ****************************************************************************************************/
-            var about_title_div = $('<div>', {
-                class: 'col-xs-12 about_title'
-            });
-            var about_title_h1 = $('<h1>', {
-                text: 'THE PATH I WALK'
-            });
-            about_title_div.append(about_title_h1);
-            $('.nav_container').append(about_title_div);
-            /***************************************************************************************************
-             * THIS IS NOT WORKING
-             *!!!!!!!!!!!!!!!!!!!!
-             ****************************************************************************************************/
+            if ($('.about_title').length == 0) {
+                $('.skills_title').remove();
+                var about_title_div = $('<div>', {
+                    class: 'col-xs-12 about_title'
+                });
+                var about_title_h1 = $('<h1>', {
+                    text: 'THE PATH I WALK'
+                });
+                about_title_div.append(about_title_h1);
+                $('.nav_container_alt').append(about_title_div);
+            }
+
 
 
             //var about_pos = $('.about_div a').position();
@@ -147,6 +143,18 @@ $(document).scroll(function () {
             $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
             $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
             $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
+
+            if ($('.skills_title').length == 0) {
+                $('.about_title').remove();
+                var skills_title_div = $('<div>', {
+                    class: 'col-xs-12 skills_title'
+                });
+                var skills_title_h1 = $('<h1>', {
+                    text: 'SKILLS'
+                });
+                skills_title_div.append(skills_title_h1);
+                $('.nav_container').append(skills_title_div);
+            }
 
             //var skills_pos = $('.skills_container a').position();
             // console.log("Skills position: ", (bottomPosition - trigger_position), skills_pos.top, bottomPosition, $(window).scrollTop(), trigger_position - (trigger_position - ((($(window).height() + skills_pos.top + ((trigger_position - bottomPosition) * 2) -100)))), $(window).scrollTop() > trigger_position - (trigger_position - ((($(window).height() + skills_pos.top + ((trigger_position - bottomPosition) * 2) -100)))));
@@ -183,6 +191,8 @@ $(document).scroll(function () {
         $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
         $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
         $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
+
+        $('.skills_title, .about_title').remove();
 
         //$('.about_title h1').css({'top': '-15vh', 'transform': 'rotateZ(0) translateX(-50%)'});
         //
