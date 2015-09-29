@@ -84,12 +84,25 @@ $(document).scroll(function () {
             $('.nav_top_angle').removeClass('nav_container').addClass('nav_container_alt');
             $('.land_text .nav_bar').css({'transform': 'rotateZ(-2deg)', 'top': '3.5vh'});
 
-            var about_pos = $('.about_div a').position();
-            if($(window).scrollTop() > trigger_position - (trigger_position - ((($(window).height() + about_pos.top -10))))){
-                $('.about_title h1').css({'top': '-3vh', 'transform': 'rotateZ(-3deg) translateX(-50%)'});
-            } else {
-                $('.about_title h1').css({'top': '-5vh', 'transform': 'rotateZ(0) translateX(-50%)'});
-            }
+            var about_title_div = $('<div>', {
+                class: 'col-xs-12 about_title'
+            });
+            var about_title_h1 = $('<h1>', {
+                text: 'THE PATH I WALK'
+            });
+
+            about_title_div.append(about_title_h1);
+            $('.nav_container').append(about_title_div);
+
+
+            //var about_pos = $('.about_div a').position();
+            //if($(window).scrollTop() > trigger_position - (trigger_position - ((($(window).height() + about_pos.top -10))))){
+            //    $('.about_title h1').css({'top': '-3vh', 'transform': 'rotateZ(-3deg) translateX(-50%)'});
+            //} else {
+            //    $('.about_title h1').css({'top': '-5vh', 'transform': 'rotateZ(0) translateX(-50%)'});
+            //}
+            //
+            //$('.skills_title h1').css({'top': '-10vh', 'transform': 'rotateZ(0) translateX(-50%)'});
 
         } else {
             $('.info_right').removeClass('info_right_circle');
@@ -103,7 +116,7 @@ $(document).scroll(function () {
             $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
             $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
 
-            $('.about_title h1').css({'top': '-15vh', 'transform': 'rotateZ(-3deg) translateX(-50%)'});
+            //$('.about_title h1').css({'top': '-15vh', 'transform': 'rotateZ(-3deg) translateX(-50%)'});
         }
 
         if (highlighted_section == '.skills') {
@@ -113,6 +126,15 @@ $(document).scroll(function () {
             $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
             $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
             $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
+
+            //var skills_pos = $('.skills_container a').position();
+            // console.log("Skills position: ", (bottomPosition - trigger_position), skills_pos.top, bottomPosition, $(window).scrollTop(), trigger_position - (trigger_position - ((($(window).height() + skills_pos.top + ((trigger_position - bottomPosition) * 2) -100)))), $(window).scrollTop() > trigger_position - (trigger_position - ((($(window).height() + skills_pos.top + ((trigger_position - bottomPosition) * 2) -100)))));
+            //if($(window).scrollTop() > trigger_position - (trigger_position - ((($(window).height() + skills_pos.top + ((trigger_position - bottomPosition) * 2) - 100))))){
+            //    $('.skills_title h1').css({'top': '0', 'transform': 'rotateZ(3deg) translateX(-50%)'});
+            //} else {
+            //    $('.skills_title h1').css({'top': '-2vh', 'transform': 'rotateZ(0) translateX(-50%)'});
+            //}
+
         } else {
             $('.skills_row div img').css({'animation-name': 'none'});
 
@@ -140,7 +162,10 @@ $(document).scroll(function () {
         $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
         $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
         $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
-        $('.about_title h1').css({'top': '-15vh', 'transform': 'rotateZ(0) translateX(-50%)'});
+
+        //$('.about_title h1').css({'top': '-15vh', 'transform': 'rotateZ(0) translateX(-50%)'});
+        //
+        //$('.skills_title h1').css({'top': '-10vh', 'transform': 'rotateZ(0) translateX(-50%)'});
     }
 
 });
