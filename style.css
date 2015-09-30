@@ -747,13 +747,6 @@ PAGE: Skills Page
     top: -8vh;
 }
 
-.skills_row {
-    position: relative;
-    #background-color: #FFC719;
-    padding: 10vh 0;
-
-}
-
 .nav_container .skills_title h1 {
     position: absolute;
     top: 8vh;
@@ -794,17 +787,6 @@ PAGE: Skills Page
     #opacity: .75;
     border-radius: 10px;
     z-index: -1;
-}
-
-.skills_row h3 {
-    position: relative;
-    text-align: center;
-    font-weight: 400;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(56, 77, 86, 1);
-    background-color: #fff;
-    border-radius: 5px;
 }
 
 .skillsChart {
@@ -848,19 +830,41 @@ PAGE: Skills Page
     height: 25%;
 }
 
-.skills_row div {
-    padding-bottom: 5vh;
-    height: 100%;
-}
-
 /**TEST**/
 
+.skills_row {
+    position: relative;
+    #background-color: #FFC719;
+    padding: 10vh 0;
+}
+
+.skills_row h3 {
+    position: absolute;
+    text-align: center;
+    font-weight: 400;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(56, 77, 86, 1);
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.skills_row div {
+    position: relative;
+    padding-top: 15%;
+    border: 2px solid #000;
+}
+
 .skills_row div img {
+    position: absolute;
+    top: 17%;
+    left: 20%;
     border-radius: 50%;
     #border: 2px solid #fff;
     box-shadow: 0 0 20px 5px #000 inset;
     background-color: rgba(56, 77, 86, .85);
-    width: 80%;
+    width: 60%;
+    height: auto;
     opacity: 1;
 
     animation-name: circleSpin;
@@ -1013,6 +1017,42 @@ PAGE: Skills Page
     }
 }
 
+
+/******SVG ANIMATION********/
+#svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000fff;
+}
+
+#svg circle {
+    position: absolute;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+    stroke: #666;
+    stroke-width: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+#svg #bar {
+    stroke: #FF9F1E;
+    stroke-dashoffset: 0;
+
+    animation-name: stroke;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes stroke {
+    0% {stroke-dashoffset: 1130.97;}
+    100% {stroke-dashoffset: 500;}
+}
 /********************************
 PAGE: Projects Page
 *********************************/
