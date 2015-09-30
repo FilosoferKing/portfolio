@@ -1031,7 +1031,7 @@ PAGE: Skills Page
     transform: translate(-50%, -50%) rotateZ(-90deg);
     width: 100%;
     height: 100%;
-    #background-color: rgba(56, 77, 86, .25);
+    #background-color: rgba(0, 0, 0, .5);
     border-radius: 50%;
     #box-shadow: 0 0 20px 5px #000;
 }
@@ -1047,23 +1047,186 @@ PAGE: Skills Page
 
 }
 
-#svg #bar {
+#svg #html{
     stroke: #FCA311;
     opacity: .9;
     stroke-dashoffset: 0;
 
 
-    animation-name: stroke;
+    animation-name: strokeHtml;
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
 
-@keyframes stroke {
+@keyframes strokeHtml {
     0% {stroke-dashoffset: 942.48;}
     100% {stroke-dashoffset: 94.25;}
 }
+
+#svg #css{
+    stroke: #FCA311;
+    opacity: .9;
+    stroke-dashoffset: 0;
+
+
+    animation-name: strokeCss;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes strokeCss {
+    0% {stroke-dashoffset: 942.48;}
+    100% {stroke-dashoffset: 94.25;}
+}
+
+#svg #js{
+    stroke: #FCA311;
+    opacity: .9;
+    stroke-dashoffset: 0;
+
+
+    animation-name: strokeJs;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes strokeJs {
+    0% {stroke-dashoffset: 942.48;}
+    100% {stroke-dashoffset: 282.70;}
+}
+
+#svg #jquery{
+    stroke: #FCA311;
+    opacity: .9;
+    stroke-dashoffset: 0;
+
+
+    animation-name: strokeJquery;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes strokeJquery {
+    0% {stroke-dashoffset: 942.48;}
+    100% {stroke-dashoffset: 235.62;}
+}
+
+#svg #bootstrap{
+    stroke: #FCA311;
+    opacity: .9;
+    stroke-dashoffset: 0;
+
+
+    animation-name: strokeBootstrap;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes strokeBootstrap {
+    0% {stroke-dashoffset: 942.48;}
+    100% {stroke-dashoffset: 188.50;}
+}
+
+#svg #php{
+    stroke: #FCA311;
+    opacity: .9;
+    stroke-dashoffset: 0;
+
+
+    animation-name: strokePhp;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes strokePhp {
+    0% {stroke-dashoffset: 942.48;}
+    100% {stroke-dashoffset: 376.99;}
+}
+
+#svg #mysql{
+    stroke: #FCA311;
+    opacity: .9;
+    stroke-dashoffset: 0;
+
+
+    animation-name: strokeMysql;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes strokeMysql {
+    0% {stroke-dashoffset: 942.48;}
+    100% {stroke-dashoffset: 376.99;}
+}
+
+#svg #git{
+    stroke: #FCA311;
+    opacity: .9;
+    stroke-dashoffset: 0;
+
+
+    animation-name: strokeGit;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes strokeGit {
+    0% {stroke-dashoffset: 942.48;}
+    100% {stroke-dashoffset: 235.62;}
+}
+
+#svg #github{
+    stroke: #FCA311;
+    opacity: .9;
+    stroke-dashoffset: 0;
+
+
+    animation-name: strokeGithub;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes strokeGithub {
+    0% {stroke-dashoffset: 942.48;}
+    100% {stroke-dashoffset: 141.37;}
+}
+
+#svg #ps{
+    stroke: #FCA311;
+    opacity: .9;
+    stroke-dashoffset: 0;
+
+
+    animation-name: strokePs;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes strokePs {
+    0% {stroke-dashoffset: 942.48;}
+    100% {stroke-dashoffset: 141.37;}
+}
+
 /********************************
 PAGE: Projects Page
 *********************************/
