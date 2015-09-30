@@ -736,7 +736,9 @@ PAGE: Skills Page
     top: 0;
     #width: 100vw;
     #height: 100vh;
-    background-color: #E7E7E7;
+    #background-color: #E7E7E7;
+    background: transparent url('img/brickwall.png') no-repeat 50% 50%;
+    background-size: cover;
     color: #fff;
     overflow: hidden;
 }
@@ -744,7 +746,7 @@ PAGE: Skills Page
 .skills_container a {
     position: relative;
     display: block;
-    top: -8vh;
+    top: -5vh;
 }
 
 .nav_container .skills_title h1 {
@@ -1038,7 +1040,7 @@ PAGE: Skills Page
     position: absolute;
     stroke-dashoffset: 0;
     transition: stroke-dashoffset 1s linear;
-    stroke: #E7E7E7;
+    stroke: transparent;
     stroke-width: 2em;
     width: 100%;
     height: 100%;
@@ -1047,6 +1049,7 @@ PAGE: Skills Page
 
 #svg #bar {
     stroke: #FCA311;
+    opacity: .9;
     stroke-dashoffset: 0;
 
 
