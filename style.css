@@ -1238,7 +1238,7 @@ PAGE: Projects Page
     #background: #000 url('img/brickwall.png') no-repeat 50% 50%;
     #background-size: cover;
     color: #fff;
-    background-color: #b4b4b4;
+    background-color: #B4B4B4;
 }
 
 .projects_container a {
@@ -1313,45 +1313,49 @@ PAGE: Projects Page
     background-position: 60% 50%;
     overflow: hidden;
     #box-shadow: 0 0 20px 10px #000 inset;
-    #border: 10px solid #000;
     cursor: pointer;
 }
 
-/*.imageDiv::after {*/
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*width: 90%;*/
-    /*height: 80%;*/
-    /*content: '';*/
-    /*background-color: rgba(56, 77, 86, .5);*/
-    /*transform: scale(1, 1) translate(-50%, -50%);*/
-/*}*/
+.imageDiv::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 35%;
+    content: '';
+    #background-color: rgba(56, 77, 86, .75);
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    background-color: rgba(180, 180, 180, .9);
+    transform: translate(-50%, -50%);
+}
 
-/*.imageDiv:hover::after {*/
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*width: 90%;*/
-    /*height: 80%;*/
-    /*content: '';*/
-    /*background-color: rgba(56, 77, 86, .5);*/
-    /*transform: scale(0, 0) translate(-50%, -50%);*/
-    /*transition-duration: 1s;*/
-/*}*/
+.imageDiv:hover::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 0;
+    content: '';
+    background-color: rgba(56, 77, 86, 0);
+    border: none;
+    transform: translate(-50%, -50%);
+    transition-duration: .5s;
+}
 
 .imageDiv h1 {
     position: absolute;
-    top: 45%;
+    top: 40%;
     text-align: center;
     width: 100%;
     transform: translateY(-50%);
     #font-family: chalk;
-    font-size: 1.75vw;
+    font-size: 1.5vw;
     font-weight: 700;
     color: #fff;
     text-shadow: 0 1px 1px #000;
     #color: rgba(56, 77, 86, 1);
+    z-index: 2;
 }
 
 .imageDiv:hover h1 {
@@ -1388,7 +1392,7 @@ PAGE: Projects Page
     content: '';
     background: transparent url('img/projects/marounrecordsbw.png') no-repeat 50% 50%;
     background-size: 90% auto;
-    opacity: .25;
+    opacity: 1;
 }
 
 #marounrecords:hover::before {
@@ -1408,7 +1412,7 @@ PAGE: Projects Page
     content: '';
     background: transparent url('img/projects/memorymatchbw.png') no-repeat 50% 50%;
     background-size: 90% auto;
-    opacity: .25;
+    opacity: 1;
 }
 
 #memorymatch:hover::before {
@@ -1428,7 +1432,7 @@ PAGE: Projects Page
     content: '';
     background: transparent url('img/projects/calculatorbw.png') no-repeat 50% 50%;
     background-size: 90% auto;
-    opacity: .25;
+    opacity: 1;
 }
 
 #calculator:hover::before {
@@ -1448,7 +1452,7 @@ PAGE: Projects Page
     content: '';
     background: transparent url('img/projects/sgtbw.png') no-repeat 50% 50%;
     background-size: 90% auto;
-    opacity: .25;
+    opacity: 1;
 }
 
 #sgt:hover::before {
@@ -1468,7 +1472,7 @@ PAGE: Projects Page
     content: '';
     background: transparent url('img/projects/twailerzbw.png') no-repeat 50% 50%;
     background-size: 90% auto;
-    opacity: .25;
+    opacity: 1;
 }
 
 #twailerz:hover::before {
@@ -1488,7 +1492,7 @@ PAGE: Projects Page
     content: '';
     background: transparent url('img/projects/tic-tact-toebw.png') no-repeat 50% 50%;
     background-size: 90% auto;
-    opacity: .25;
+    opacity: 1;
 }
 
 #tictactoe:hover::before {
@@ -1508,7 +1512,7 @@ PAGE: Projects Page
     content: '';
     background: transparent url('img/projects/taskitbw.png') no-repeat 50% 50%;
     background-size: 90% auto;
-    opacity: .25;
+    opacity: 1;
 }
 
 #taskit:hover::before {
@@ -1585,9 +1589,8 @@ PAGE: Connect Page
 *********************************/
 .connect_container {
     position: relative;
-    height: 100vh;
-    background-color: #000;
-    opacity: .5;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 
