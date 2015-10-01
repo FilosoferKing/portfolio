@@ -1320,14 +1320,20 @@ PAGE: Projects Page
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 90%;
-    height: 35%;
-    content: '';
+    width: 80%;
+    height: 25%;
+    content: attr(content);
     #background-color: rgba(56, 77, 86, .75);
-    border-top: 5px solid #000;
-    border-bottom: 5px solid #000;
-    background-color: rgba(180, 180, 180, .9);
+    border-top: 2px solid rgba(56, 77, 86, 1);
+    border-bottom: 2px solid rgba(56, 77, 86, 1);
+    background-color: rgba(180, 180, 180, 1);
     transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 155%;
+    font-size: 1.75vw;
+    font-weight: 500;
+    #text-shadow: 0 1px 1px #000;
+    color: rgba(56, 77, 86, 1);
 }
 
 .imageDiv:hover::after {
@@ -1343,20 +1349,20 @@ PAGE: Projects Page
     transition-duration: .5s;
 }
 
-.imageDiv h1 {
-    position: absolute;
-    top: 40%;
-    text-align: center;
-    width: 100%;
-    transform: translateY(-50%);
-    #font-family: chalk;
-    font-size: 1.5vw;
-    font-weight: 700;
-    color: #fff;
-    text-shadow: 0 1px 1px #000;
-    #color: rgba(56, 77, 86, 1);
-    z-index: 2;
-}
+/*.imageDiv h1 {*/
+    /*position: absolute;*/
+    /*top: 40%;*/
+    /*text-align: center;*/
+    /*width: 100%;*/
+    /*transform: translateY(-50%);*/
+    /*#font-family: chalk;*/
+    /*font-size: 2vw;*/
+    /*font-weight: 700;*/
+    /*color: #fff;*/
+    /*text-shadow: 0 1px 1px #000;*/
+    /*#color: rgba(56, 77, 86, 1);*/
+    /*z-index: 2;*/
+/*}*/
 
 .imageDiv:hover h1 {
     opacity: 0;
@@ -1391,7 +1397,7 @@ PAGE: Projects Page
     height: 100%;
     content: '';
     background: transparent url('img/projects/marounrecordsbw.png') no-repeat 50% 50%;
-    background-size: 90% auto;
+    background-size: 60% auto;
     opacity: 1;
 }
 
@@ -1411,7 +1417,7 @@ PAGE: Projects Page
     height: 100%;
     content: '';
     background: transparent url('img/projects/memorymatchbw.png') no-repeat 50% 50%;
-    background-size: 90% auto;
+    background-size: 60% auto;
     opacity: 1;
 }
 
@@ -1431,7 +1437,7 @@ PAGE: Projects Page
     height: 100%;
     content: '';
     background: transparent url('img/projects/calculatorbw.png') no-repeat 50% 50%;
-    background-size: 90% auto;
+    background-size: 60% auto;
     opacity: 1;
 }
 
@@ -1451,7 +1457,7 @@ PAGE: Projects Page
     height: 100%;
     content: '';
     background: transparent url('img/projects/sgtbw.png') no-repeat 50% 50%;
-    background-size: 90% auto;
+    background-size: 60% auto;
     opacity: 1;
 }
 
@@ -1471,7 +1477,7 @@ PAGE: Projects Page
     height: 100%;
     content: '';
     background: transparent url('img/projects/twailerzbw.png') no-repeat 50% 50%;
-    background-size: 90% auto;
+    background-size: 60% auto;
     opacity: 1;
 }
 
@@ -1491,7 +1497,7 @@ PAGE: Projects Page
     height: 100%;
     content: '';
     background: transparent url('img/projects/tic-tact-toebw.png') no-repeat 50% 50%;
-    background-size: 90% auto;
+    background-size: 60% auto;
     opacity: 1;
 }
 
@@ -1511,7 +1517,7 @@ PAGE: Projects Page
     height: 100%;
     content: '';
     background: transparent url('img/projects/taskitbw.png') no-repeat 50% 50%;
-    background-size: 90% auto;
+    background-size: 60% auto;
     opacity: 1;
 }
 
