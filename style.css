@@ -1029,9 +1029,9 @@ PAGE: Skills Page
     transform: translate(-50%, -50%) rotateZ(-90deg);
     width: 100%;
     height: 100%;
-    #background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .25);
     border-radius: 50%;
-    box-shadow: 0 0 50px 20px #000 inset;
+    #box-shadow: 0 0 50px 20px #000 inset;
 }
 
 #svg circle {
@@ -1039,7 +1039,7 @@ PAGE: Skills Page
     position: absolute;
     stroke-dashoffset: 0;
     transition: stroke-dashoffset 1s linear;
-    stroke: rgba(0, 0, 0, .25);
+    stroke: rgba(0, 0, 0, .5);
     stroke-width: 3em;
     width: 100%;
     height: 100%;
@@ -1235,10 +1235,16 @@ PAGE: Projects Page
     top: 0;
     padding-left: 0;
     padding-right: 0;
-    background: #000 url('img/alt2bg.jpg') no-repeat 50% 50%;
+    background: #000 url('img/brickwall.png') no-repeat 50% 50%;
     background-size: cover;
     color: #fff;
     #background-color: rgba(83, 132, 89, .75);
+}
+
+.projects_container a {
+    position: relative;
+    display: block;
+    top: -7vh;
 }
 
 .nav_container_alt .project_title h1 {
@@ -1284,8 +1290,7 @@ PAGE: Projects Page
 }
 
 .projectImagesContainer {
-    padding-right: 0;
-    padding-left: 0;
+    padding: 10vh 0;
 }
 
 .projects {
@@ -1298,8 +1303,9 @@ PAGE: Projects Page
     padding-right: 0;
 }
 
-.project_title h1 {
+.projects h1 {
     position: relative;
+    font-weight: 700;
     font-size: 2vw;
     text-align: center;
     padding: 4vh 0;
@@ -1315,7 +1321,7 @@ PAGE: Projects Page
     background-position: 60% 50%;
     overflow: hidden;
     #box-shadow: 0 0 20px 10px #000 inset;
-    #border: 1px solid #000;
+    #border: 10px solid #000;
     cursor: pointer;
 }
 
@@ -1365,7 +1371,7 @@ PAGE: Projects Page
     content: '';
     background: transparent url('img/projects/mrchalkbw.png') no-repeat 50% 50%;
     background-size: contain;
-    opacity: .25;
+    opacity: .2;
 }
 
 #marounrecords:hover::before {
@@ -1556,6 +1562,17 @@ Projects MODAL
     font-size: 3vw;
     cursor: pointer;
 }
+
+/********************************
+PAGE: Connect Page
+*********************************/
+.connect_container {
+    position: relative;
+    height: 100vh;
+    background-color: #000;
+    opacity: .5;
+}
+
 
 
 
