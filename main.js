@@ -99,7 +99,7 @@ $(document).scroll(function () {
 
 
             if ($('.about_title').length == 0) {
-                $('.skills_title').remove();
+                $('.skills_title, .project_title').remove();
                 var about_title_div = $('<div>', {
                     class: 'col-xs-12 about_title'
                 });
@@ -135,7 +135,7 @@ $(document).scroll(function () {
             $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
 
             if ($('.skills_title').length == 0) {
-                $('.about_title').remove();
+                $('.about_title, .project_title').remove();
                 var skills_title_div = $('<div>', {
                     class: 'col-xs-12 skills_title'
                 });
@@ -146,6 +146,8 @@ $(document).scroll(function () {
                 $('.nav_container').append(skills_title_div);
             }
 
+            $('#svg circle').css({'display': 'block'});
+
 
         } else {
             $('.skills_row div img').css({'animation-name': 'none'});
@@ -153,7 +155,32 @@ $(document).scroll(function () {
             $('.bottom_angle').removeClass('bottom_land_angle').addClass('bottom_land_angle_alt');
             $('.nav_top_angle').removeClass('nav_container').addClass('nav_container_alt');
             $('.land_text .nav_bar').css({'transform': 'rotateZ(-2deg)', 'top': '3.5vh'});
+
+            $('#svg circle').css({'display': 'none'});
         }
+
+        if (highlighted_section == '.projects') {
+            console.log("This is projects! Boom");
+            $('.bottom_angle').removeClass('bottom_land_angle').addClass('bottom_land_angle_alt');
+            $('.nav_top_angle').removeClass('nav_container').addClass('nav_container_alt');
+            $('.land_text .nav_bar').css({'transform': 'rotateZ(-2deg)', 'top': '3.5vh'});
+
+            if ($('.project_title').length == 0) {
+                $('.about_title, .skills_title').remove();
+                var project_title_div = $('<div>', {
+                    class: 'col-xs-12 project_title'
+                });
+                var project_title_h1 = $('<h1>', {
+                    text: 'PROJECTS'
+                });
+                project_title_div.append(project_title_h1);
+                $('.nav_container_alt').append(project_title_div);
+            }
+
+        } else {
+
+        }
+
 
 
     } else {
@@ -176,6 +203,8 @@ $(document).scroll(function () {
         $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
 
         $('.skills_title, .about_title').remove();
+
+        $('#svg circle').css({'display': 'none'});
 
     }
 
