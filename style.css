@@ -1578,15 +1578,44 @@ Projects MODAL
 }
 
 .modalImageContainer {
+    position: relative;
     padding: 0;
 }
 
+.projectImageDiv {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: auto;
+}
+
 .projectImage {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: auto;
+}
+
+.carouselLeft {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 50px;
+    background-color: yellow;
+}
+
+.carouselRight {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 50px;
+    background-color: yellow;
 }
 
 .modalInfoContainer {

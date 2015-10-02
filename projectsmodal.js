@@ -10,6 +10,7 @@ $(document).ready(function () {
         console.log('Project id: ', projectId);
         loadProjectInfo(projectId);
         loadProjectImage();
+        $('#' + currentImage).css({'left': '0'});
     });
 
     /*Handler for exiting project modal*/
@@ -57,10 +58,18 @@ function buildModal(title, desc, imgsrc) {
         id: 'projectInfo',
         text: desc
     });
+    var rightButton = $('<button>', {
+        class: 'carouselRight',
+        direction: 1
+    });
+    var leftButton = $('<button>', {
+        class: 'carouselLeft',
+        direction: -1
+    });
 
     $(modalContainer).append(modalContentContainer, exitButton);
     $(modalContentContainer).append(modalImageContainer, modalInfoContainer);
-    $(modalImageContainer).append(projectImage);
+    $(modalImageContainer).append(projectImage, rightButton, leftButton);
     $(modalInfoContainer).append(projectTitle, projectInfo);
 
     $('body').append(modalContainer);
@@ -79,9 +88,9 @@ function buildModal(title, desc, imgsrc) {
 function loadProjectInfo(id) {
     switch (id) {
         case 'marounrecords':
-            title = 'Maroun Records';
-            desc = 'This is info about the Maroun Records project';
-            imgsrc = 'img/projects/marounrecords.png';
+            //title = 'Maroun Records';
+            //desc = 'This is info about the Maroun Records project';
+            //imgsrc = 'img/projects/marounrecords.png';
             buildModal(title, desc, imgsrc);
             break;
         case 'memorymatch':

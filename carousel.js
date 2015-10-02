@@ -1,4 +1,4 @@
-var projectImageArray = ['marounrecords.png', 'memorymatch.png', 'sgt.png', 'calculator.png', 'twailerz.png', 'tic-tac-toe.png', 'skilloutline.png', 'projectoutline.png'];
+var projectImageArray = ['marounrecords.png', 'memorymatch.png', 'calculator.png', 'sgt.png', 'twailerz.png', 'tic-tac-toe.png', 'taskit.png', 'taskit.png'];
 var currentImage = 0;
 var stagedImage = '';
 var clickEnabled = true;
@@ -7,11 +7,11 @@ $(document).ready(function(){
 
    //loadProjectImage();
 
-    $('.carouselLeft').on('click', function () {
+    $('body').on('click', '.carouselLeft', function () {
         if(clickEnabled == true) {
             clickEnabled = false;
             console.log("Left button clicked");
-            var imageDirection = $(this).attr('id');
+            var imageDirection = $(this).attr('direction');
             displayNextImage(imageDirection);
             setTimeout(function(){
                 clickEnabled = true;
@@ -20,11 +20,12 @@ $(document).ready(function(){
     });
 
 
-    $('.carouselRight').on('click', function(){
+    $('body').on('click', '.carouselRight', function(){
         if(clickEnabled == true) {
             clickEnabled = false;
             console.log("Right button clicked");
-            var imageDirection = $(this).attr('id');
+            var imageDirection = $(this).attr('direction');
+            console.log('Image direction: ', imageDirection);
             displayNextImage(imageDirection);
             setTimeout(function () {
                 clickEnabled = true;
@@ -46,16 +47,18 @@ $(document).ready(function(){
         }
     });
 
-    $('#' + currentImage).css({'left': '0'});
-
 });
 function loadProjectImage(){
-    for (var i = projectImageArray.length; i > -1; i--) {
+    for (var i = projectImageArray.length - 1; i > -1; i--) {
         var projectImageDiv = $('<div>', {
-            class: 'col-xs-12 projectImage',
+            class: 'col-xs-12 projectImageDiv',
             id: i
         });
-        $(projectImageDiv).css({'background': 'transparent url("img/' + projectImageArray[i] + '") no-repeat 50% 50%', 'background-size': 'cover'});
+        var image = $('<img>', {
+            src: 'img/projects/' + projectImageArray[i] + '',
+            class:  'projectImage',
+        });
+        $(projectImageDiv).append(image);
         $(projectImageDiv).appendTo('.modalImageContainer');
     }
 }
