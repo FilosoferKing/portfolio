@@ -9,6 +9,7 @@ $(document).ready(function () {
         var projectId = $(this).attr('id');
         console.log('Project id: ', projectId);
         loadProjectInfo(projectId);
+        loadProjectImage();
     });
 
     /*Handler for exiting project modal*/
@@ -42,7 +43,7 @@ function buildModal(title, desc, imgsrc) {
         class: 'col-xs-12 modalImageContainer'
     });
     var projectImage = $('<img>', {
-        id: 'projectImage',
+        class: 'projectImage',
         src: imgsrc
     });
     var modalInfoContainer = $('<div>', {

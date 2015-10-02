@@ -5,7 +5,7 @@ var clickEnabled = true;
 
 $(document).ready(function(){
 
-   loadProjectImage();
+   //loadProjectImage();
 
     $('.carouselLeft').on('click', function () {
         if(clickEnabled == true) {
@@ -52,11 +52,11 @@ $(document).ready(function(){
 function loadProjectImage(){
     for (var i = projectImageArray.length; i > -1; i--) {
         var projectImageDiv = $('<div>', {
-            class: 'col-xs-12 imageDiv',
+            class: 'col-xs-12 projectImage',
             id: i
         });
         $(projectImageDiv).css({'background': 'transparent url("img/' + projectImageArray[i] + '") no-repeat 50% 50%', 'background-size': 'cover'});
-        $(projectImageDiv).appendTo('.projectImagesContainer');
+        $(projectImageDiv).appendTo('.modalImageContainer');
     }
 }
 

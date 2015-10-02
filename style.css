@@ -1239,6 +1239,7 @@ PAGE: Projects Page
     #background-size: cover;
     color: #fff;
     background-color: #B4B4B4;
+    overflow: hidden;
 }
 
 .projects_container a {
@@ -1291,6 +1292,27 @@ PAGE: Projects Page
 
 .projectImagesContainer {
     padding: 10vh 0;
+    overflow: hidden;
+}
+
+.projectImagesContainer::before {
+    position: absolute;
+    top: 0;
+    left: -95%;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(56, 77, 86, 1);
+}
+
+.projectImagesContainer::after {
+    position: absolute;
+    top: 0;
+    left: 95%;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(56, 77, 86, 1);
 }
 
 .projects {
@@ -1321,7 +1343,7 @@ PAGE: Projects Page
     top: 50%;
     left: 50%;
     width: 80%;
-    height: 25%;
+    height: 20%;
     content: attr(content);
     #background-color: rgba(56, 77, 86, .75);
     border-top: 2px solid rgba(56, 77, 86, 1);
@@ -1330,7 +1352,7 @@ PAGE: Projects Page
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 155%;
-    font-size: 1.75vw;
+    font-size: 1.5vw;
     font-weight: 500;
     #text-shadow: 0 1px 1px #000;
     color: rgba(56, 77, 86, 1);
@@ -1559,7 +1581,7 @@ Projects MODAL
     padding: 0;
 }
 
-#projectImage {
+.projectImage {
     position: relative;
     top: 0;
     left: 0;
