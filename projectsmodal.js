@@ -69,8 +69,8 @@ function buildModal(title, desc, imgsrc) {
 
     $(modalContainer).append(modalContentContainer, exitButton);
     $(modalContentContainer).append(modalImageContainer, modalInfoContainer);
-    $(modalImageContainer).append(projectImage, rightButton, leftButton);
-    $(modalInfoContainer).append(projectTitle, projectInfo);
+    $(modalImageContainer).append(projectImage);
+    $(modalInfoContainer).append(projectTitle, projectInfo, rightButton, leftButton);
 
     $('body').append(modalContainer);
 
@@ -88,10 +88,10 @@ function buildModal(title, desc, imgsrc) {
 function loadProjectInfo(id) {
     switch (id) {
         case 'marounrecords':
-            //title = 'Maroun Records';
-            //desc = 'This is info about the Maroun Records project';
+            title = 'Maroun Records';
+            desc = 'This is info about the Maroun Records project';
             //imgsrc = 'img/projects/marounrecords.png';
-            buildModal(title, desc, imgsrc);
+            buildModal(title, desc);
             break;
         case 'memorymatch':
             title = 'Memory Match';
