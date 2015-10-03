@@ -1582,6 +1582,7 @@ Projects MODAL
 .modalImageContainer {
     position: relative;
     padding: 0;
+    height: 50vh;
 }
 
 .projectImageDiv {
@@ -1589,7 +1590,7 @@ Projects MODAL
     top: 0;
     left: -100%;
     width: 100%;
-    min-height: 100%;
+    height: auto;
 }
 
 .projectImage {
@@ -1608,6 +1609,7 @@ Projects MODAL
     width: 25px;
     height: 50px;
     background-color: yellow;
+    z-index: 2;
 }
 
 .carouselRight {
@@ -1618,10 +1620,12 @@ Projects MODAL
     width: 25px;
     height: 50px;
     background-color: yellow;
+    z-index: 2;
 }
 
 .modalInfoContainer {
     position: relative;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .modalInfoContainer h1 {
@@ -1630,7 +1634,7 @@ Projects MODAL
 
 .modalInfoContainer p {
     text-align: center;
-    font-size: 2em;
+    font-size: 2vw;
 
 }
 

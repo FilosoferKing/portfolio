@@ -69,8 +69,8 @@ function buildModal(title, desc, imgsrc) {
 
     $(modalContainer).append(modalContentContainer, exitButton);
     $(modalContentContainer).append(modalImageContainer, modalInfoContainer);
-    $(modalImageContainer).append(projectImage);
-    $(modalInfoContainer).append(projectTitle, projectInfo, rightButton, leftButton);
+    $(modalImageContainer).append(projectImage, rightButton, leftButton);
+    $(modalInfoContainer).append(projectTitle, projectInfo);
 
     $('body').append(modalContainer);
 
