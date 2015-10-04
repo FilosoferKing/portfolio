@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b400f1d-919c-45e8-9df1-ca926dc19bd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/carousel.js" afterPath="$PROJECT_DIR$/carousel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +32,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="315" column="14" selection-start-line="315" selection-start-column="14" selection-end-line="315" selection-end-column="14" />
+                <state vertical-scroll-proportion="-11.115385">
+                  <caret line="32" column="76" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="76" />
                   <folding />
                 </state>
               </provider>
@@ -44,8 +42,8 @@
           <file leaf-file-name="projectsmodal.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/projectsmodal.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3975501">
-                  <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.43541202">
+                  <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
@@ -58,8 +56,8 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.62138087">
-                  <caret line="1572" column="42" selection-start-line="1572" selection-start-column="42" selection-end-line="1572" selection-end-column="42" />
+                <state vertical-scroll-proportion="0.46993318">
+                  <caret line="1634" column="58" selection-start-line="1634" selection-start-column="58" selection-end-line="1634" selection-end-column="58" />
                   <folding />
                 </state>
               </provider>
@@ -637,14 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="315" column="14" selection-start-line="315" selection-start-column="14" selection-end-line="315" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/projects/skilloutline.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -666,18 +656,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="32" column="76" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projectsmodal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3975501">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43541202">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62138087">
-          <caret line="1572" column="42" selection-start-line="1572" selection-start-column="42" selection-end-line="1572" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.46993318">
+          <caret line="1634" column="58" selection-start-line="1634" selection-start-column="58" selection-end-line="1634" selection-end-column="58" />
           <folding />
         </state>
       </provider>

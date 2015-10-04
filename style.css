@@ -1569,7 +1569,7 @@ Projects MODAL
     top: 10%;
     left: 0;
     #width: 100vw;
-    height: 80vh;
+    #height: 80vh;
     background-color: rgba(56, 77, 86, 1);
     box-shadow: 0 0 15px 3px #000;
     padding: 0;
@@ -1581,9 +1581,9 @@ Projects MODAL
 
 .modalImageContainer {
     position: relative;
-    padding: 0;
-    height: 50vh;
-    background-color: rgba(56, 77, 86, 1);
+    padding: 25%;
+    height: auto;
+    background-color: #E7E7E7;
 }
 
 .projectImageDiv {
@@ -1605,28 +1605,34 @@ Projects MODAL
 .carouselLeft {
     position: absolute;
     top: 50%;
-    left: 5%;
+    left: 25px;
     transform: translateY(-50%);
     width: 25px;
     height: 50px;
-    background-color: yellow;
+    border: none;
+    outline: none;
+    background: transparent url('img/arrowrev.png') no-repeat 50% 50%;
+    background-size: contain;
     z-index: 2;
 }
 
 .carouselRight {
     position: absolute;
     top: 50%;
-    left: 95%;
+    right: 25px;
     transform: translateY(-50%);
     width: 25px;
     height: 50px;
-    background-color: yellow;
+    border: none;
+    outline: none;
+    background: transparent url('img/arrow.png') no-repeat 50% 50%;
+    background-size: contain;
     z-index: 2;
 }
 
 .modalInfoContainer {
     position: relative;
-    background-color: rgba(56, 77, 86, 1);
+    background: linear-gradient(to top, #B4B4B4, #E7E7E7);
 }
 
 .modalInfoContainer h1 {
