@@ -337,6 +337,7 @@ Navigation menu
     opacity: 1;
 
     animation-name: logoFlip;
+    animation-delay: 1s;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
@@ -390,6 +391,34 @@ PAGE: Landing Page
     z-index: 0;
     background: #fff url('img/landbw.jpg') no-repeat 50% 50%;
     background-size: cover;
+}
+
+.landingPage {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #384D56;
+    z-index: 10000;
+}
+
+.landingPage img {
+    position: relative;
+    width: auto;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation-name: tlLogoFlip;
+    animation-delay: 1s;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes tlLogoFlip {
+    0% {transform: translate(-50%, -50%) rotateY(-360deg)}
+    100% {transform: translate(-50%, -50%) rotateY(0)}
 }
 
 /*.landing_div .land_menu a {*/
