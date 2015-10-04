@@ -48,7 +48,7 @@ $(document).ready(function(){
     });
 
 });
-function loadProjectImage(){
+function loadProjectImage(imageId){
     for (var i = projectImageArray.length - 1; i > -1; i--) {
         var projectImageDiv = $('<div>', {
             class: 'col-xs-12 projectImageDiv',
@@ -61,6 +61,9 @@ function loadProjectImage(){
         $(projectImageDiv).append(image);
         $(projectImageDiv).appendTo('.modalImageContainer');
     }
+
+    $('#' + imageId).css({'left': '0'});
+    currentImage = imageId;
 }
 
 function displayNextImage(direction){
