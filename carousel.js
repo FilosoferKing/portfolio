@@ -1,4 +1,6 @@
 var projectImageArray = ['marounrecords.png', 'memorymatch.png', 'calculator.png', 'sgt.png', 'twailerz.png', 'tic-tac-toe.png', 'taskit.png', 'taskit.png'];
+var titleArray = ['Maroun Records', 'Memory Match', 'Calculator', 'Student Grade Table', 'Twailerz', 'Tic Tac Toe', 'Task It', 'Final'];
+var descArray = ['This is info about the Maroun Records project', 'This is info about the Memory Match project', 'This is info about the Calculator project', 'This is info about theStudent Grade Table project', 'This is info about the Twailerz project', 'This is info about the Tic Tac Toe project', 'This is info about the Task It project', 'This is info about the Final project'];
 var currentImage = 0;
 var stagedImage = '';
 var clickEnabled = true;
@@ -52,17 +54,19 @@ function loadProjectImage(imageId){
     for (var i = projectImageArray.length - 1; i > -1; i--) {
         var projectImageDiv = $('<div>', {
             class: 'col-xs-12 projectImageDiv',
-            id: i
+            id: i,
+            title: titleArray[i],
+            desc: descArray[i]
         });
         var image = $('<img>', {
             src: 'img/projects/' + projectImageArray[i] + '',
-            class:  'projectImage',
+            class:  'projectImage'
         });
         $(projectImageDiv).append(image);
         $(projectImageDiv).appendTo('.modalImageContainer');
     }
 
-    $('#' + imageId).css({'left': '0'});
+    $('#' + imageId).css({'top': '0'});
     currentImage = imageId;
 }
 
@@ -72,14 +76,14 @@ function displayNextImage(direction){
     if(direction == -1 && currentImage == 0){
         stagedImage = 7;
         console.log('Current Image Left at 0: ', currentImage);
-        $('#' + stagedImage).delay(500).animate({'left': '0'}, 500);
-        $('#' + currentImage).animate({'left': '-100%'}, 500);
+        $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image left at 0: ', currentImage);
     } else if(direction == -1) {
         console.log('Current Image Left: ', currentImage);
-        $('#' + stagedImage).delay(500).animate({'left': '0'}, 500);
-        $('#' + currentImage).animate({'left': '-100%'}, 500);
+        $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image left: ', currentImage);
     }
@@ -88,14 +92,14 @@ function displayNextImage(direction){
 
         console.log('Current Image Right at 7: ', currentImage);
         stagedImage = 0;
-        $('#' + stagedImage).delay(500).animate({'left': '0'}, 500);
-        $('#' + currentImage).animate({'left': '-100%'}, 500);
+        $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image at 7: ', currentImage);
     } else if(direction == 1) {
         console.log('Current Image Right: ', currentImage);
-        $('#' + stagedImage).delay(500).animate({'left': '0'}, 500);
-        $('#' + currentImage).animate({'left': '-100%'}, 500);
+        $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image right: ', currentImage);
     }
