@@ -1559,7 +1559,7 @@ Projects MODAL
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, .25);
+    background-color: rgba(255, 255, 255, .5);
     padding: 0;
     z-index: 1000;
 }
@@ -1607,8 +1607,8 @@ Projects MODAL
     top: 50%;
     left: 25px;
     transform: translateY(-50%);
-    width: 25px;
-    height: 50px;
+    width: 50px;
+    height: 100px;
     border: none;
     outline: none;
     background: transparent url('img/arrowrev.png') no-repeat 50% 50%;
@@ -1621,8 +1621,8 @@ Projects MODAL
     top: 50%;
     right: 25px;
     transform: translateY(-50%);
-    width: 25px;
-    height: 50px;
+    width: 50px;
+    height: 100px;
     border: none;
     outline: none;
     background: transparent url('img/arrow.png') no-repeat 50% 50%;
@@ -1633,6 +1633,7 @@ Projects MODAL
 .modalInfoContainer {
     position: relative;
     background: linear-gradient(to top, #B4B4B4, #E7E7E7);
+    color: rgba(56, 77, 86, 1);
 }
 
 .modalInfoContainer h1 {

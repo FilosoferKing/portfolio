@@ -138,11 +138,11 @@ function modalInfoChange(){
     var modalTitle = $('#' + stagedImage).attr('title');
     var modalInfo = $('#' + stagedImage).attr('desc');
 
-    $('#projectTitle').fadeOut(500);
-    $('#projectInfo').fadeOut(500);
+    $('#projectTitle').fadeTo(500, 0);
+    $('#projectInfo').fadeTo(500, 0);
     setTimeout(function(){
-        $('#projectTitle').hide().text(modalTitle).fadeIn(250);
-        $('#projectInfo').hide().text(modalInfo).fadeIn(250);
+        $('#projectTitle').text(modalTitle).fadeTo(250, 1);
+        $('#projectInfo').text(modalInfo).fadeTo(250, 1);
     }, 750);
 }
 
