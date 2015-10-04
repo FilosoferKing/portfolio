@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/main.js" line="84" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b400f1d-919c-45e8-9df1-ca926dc19bd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/carousel.js" afterPath="$PROJECT_DIR$/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="0b400f1d-919c-45e8-9df1-ca926dc19bd6" name="Default" comment="" />
     <ignored path="portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
