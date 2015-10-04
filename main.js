@@ -88,7 +88,7 @@ $(document).scroll(function () {
         if (highlighted_section == '.about') {
             console.log("This is about! Boom");
             $('.info_right').addClass('info_right_circle');
-            $('.info_right h1, .info_right p, hr').css({
+            $('.info_right h1, .info_right p, .info_right hr').css({
                 'opacity': '1',
                 'transition-delay': '1s',
                 'transition-duration': '.5s'
@@ -114,7 +114,7 @@ $(document).scroll(function () {
 
         } else {
             $('.info_right').removeClass('info_right_circle');
-            $('.info_right h1, .info_right p, hr').css({
+            $('.info_right h1, .info_right p, .info_right hr').css({
                 'opacity': '0',
                 'transition-delay': '0s',
                 'transition-duration': '0s'

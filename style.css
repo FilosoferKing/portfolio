@@ -601,7 +601,7 @@ PAGE: About Page
     top: -10vh;
 }
 
-hr {
+.info_right hr {
     background-color: rgba(255, 255, 255, .85);
     height: 1px;
     width: 50%;
@@ -1689,9 +1689,91 @@ PAGE: Connect Page
 *********************************/
 .connect_container {
     position: relative;
-    height: 50vh;
-    background-color: rgba(0, 0, 0, .5);
+    height: auto;
+    background-color: rgb(108, 108, 108);
 }
+
+form {
+    position: relative;
+    margin-top: 10vh;
+}
+
+form input {
+    position: relative;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #FCA311;
+    background-color: transparent;
+    margin-bottom: 5vh;
+    outline: none;
+    color: #E7E7E7;
+    font-size: 1.25vw;
+}
+
+form textarea {
+    position: relative;
+    height: 200px;
+    border-radius: 5px;
+    border: 2px solid #FCA311;
+    background-color: transparent;
+    margin-bottom: 5vh;
+    outline: none;
+    color: #E7E7E7;
+    font-size: 1.25vw;
+}
+
+form button {
+    position: relative;
+    font-size: 1.5vw;
+    height: auto;
+    padding: 0;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #fff;
+    background-color: #FCA311;
+    margin-bottom: 30vh;
+    color: #fff;
+    outline: none;
+}
+
+form span {
+    padding-top: 1vh;
+    text-align: center;
+}
+
+.contactInfo hr {
+    position: relative;
+    width: 50%;
+    height: 2px;
+    background-color: #FCA311;
+    border: none;
+    z-index: 20;
+    opacity: 1;
+}
+
+.contactInfo h3 {
+    font-size: 1.25vw;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    margin-top: 10vh;
+}
+
+.contactInfo p {
+    font-size: 1.25vw;
+    color: #fff;
+}
+
+.emailDec p, .phoneDec p {
+    text-align: right;
+}
+
+.emailInfo p, .phoneInfo p {
+    text-align: left;
+}
+
 
 
 
