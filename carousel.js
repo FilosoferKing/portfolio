@@ -93,16 +93,14 @@ function displayNextImage(direction){
     if(direction == -1 && currentImage == 0){
         stagedImage = 7;
         //console.log('Current Image Left at 0: ', currentImage);
-        $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        changeModalImage();
         modalInfoChange();
-        $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
         //console.log('New current image left at 0: ', currentImage);
     } else if(direction == -1) {
         //console.log('Current Image Left: ', currentImage);
-        $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        changeModalImage();
         modalInfoChange();
-        $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
         //console.log('New current image left: ', currentImage);
     }
@@ -110,16 +108,14 @@ function displayNextImage(direction){
     if(direction == 1 && currentImage == projectImageArray.length - 1){
         //console.log('Current Image Right at 7: ', currentImage);
         stagedImage = 0;
-        $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        changeModalImage();
         modalInfoChange();
-        $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
        // console.log('New current image at 7: ', currentImage);
     } else if(direction == 1) {
        // console.log('Current Image Right: ', currentImage);
-        $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        changeModalImage();
         modalInfoChange();
-        $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
         //console.log('New current image right: ', currentImage);
     }
@@ -138,11 +134,29 @@ function modalInfoChange(){
     var modalTitle = $('#' + stagedImage).attr('title');
     var modalInfo = $('#' + stagedImage).attr('desc');
 
-    $('#projectTitle').fadeTo(500, 0);
-    $('#projectInfo').fadeTo(500, 0);
+    $('#projectTitle').fadeTo(250, 0);
+    $('#projectInfo').fadeTo(250, 0);
     setTimeout(function(){
         $('#projectTitle').text(modalTitle).fadeTo(250, 1);
         $('#projectInfo').text(modalInfo).fadeTo(250, 1);
-    }, 750);
+    }, 500);
+}
+
+/***************************************
+ * NAME: changeModalImage()
+ * PARAMS: none
+ * GLOBAL VARIABLES: stagedImage, currentImage
+ * LOCAL VARIABLES: none
+ * PURPOSE: loads then next image depending on the user click (left or right)
+ * FUNCTIONS USED: none
+ */
+function changeModalImage(){
+    $('#' + stagedImage).fadeTo(0, 0).animate({'top': '0'}, 500);
+    setTimeout(function(){
+        $('#' + stagedImage).fadeTo(500, 1);
+    }, 500);
+    $('#' + currentImage).fadeTo(500, 0).animate({'top': '-100%'}, 500, function(){
+        $(this).fadeTo(500, 1);
+    });
 }
 
