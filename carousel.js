@@ -77,12 +77,14 @@ function displayNextImage(direction){
         stagedImage = 7;
         console.log('Current Image Left at 0: ', currentImage);
         $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        modalInfoChange();
         $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image left at 0: ', currentImage);
     } else if(direction == -1) {
         console.log('Current Image Left: ', currentImage);
         $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        modalInfoChange();
         $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image left: ', currentImage);
@@ -93,16 +95,30 @@ function displayNextImage(direction){
         console.log('Current Image Right at 7: ', currentImage);
         stagedImage = 0;
         $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        modalInfoChange();
         $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image at 7: ', currentImage);
     } else if(direction == 1) {
         console.log('Current Image Right: ', currentImage);
         $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
+        modalInfoChange();
         $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
         console.log('New current image right: ', currentImage);
     }
 
+}
+
+function modalInfoChange(){
+    var modalTitle = $('#' + stagedImage).attr('title');
+    var modalInfo = $('#' + stagedImage).attr('desc');
+
+    $('#projectTitle').fadeOut(500);
+    $('#projectInfo').fadeOut(500);
+    setTimeout(function(){
+        $('#projectTitle').hide().text(modalTitle).fadeIn(250);
+        $('#projectInfo').hide().text(modalInfo).fadeIn(250);
+    }, 750);
 }
 

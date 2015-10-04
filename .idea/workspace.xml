@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0b400f1d-919c-45e8-9df1-ca926dc19bd6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/carousel.js" afterPath="$PROJECT_DIR$/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +42,7 @@
           <file leaf-file-name="projectsmodal.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/projectsmodal.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.84855235">
+                <state vertical-scroll-proportion="2.5178173">
                   <caret line="133" column="57" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="57" />
                   <folding />
                 </state>
@@ -67,8 +66,8 @@
           <file leaf-file-name="carousel.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/carousel.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.65924275">
-                  <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
+                <state vertical-scroll-proportion="0.6971047">
+                  <caret line="114" column="54" selection-start-line="114" selection-start-column="54" selection-end-line="114" selection-end-column="54" />
                   <folding />
                 </state>
               </provider>
@@ -667,7 +666,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projectsmodal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84855235">
+        <state vertical-scroll-proportion="2.5178173">
           <caret line="133" column="57" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="57" />
           <folding />
         </state>
@@ -675,8 +674,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/carousel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65924275">
-          <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.6971047">
+          <caret line="114" column="54" selection-start-line="114" selection-start-column="54" selection-end-line="114" selection-end-column="54" />
           <folding />
         </state>
       </provider>
