@@ -50,6 +50,15 @@ $(document).ready(function(){
     });
 
 });
+
+/***************************************
+ * NAME: loadProjectImage()
+ * PARAMS: imageId
+ * GLOBAL VARIABLES: titleArray, descArray, currentImage, projectImageArray
+ * LOCAL VARIABLES: projectImageDiv, image
+ * PURPOSE: cycles through the image array and appends the images to the modal
+ * FUNCTIONS USED: none
+ */
 function loadProjectImage(imageId){
     for (var i = projectImageArray.length - 1; i > -1; i--) {
         var projectImageDiv = $('<div>', {
@@ -70,46 +79,61 @@ function loadProjectImage(imageId){
     currentImage = imageId;
 }
 
+/***************************************
+ * NAME: displayNextImage()
+ * PARAMS: direction
+ * GLOBAL VARIABLES: currentImage, stagedImage, projectImageArray
+ * LOCAL VARIABLES: none
+ * PURPOSE: slides the staged image into the display and slides the current image out of display
+ * FUNCTIONS USED: modalInfoChange()
+ */
 function displayNextImage(direction){
     stagedImage = parseInt(currentImage) + parseInt(direction);
-    console.log('Staged image: ', stagedImage);
+    //console.log('Staged image: ', stagedImage);
     if(direction == -1 && currentImage == 0){
         stagedImage = 7;
-        console.log('Current Image Left at 0: ', currentImage);
+        //console.log('Current Image Left at 0: ', currentImage);
         $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
         modalInfoChange();
         $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
-        console.log('New current image left at 0: ', currentImage);
+        //console.log('New current image left at 0: ', currentImage);
     } else if(direction == -1) {
-        console.log('Current Image Left: ', currentImage);
+        //console.log('Current Image Left: ', currentImage);
         $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
         modalInfoChange();
         $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
-        console.log('New current image left: ', currentImage);
+        //console.log('New current image left: ', currentImage);
     }
 
     if(direction == 1 && currentImage == projectImageArray.length - 1){
-
-        console.log('Current Image Right at 7: ', currentImage);
+        //console.log('Current Image Right at 7: ', currentImage);
         stagedImage = 0;
         $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
         modalInfoChange();
         $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
-        console.log('New current image at 7: ', currentImage);
+       // console.log('New current image at 7: ', currentImage);
     } else if(direction == 1) {
-        console.log('Current Image Right: ', currentImage);
+       // console.log('Current Image Right: ', currentImage);
         $('#' + stagedImage).delay(500).animate({'top': '0'}, 500);
         modalInfoChange();
         $('#' + currentImage).animate({'top': '-100%'}, 500);
         currentImage = stagedImage;
-        console.log('New current image right: ', currentImage);
+        //console.log('New current image right: ', currentImage);
     }
 
 }
 
+/***************************************
+ * NAME: modalInfoChange()
+ * PARAMS: none
+ * GLOBAL VARIABLES: stagedImage
+ * LOCAL VARIABLES: modalTitle, ModalInfo
+ * PURPOSE: updates the correct display information to match the current image
+ * FUNCTIONS USED: none
+ */
 function modalInfoChange(){
     var modalTitle = $('#' + stagedImage).attr('title');
     var modalInfo = $('#' + stagedImage).attr('desc');

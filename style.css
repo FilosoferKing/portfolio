@@ -1570,7 +1570,7 @@ Projects MODAL
     left: 0;
     #width: 100vw;
     height: 80vh;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(56, 77, 86, 1);
     box-shadow: 0 0 15px 3px #000;
     padding: 0;
     /*overflow: scroll;*/
@@ -1583,6 +1583,7 @@ Projects MODAL
     position: relative;
     padding: 0;
     height: 50vh;
+    background-color: rgba(56, 77, 86, 1);
 }
 
 .projectImageDiv {
@@ -1625,7 +1626,7 @@ Projects MODAL
 
 .modalInfoContainer {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(56, 77, 86, 1);
 }
 
 .modalInfoContainer h1 {
