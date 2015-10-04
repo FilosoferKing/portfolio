@@ -28,7 +28,7 @@ $(document).ready(function () {
  * PURPOSE: gets project information from loadProjectInfo() and builds out modal and appends it to the body
  * FUNCTIONS USED: none
  */
-function buildModal(title, desc, imgsrc) {
+function buildModal(title, desc, imageId) {
     var modalContainer = $('<div>', {
         class: 'col-xs-12 modalContainer'
     });
@@ -42,7 +42,7 @@ function buildModal(title, desc, imgsrc) {
         class: 'col-xs-12 modalImageContainer'
     });
     var projectImage = $('<img>', {
-        id: 'projectImage',
+        class: 'projectImage',
         src: imgsrc
     });
     var modalInfoContainer = $('<div>', {
@@ -56,13 +56,23 @@ function buildModal(title, desc, imgsrc) {
         id: 'projectInfo',
         text: desc
     });
+    var rightButton = $('<button>', {
+        class: 'carouselRight',
+        direction: 1
+    });
+    var leftButton = $('<button>', {
+        class: 'carouselLeft',
+        direction: -1
+    });
 
     $(modalContainer).append(modalContentContainer, exitButton);
     $(modalContentContainer).append(modalImageContainer, modalInfoContainer);
-    $(modalImageContainer).append(projectImage);
+    $(modalImageContainer).append(projectImage, rightButton, leftButton);
     $(modalInfoContainer).append(projectTitle, projectInfo);
 
     $('body').append(modalContainer);
+
+    loadProjectImage(imageId);
 
     $('.menu_button').hide(); //hides the menu button when modal is active
 }
@@ -80,50 +90,50 @@ function loadProjectInfo(id) {
         case 'marounrecords':
             title = 'Maroun Records';
             desc = 'This is info about the Maroun Records project';
-            imgsrc = 'img/projects/marounrecords.png';
-            buildModal(title, desc, imgsrc);
+            var imageId = 0;
+            buildModal(title, desc, imageId);
             break;
         case 'memorymatch':
             title = 'Memory Match';
             desc = 'This is info about the Memory Match project';
-            imgsrc = 'img/projects/memorymatch.png';
-            buildModal(title, desc, imgsrc);
+            var imageId = 1;
+            buildModal(title, desc, imageId);
             break;
         case 'calculator':
             title = 'Calculator';
             desc = 'This is info about the Calculator project';
-            imgsrc = 'img/projects/calculator.png';
-            buildModal(title, desc, imgsrc);
+            var imageId = 2;
+            buildModal(title, desc, imageId);
             break;
         case 'sgt':
             title = 'Student Grade Table';
             desc = 'This is info about theStudent Grade Table project';
-            imgsrc = 'img/projects/sgt.png';
-            buildModal(title, desc, imgsrc);
+            var imageId = 3;
+            buildModal(title, desc, imageId);
             break;
         case 'twailerz':
             title = 'Twailerz';
             desc = 'This is info about the Twailerz project';
-            imgsrc = 'img/projects/twailerz.png';
-            buildModal(title, desc, imgsrc);
+            var imageId = 4;
+            buildModal(title, desc, imageId);
             break;
         case 'tictactoe':
             title = 'Tic Tac Toe';
             desc = 'This is info about the Tic Tac Toe project';
-            imgsrc = 'img/projects/tic-tac-toe.png';
-            buildModal(title, desc, imgsrc);
+            var imageId = 5;
+            buildModal(title, desc, imageId);
             break;
         case 'taskit':
             title = 'Task It';
             desc = 'This is info about the Task It project';
-            imgsrc = 'img/projects/taskit.png';
-            buildModal(title, desc, imgsrc);
+            var imageId = 6;
+            buildModal(title, desc, imageId);
             break;
         case 'final':
             title = 'Final';
             desc = 'This is info about the Final project';
-            imgsrc = 'img/projects/taskit.png';
-            buildModal(title, desc, imgsrc);
+            var imageId = 7;
+            buildModal(title, desc, imageId);
             break;
     }
 }
