@@ -1755,15 +1755,16 @@ form span {
 
 .contactInfo h3 {
     font-size: 1.25vw;
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
     color: #fff;
-    margin-top: 10vh;
+    margin-top: 15vh;
 }
 
 .contactInfo p {
     font-size: 1.25vw;
     color: #fff;
+    font-weight: 300;
 }
 
 .emailDec p, .phoneDec p {
@@ -1772,6 +1773,40 @@ form span {
 
 .emailInfo p, .phoneInfo p {
     text-align: left;
+}
+
+.links {
+    position: relative;
+    margin-top: 5vh;
+}
+
+.linkedIn {
+
+    height: 50px;
+    background: transparent url('img/logos/linkedinw.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.gitHub {
+
+    height: 50px;
+    background: transparent url('img/logos/githubw.png') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.resume {
+    height: 50px;
+    #width: 120px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.resume p {
+    padding-top: .5vh;
+    text-align: center;
+    font-size: .75vw;
+    font-weight: 600;
+    color: rgb(108, 108, 108);
 }
 
 
