@@ -1731,10 +1731,13 @@ Projects MODAL
 
 .exitModal {
     position: absolute;
-    top: 25px;
-    right: 40px;
-    color: #000;
-    font-size: 3vw;
+    top: 15px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: transparent url('img/exit.png') no-repeat 50% 50%;
+    background-size: contain;
+    color: #FCA311;
     cursor: pointer;
 }
 

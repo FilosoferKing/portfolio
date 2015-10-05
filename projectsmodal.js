@@ -17,6 +17,14 @@ $(document).ready(function () {
         $('.menu_button').show(); //shows menu button when modal is exited
     });
 
+    //allows user to click outside modal to exit
+    $('body').on('click', '.modalContainer', function() {
+        $('.modalContainer').remove();
+    });
+    //prevents exiting modal when clicking on actual modal
+    $('body').on('click', '.modalContentContainer', function(event) {
+        event.stopPropagation();
+    });
 
 });
 
@@ -33,7 +41,7 @@ function buildModal(title, desc, imageId) {
         class: 'col-xs-12 modalContainer'
     });
     var exitButton = $('<span>', {
-        class: 'glyphicon glyphicon-remove-circle exitModal'
+        class: 'exitModal'
     });
     var modalContentContainer = $('<div>', {
         class: 'col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 modalContentContainer'
@@ -65,8 +73,8 @@ function buildModal(title, desc, imageId) {
         direction: -1
     });
 
-    $(modalContainer).append(modalContentContainer, exitButton);
-    $(modalContentContainer).append(modalImageContainer, modalInfoContainer);
+    $(modalContainer).append(modalContentContainer);
+    $(modalContentContainer).append(modalImageContainer, modalInfoContainer, exitButton);
     $(modalImageContainer).append(projectImage, rightButton, leftButton);
     $(modalInfoContainer).append(projectTitle, projectInfo);
 
