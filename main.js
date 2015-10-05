@@ -3,7 +3,10 @@ $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
     intro_reveal();
-    landingPageFadeOut();
+
+    $('.landingPage .enter button').on('click', function() {
+        landingPageFadeOut();
+    });
 
     //$('body').on('click', function(){
     //    console.log('body click');
@@ -244,9 +247,8 @@ function intro_reveal() {
 }
 
 function landingPageFadeOut(){
-    setTimeout(function(){
+
    $('.landingPage').fadeOut(1000);
-    }, 1000);
 }
 
 
