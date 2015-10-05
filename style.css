@@ -250,6 +250,7 @@ Navigation menu
 
 .land_text .nav_bar a {
     position: relative;
+    text-decoration: none;
 }
 
 .land_text .nav_bar p {
@@ -1733,7 +1734,7 @@ form button {
     border-right: none;
     border-bottom: 2px solid #fff;
     background-color: #FCA311;
-    margin-bottom: 30vh;
+    margin-bottom: 20vh;
     color: #fff;
     outline: none;
 }
