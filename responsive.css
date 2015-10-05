@@ -4,6 +4,7 @@
     Navgation
     ************************************/
     .menu_button {
+        visibility: visible;
         font-size: 8vw;
         opacity: 1;
     }
@@ -16,9 +17,32 @@
         height: 22.5vh;
     }
 
+    .land_text .title h1 {
+        margin-top: 10px;
+        font-size: 5vh;
+    }
+
+    #tl {
+        width: auto;
+        height: 6vh;
+    }
     /************************************
         Landing Page
     ************************************/
+    .landing_div {
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        width: 100vw;
+        height: 100vh;
+        color: #fff;
+        padding: 0;
+        z-index: 0;
+        background: #fff url('img/landbwmobile.jpg') no-repeat 30% 20%;
+        background-size: cover;
+    }
 
     .enter {
         position: absolute;
@@ -238,8 +262,13 @@
     Navgation
     ************************************/
     .menu_button {
-        font-size: 10vw;
+        font-size: 9vw;
         opacity: 1;
+    }
+
+    .land_text .title h1 {
+        margin-top: 10px;
+        font-size: 4.5vh;
     }
 
     .imageDiv {
@@ -250,6 +279,20 @@
     /************************************
     Landing Page
     ************************************/
+    .landing_div {
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        width: 100vw;
+        height: 100vh;
+        color: #fff;
+        padding: 0;
+        z-index: 0;
+        background: #fff url('img/landbwmobile.jpg') no-repeat 30% 20%;
+        background-size: cover;
+    }
 
     .landingPage .tlLogo img {
         position: absolute;
