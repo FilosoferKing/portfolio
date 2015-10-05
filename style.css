@@ -1694,9 +1694,57 @@ PAGE: Connect Page
     background-color: rgb(108, 108, 108);
 }
 
+.connect_container a {
+    position: relative;
+    display: block;
+    top: 0vh;
+}
+
+.nav_container .connect_title h1 {
+    position: absolute;
+    top: 8vh;
+    left: 50%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2vw;
+    padding: 10px;
+    color: rgba(56, 77, 86, 1);
+    transform: rotateZ(3deg) translateX(-50%);
+    transition-duration: 1s;
+
+    animation-name: connectSlideDown;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes connectSlideDown {
+    0% {top: -5vh;}
+    100% {top: 8vh;}
+}
+
+.nav_container .connect_title {
+    position: absolute;
+}
+
+.nav_container .connect_title h1::before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 100%;
+    height: 10vh;
+    background-color: #B4B4B4;
+    #opacity: .75;
+    border-radius: 10px;
+    z-index: -1;
+}
+
 form {
     position: relative;
-    margin-top: 10vh;
+    margin-top: 20vh;
 }
 
 form input {
@@ -1759,7 +1807,7 @@ form span {
     font-weight: 500;
     text-align: center;
     color: #fff;
-    margin-top: 15vh;
+    margin-top: 25vh;
 }
 
 .contactInfo p {

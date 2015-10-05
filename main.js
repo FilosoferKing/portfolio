@@ -100,7 +100,7 @@ $(document).scroll(function () {
 
 
             if ($('.about_title').length == 0) {
-                $('.skills_title, .project_title').remove();
+                $('.skills_title, .project_title, .connect_title').remove();
                 var about_title_div = $('<div>', {
                     class: 'col-xs-12 about_title'
                 });
@@ -136,7 +136,7 @@ $(document).scroll(function () {
             $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
 
             if ($('.skills_title').length == 0) {
-                $('.about_title, .project_title').remove();
+                $('.about_title, .project_title, .connect_title').remove();
                 var skills_title_div = $('<div>', {
                     class: 'col-xs-12 skills_title'
                 });
@@ -167,7 +167,7 @@ $(document).scroll(function () {
             $('.land_text .nav_bar').css({'transform': 'rotateZ(-2deg)', 'top': '3.5vh'});
 
             if ($('.project_title').length == 0) {
-                $('.about_title, .skills_title').remove();
+                $('.about_title, .skills_title, .connect_title').remove();
                 var project_title_div = $('<div>', {
                     class: 'col-xs-12 project_title'
                 });
@@ -176,6 +176,28 @@ $(document).scroll(function () {
                 });
                 project_title_div.append(project_title_h1);
                 $('.nav_container_alt').append(project_title_div);
+            }
+
+        } else {
+
+        }
+
+        if (highlighted_section == '.connect') {
+            console.log("This is connect!! Boom");
+            $('.bottom_angle').removeClass('bottom_land_angle_alt').addClass('bottom_land_angle');
+            $('.nav_top_angle').removeClass('nav_container_alt').addClass('nav_container');
+            $('.land_text .nav_bar').css({'transform': 'rotateZ(2deg)', 'top': '8.5vh'});
+
+            if ($('.connect_title').length == 0) {
+                $('.about_title, .skills_title, .project_title').remove();
+                var connect_title_div = $('<div>', {
+                    class: 'col-xs-12 connect_title'
+                });
+                var connect_title_h1 = $('<h1>', {
+                    text: 'CONNECT'
+                });
+                connect_title_div.append(connect_title_h1);
+                $('.nav_container').append(connect_title_div);
             }
 
         } else {
