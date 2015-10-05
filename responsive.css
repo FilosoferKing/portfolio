@@ -19,56 +19,72 @@
     /************************************
         Landing Page
     ************************************/
-    .land_text .title h1 {
+
+    .enter {
         position: absolute;
-        width: 100%;
-        text-align: center;
-        left: 50%;
-        top: 40%;
-        transform: translate(-50%, -50%);
-        font-weight: 200;
-        font-size: 8vw;
-        opacity: 0;
-
-    }
-
-    .title h3 {
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -20%);
-        font-weight: 200;
-        font-size: 5vw;
-        opacity: 0;
-    }
-
-    .land_about,
-    .land_skills,
-    .land_projects,
-    .land_connect {
+        top: 0;
         left: 0;
-    }
-
-    /************************************
-    Name
-    ************************************/
-    .fname {
-        transform: translateY(75vh);
-        padding: 0;
-    }
-
-    .lname {
-        transform: translateY(75vh);
-        padding: 0;
-        margin-left: 5vw;
+        transform: translateX(0);
+        width: 100vw;
+        height: 10vh;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
 
     }
 
-    .fname h1, .lname h1 {
-        font-size: 10vh;
+    .enter button {
+        position: absolute;
+        top: 5vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 50px;
+        font-size: 4vw;
+        font-weight: 300;
+        color: #FCA311;
+        background-color: transparent;
+        border: 2px solid #FCA311;
+        border-radius: 5px;
     }
+
+    .fName, .lName {
+        position: absolute;
+        height: auto;
+        display: none;
+    }
+
+    .landingPage .fName h1 {
+        position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translate(-60%, -75%);
+        text-align: center;
+        font-size: 12vw;
+        font-weight: 300;
+        color: #fff;
+    }
+
+    .landingPage .lName h1 {
+        position: absolute;
+        top: 80vh;
+        left: 50%;
+        transform: translateX(-60%);
+        text-align: center;
+        font-size: 12vw;
+        font-weight: 300;
+        color: #fff;
+    }
+
+    .landingPage .tlLogo img {
+        position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translate(-50%);
+        height: 60vh;
+        width: auto;
+    }
+
 
     /************************************
     About Me
@@ -196,7 +212,6 @@
         font-size: 1.75em;
     }
 
-<<<<<<< HEAD
     .imageDiv {
         padding-top: 100%;
     }
@@ -204,7 +219,7 @@
     .project_title h1 {
         font-size: 1.75em;
     }
-=======
+
     .modalInfoContainer p {
         font-size: 1.25em;
     }
@@ -215,7 +230,6 @@
         font-size: 3em;
     }
 
->>>>>>> build_projects_modal
 }
 
 @media screen and (max-width: 380px) {
@@ -231,6 +245,34 @@
     .imageDiv {
         width: 100%;
         padding-top: 100%;
+    }
+
+    /************************************
+    Landing Page
+    ************************************/
+
+    .landingPage .tlLogo img {
+        position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90vw;
+        height: auto;
+    }
+
+    .enter button {
+        position: absolute;
+        top: 5vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 50px;
+        font-size: 7vw;
+        font-weight: 300;
+        color: #FCA311;
+        background-color: transparent;
+        border: 2px solid #FCA311;
+        border-radius: 5px;
     }
 
 }
