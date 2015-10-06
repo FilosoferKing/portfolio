@@ -220,29 +220,14 @@
     /************************************
     Skills Me
     ************************************/
-    .skills_container .skills_div {
-        padding: 0;
-        margin: 0;
-    }
-
-    .skills_row {
-        padding: 0;
-    }
-
-    .skillsChart h2 {
-        font-size: 1.5em;
-    }
-
-    .skills_title h1 {
-        font-size: 1.75em;
-    }
-
-    .skillsChart p {
-        font-size: 1em;
-    }
-
     .nav_container .skills_title h1 {
         font-size: 3vh;
+    }
+
+    .skills_row div {
+        position: relative;
+        padding-top: 50%;
+        margin: 0;
     }
 
     /************************************
