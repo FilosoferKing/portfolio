@@ -2,23 +2,10 @@ var trigger_position;
 $(document).ready(function () {
     var menu_toggle = false;//toggle variable for navigation menu click handler
 
-    intro_reveal();
-
+    /*click handler for enter site button on landing page*/
     $('.landingPage .enter button').on('click', function() {
         landingPageFadeOut();
     });
-
-    //$('body').on('click', function(){
-    //    console.log('body click');
-    //    var about_title_div = $('<div>', {
-    //        class: 'col-xs-12 about_title'
-    //    });
-    //    var about_title_h1 = $('<h1>', {
-    //        text: 'THE PATH I WALK'
-    //    });
-    //    about_title_div.append(about_title_h1);
-    //    $('.nav_container').append(about_title_div);
-    //    });
 
     /***************************************
      * NAME: Menu button click handler
@@ -31,23 +18,25 @@ $(document).ready(function () {
     $('.menu_button').on('click', function () {
         if (menu_toggle == false) {
             console.log("Nav displayed");
-            $('.nav_menu').css({"display": "block"});
-            //$('.nav_container').css({"background-color": "rgba(0, 0, 0, .25)", "top": "0", "height": "8vh"});
+            $('.mobileNav').css({"display": "block"});
             menu_toggle = true;
         } else {
             console.log("Nav hidden");
-            $('.nav_menu').css({"display": "none", "transition-duration": "0s"});
-            //$('.nav_container').css({"background-color": "rgba(0, 0, 0, 0)", "top": "0", "height": "0"});
+            $('.mobileNav').css({"display": "none"});
             menu_toggle = false;
         }
     });
 
-    /*Handler for correcting toggle flag when a nav menu option is clicked.*/
-    $('.menu_click').on('click', function () {
+    /*Click handler for the mobile navigation menu*/
+    $('.mobileNav a').on('click', function(){
+        $('.mobileNav p').removeClass('active');
+        $(this).children('p').addClass('active');
+        $('.mobileNav').css({"display": "none"});
         menu_toggle = false;
-    });
+    })
     
 });
+
 /***************************************
  * NAME: Scroll handler
  * PARAMS: none
@@ -238,18 +227,7 @@ $(document).scroll(function () {
 
 });
 
-
-function intro_reveal() {
-    setTimeout(function () {
-        //$('.title #tl').css({'opacity': '1'});
-    }, 500);
-    //setTimeout(function () {
-    //    $('.title h3').css({'opacity': '1', 'transition-duration': '2s'});
-    //}, 1000);
-}
-
 function landingPageFadeOut(){
-
    $('.landingPage').fadeOut(1000);
 }
 
