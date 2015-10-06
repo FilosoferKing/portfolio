@@ -522,11 +522,18 @@ PAGE: About Page
 /*}*/
 
 .info_right {
-    position: absolute;
+    position: relative;
     #overflow: hidden;
     padding: 3vh 0;
     top: 50%;
-    transform: translateY(-70%);
+    transform: translateY(-50%);
+}
+
+.about_div #inquiry {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    color: #fff;
 }
 
 .info_right_circle::after {
