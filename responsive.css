@@ -274,36 +274,38 @@
 
     .imageDiv::after {
         position: absolute;
-        top: 50%;
+        top: 95%;
         left: 50%;
-        width: 94%;
+        width: 100%;
         height: 20%;
         content: attr(content);
-        background-color: rgba(56, 77, 86, 1);
-        border-top: 2px solid #fff;
-        border-bottom: 2px solid #fff;
+        background-color: #fff;
+        border: none;
         transform: translate(-50%, -50%);
         text-align: center;
         line-height: 200%;
         font-size: 4vw;
         font-weight: 500;
         #text-shadow: 0 1px 1px #000;
-        color: #fff;
+        color: rgba(56, 77, 86, 1);
     }
 
     .imageDiv:hover::after {
         position: absolute;
         top: 95%;
         left: 50%;
-        width: 102%;
+        width: 100%;
         height: 20%;
         content: attr(content);
-        background-color: rgba(56, 77, 86, 1);
-        border-top: 2px solid #fff;
-        border-bottom: 2px solid #fff;
+        background-color: #fff;
+        border: none;
         transform: translate(-50%, -50%);
-        transition-duration: .5s;
-        opacity: 1;
+        text-align: center;
+        line-height: 200%;
+        font-size: 4vw;
+        font-weight: 500;
+        #text-shadow: 0 1px 1px #000;
+        color: rgba(56, 77, 86, 1);
     }
 
     /************************************
@@ -325,6 +327,66 @@
         top: 10px;
         right: 25px;
         font-size: 3em;
+    }
+
+    /************************************
+    Connect Page
+    ************************************/
+    .nav_container .connect_title h1 {
+        font-size: 3vh;
+    }
+
+    form button {
+        position: relative;
+        font-size: 4vh;
+        height: auto;
+        width: 25vw;
+        padding: 0;
+        border-radius: 5px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid #fff;
+        background-color: #FCA311;
+        margin-bottom: 20vh;
+        color: #fff;
+        outline: none;
+    }
+
+    .button {
+        left: 50%;
+        transform: translate(-50%);
+        width: 25vw;
+    }
+
+    .contactInfo h3 {
+        font-size: 5vh;
+    }
+
+    .contactInfo p {
+        font-size: 3.5vh;
+    }
+
+    .emailDec p, .phoneDec p {
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .emailInfo p, .phoneInfo p {
+        text-align: center;
+    }
+
+    .resume p {
+        padding-top: 2vh;
+        font-size: 2.5vh;
+    }
+
+    ::-webkit-input-placeholder {
+        font-size: 2.5vh;
+    }
+
+    form input {
+        font-size: 3vh;
     }
 
 }
@@ -392,6 +454,13 @@
     }
 
     /************************************
+    About Page
+    ************************************/
+    .nav_container_alt .about_title h1 {
+        font-size: 2.9vh;
+    }
+
+    /************************************
     Skills Page
     ************************************/
     .skills_row h3 {
@@ -420,5 +489,72 @@
         font-size: 5vw;
     }
 
+    /************************************
+   Connect Page
+   ************************************/
+    .connect_container {
+        padding: 0;
+    }
+
+    .input_container {
+        padding: 0;
+    }
+
+    .message_container {
+        padding: 0;
+    }
+
+    .contactForm {
+        padding: 0;
+        width: 100%;
+    }
+
+    form input {
+        position: relative;
+        height: 40px;
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid #FCA311;
+        background-color: transparent;
+        margin-bottom: 5vh;
+        outline: none;
+        color: #E7E7E7;
+        font-size: 1.25vw;
+    }
+
+    form button {
+        position: relative;
+        font-size: 4vh;
+        height: auto;
+        width: 25vw;
+        padding: 0;
+        border-radius: 5px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid #fff;
+        background-color: #FCA311;
+        margin-bottom: 20vh;
+        color: #fff;
+        outline: none;
+    }
+
+    .button {
+        left: 50%;
+        transform: translate(-50%);
+        width: 25vw;
+    }
+
+    .resume p {
+        font-size: 2.5vh;
+    }
+
+    ::-webkit-input-placeholder {
+        font-size: 3.5vh;
+    }
+
+    form input {
+        font-size: 4vh;
+    }
 }
 

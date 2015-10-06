@@ -1620,15 +1620,16 @@ form span {
 .contactInfo p {
     font-size: 1.25vw;
     color: #fff;
-    font-weight: 300;
 }
 
 .emailDec p, .phoneDec p {
     text-align: right;
+    font-weight: 700;
 }
 
 .emailInfo p, .phoneInfo p {
     text-align: left;
+    font-weight: 300;
 }
 
 .links {
