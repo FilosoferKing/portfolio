@@ -527,7 +527,6 @@ PAGE: About Page
     padding: 3vh 0;
     top: 50%;
     transform: translateY(-70%);
-
 }
 
 .info_right_circle::after {

@@ -5,7 +5,7 @@
     ************************************/
     .menu_button {
         visibility: visible;
-        font-size: 8vw;
+        font-size: 7vh;
         opacity: 1;
     }
 
@@ -25,6 +25,10 @@
     #tl {
         width: auto;
         height: 6vh;
+    }
+
+    .land_text a {
+        visibility: hidden;
     }
     /************************************
         Landing Page
@@ -114,7 +118,8 @@
     About Me
     ************************************/
     .about_div {
-        background-color: rgba(56, 77, 86, 1);
+        position: relative;
+        background-color: rgba(56, 77, 86, 0);
     }
 
     .title img {
@@ -131,24 +136,42 @@
     }
 
     .about_div::before {
-        top: 85%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        content: '';
+        background: transparent url('img/aboutbw.jpg') no-repeat 0 50%;
+        background-size: cover;
+        z-index: 0;
     }
 
     .about_title h1 {
         font-size: 1.75em;
         color: #fff;
-        width: 100%;
     }
 
-    .info_left h1, .info_right h1 {
+    .info_right {
+        position: absolute;
+        #overflow: hidden;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .info_right h1 {
         font-size: 1.5em;
     }
 
-    .info_left p, .info_right p {
+    .info_right p {
         font-size: 1.25em;
     }
 
-    .info_left_circle::after, .info_right_circle::after {
+    .info_right_circle::after {
         position: absolute;
         top: 0;
         left: 50%;
@@ -174,20 +197,24 @@
             left: 50%;
             width: 0;
             height: 0;
-            transform: translateX(-50%) rotateZ(-90deg);
+            transform: translateX(-50%) rotateZ(0);
             background-color: rgba(56, 77, 86, 0);
         }
         75% {
             background-color: rgba(56, 77, 86, 0);
         }
         100% {
-            top: 0%;
+            top: 0;
             left: 50%;
-            width: 95%;
+            width: 100%;
             height: 100%;
             transform: translateX(-50%) rotateZ(0);
-            background-color: rgba(56, 77, 86, 1);
+            background-color: rgba(56, 77, 86, .9);
         }
+    }
+
+    .nav_container_alt .about_title h1 {
+        font-size: 3vh;
     }
 
     /************************************
@@ -212,6 +239,10 @@
 
     .skillsChart p {
         font-size: 1em;
+    }
+
+    .nav_container .skills_title h1 {
+        font-size: 3vh;
     }
 
     /************************************
