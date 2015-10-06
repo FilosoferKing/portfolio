@@ -218,7 +218,7 @@
     }
 
     /************************************
-    Skills Me
+    Skills Page
     ************************************/
     .nav_container .skills_title h1 {
         font-size: 3vh;
@@ -230,9 +230,27 @@
         margin: 0;
     }
 
+    .skills_row h3 {
+        position: absolute;
+        text-align: center;
+        font-weight: 400;
+        font-size: 3vh;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        color: #fff;
+        #background-color: #fff;
+        border-radius: 5px;
+        #text-shadow: 1px 1px 1px #000;
+    }
+
     /************************************
     Project Page
     ************************************/
+    .nav_container_alt .project_title h1 {
+        font-size: 3vh;
+    }
+
     .imageDiv {
         padding-top: 50%;
     }
@@ -245,15 +263,53 @@
         font-size: 1.5em;
     }
 
+    .projectImagesContainer::before {
+        display: none;
+    }
+
+    .projectImagesContainer::after {
+        display: none;
+    }
+
+    .imageDiv::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 102%;
+        height: 20%;
+        content: attr(content);
+        #background-color: rgba(56, 77, 86, .75);
+        border-top: 2px solid rgba(56, 77, 86, 1);
+        border-bottom: 2px solid rgba(56, 77, 86, 1);
+        background-color: #fff;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        line-height: 200%;
+        font-size: 4vw;
+        font-weight: 500;
+        #text-shadow: 0 1px 1px #000;
+        color: rgba(56, 77, 86, 1);
+    }
+
+    .imageDiv:hover::after {
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        width: 102%;
+        height: 20%;
+        content: attr(content);
+        background-color: #fff;
+        border: none;
+        transform: translate(-50%, -50%);
+        transition-duration: .5s;
+        opacity: 1;
+    }
+
     /************************************
     Project MODAL
     ************************************/
     .modalInfoContainer h1 {
         font-size: 1.75em;
-    }
-
-    .imageDiv {
-        padding-top: 100%;
     }
 
     .project_title h1 {
@@ -332,6 +388,35 @@
         background-color: transparent;
         border: 2px solid #FCA311;
         border-radius: 5px;
+    }
+
+    /************************************
+    Skills Page
+    ************************************/
+    .skills_row h3 {
+        position: absolute;
+        text-align: center;
+        font-weight: 400;
+        font-size: 2.5vh;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        color: #fff;
+        #background-color: #fff;
+        border-radius: 5px;
+        #text-shadow: 1px 1px 1px #000;
+    }
+
+    /************************************
+    Project Page
+    ************************************/
+    .imageDiv {
+        padding-top: 50%;
+    }
+
+    .imageDiv::after {
+        line-height: 175%;
+        font-size: 5vw;
     }
 
 }
