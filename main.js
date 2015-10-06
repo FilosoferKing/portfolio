@@ -30,10 +30,12 @@ $(document).ready(function () {
      */
     $('.menu_button').on('click', function () {
         if (menu_toggle == false) {
+            console.log("Nav displayed");
             $('.nav_menu').css({"display": "block"});
             //$('.nav_container').css({"background-color": "rgba(0, 0, 0, .25)", "top": "0", "height": "8vh"});
             menu_toggle = true;
         } else {
+            console.log("Nav hidden");
             $('.nav_menu').css({"display": "none", "transition-duration": "0s"});
             //$('.nav_container').css({"background-color": "rgba(0, 0, 0, 0)", "top": "0", "height": "0"});
             menu_toggle = false;
