@@ -299,7 +299,8 @@
         height: 20%;
         content: attr(content);
         background-color: rgba(56, 77, 86, 1);
-        border: none;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
         transform: translate(-50%, -50%);
         transition-duration: .5s;
         opacity: 1;
