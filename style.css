@@ -791,7 +791,7 @@ PAGE: Skills Page
     #box-shadow: 0 0 20px 5px #000 inset;
     background-color: rgba(56, 77, 86, .85);
     width: 50%;
-    height: auto;
+    height: 50%;
     opacity: 1;
 
     animation-name: circleSpin;
