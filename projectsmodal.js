@@ -107,40 +107,28 @@ function loadProjectInfo(id) {
             var imageId = 1;
             buildModal(title, desc, imageId);
             break;
-        case 'calculator':
-            title = 'Calculator';
-            desc = 'This is info about the Calculator project';
-            var imageId = 2;
-            buildModal(title, desc, imageId);
-            break;
         case 'sgt':
             title = 'Student Grade Table';
             desc = 'This is info about theStudent Grade Table project';
-            var imageId = 3;
+            var imageId = 2;
             buildModal(title, desc, imageId);
             break;
         case 'twailerz':
             title = 'Twailerz';
             desc = 'This is info about the Twailerz project';
-            var imageId = 4;
+            var imageId = 3;
             buildModal(title, desc, imageId);
             break;
         case 'tictactoe':
             title = 'Tic Tac Toe';
             desc = 'This is info about the Tic Tac Toe project';
-            var imageId = 5;
+            var imageId = 4;
             buildModal(title, desc, imageId);
             break;
         case 'taskit':
             title = 'Task It';
             desc = 'This is info about the Task It project';
-            var imageId = 6;
-            buildModal(title, desc, imageId);
-            break;
-        case 'final':
-            title = 'Final';
-            desc = 'This is info about the Final project';
-            var imageId = 7;
+            var imageId = 5;
             buildModal(title, desc, imageId);
             break;
     }

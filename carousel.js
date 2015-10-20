@@ -1,6 +1,6 @@
-var projectImageArray = ['marounrecords.png', 'memorymatch.png', 'calculator.png', 'sgt.png', 'twailerz.png', 'tic-tac-toe.png', 'taskit.png', 'taskit.png'];
-var titleArray = ['Maroun Records', 'Memory Match', 'Calculator', 'Student Grade Table', 'Twailerz', 'Tic Tac Toe', 'Task It', 'Final'];
-var descArray = ['This is info about the Maroun Records project', 'This is info about the Memory Match project', 'This is info about the Calculator project', 'This is info about theStudent Grade Table project', 'This is info about the Twailerz project', 'This is info about the Tic Tac Toe project', 'This is info about the Task It project', 'This is info about the Final project'];
+var projectImageArray = ['marounrecords.png', 'memorymatch.png', 'sgt.png', 'twailerz.png', 'tic-tac-toe.png', 'taskit.png'];
+var titleArray = ['Maroun Records', 'Memory Match','Student Grade Table', 'Twailerz', 'Tic Tac Toe', 'Task It'];
+var descArray = ['This is info about the Maroun Records project', 'This is info about the Memory Match project', 'This is info about theStudent Grade Table project', 'This is info about the Twailerz project', 'This is info about the Tic Tac Toe project', 'This is info about the Task It project'];
 var currentImage = 0;
 var stagedImage = '';
 var clickEnabled = true;
@@ -91,7 +91,7 @@ function displayNextImage(direction){
     stagedImage = parseInt(currentImage) + parseInt(direction);
     //console.log('Staged image: ', stagedImage);
     if(direction == -1 && currentImage == 0){
-        stagedImage = 7;
+        stagedImage = 5;
         //console.log('Current Image Left at 0: ', currentImage);
         changeModalImage();
         modalInfoChange();
