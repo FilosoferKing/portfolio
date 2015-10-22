@@ -1,5 +1,6 @@
 var title; //title of project
 var desc; //description of project
+var link;//link to project
 var imgsrc; //src for project image
 
 $(document).ready(function () {
@@ -36,7 +37,7 @@ $(document).ready(function () {
  * PURPOSE: gets project information from loadProjectInfo() and builds out modal and appends it to the body
  * FUNCTIONS USED: none
  */
-function buildModal(title, desc, imageId) {
+function buildModal(title, desc, imageId, link) {
     var modalContainer = $('<div>', {
         class: 'col-xs-12 modalContainer'
     });
@@ -64,6 +65,15 @@ function buildModal(title, desc, imageId) {
         id: 'projectInfo',
         text: desc
     });
+    var projectLinkText = $('<p>', {
+        id: 'projectLinkText'
+    });
+    var projectLink = $('<a>', {
+        id: 'projectLink',
+        href: link,
+        target: "_blank",
+        text: "View Project"
+    });
     var rightButton = $('<button>', {
         class: 'carouselRight',
         direction: 1
@@ -76,7 +86,8 @@ function buildModal(title, desc, imageId) {
     $(modalContainer).append(modalContentContainer);
     $(modalContentContainer).append(modalImageContainer, modalInfoContainer, exitButton);
     $(modalImageContainer).append(projectImage, rightButton, leftButton);
-    $(modalInfoContainer).append(projectTitle, projectInfo);
+    $(projectLinkText).append(projectLink);
+    $(modalInfoContainer).append(projectTitle, projectInfo, projectLinkText);
 
     $('body').append(modalContainer);
 
@@ -94,42 +105,49 @@ function buildModal(title, desc, imageId) {
  * FUNCTIONS USED: buildModal()
  */
 function loadProjectInfo(id) {
+    var linkStart = "http://www.trevorlinan.com/";
     switch (id) {
         case 'marounrecords':
             title = 'Maroun Records';
-            desc = 'This is info about the Maroun Records project';
+            desc = 'Maroun Records is music label website for supporting up and coming artists.';
+            link = linkStart + "marounrecords";
             var imageId = 0;
-            buildModal(title, desc, imageId);
+            buildModal(title, desc, imageId, link);
             break;
         case 'memorymatch':
             title = 'Memory Match';
-            desc = 'This is info about the Memory Match project';
+            desc = 'Match Wars is a Star Wars themed card matching game to test your memory.';
+            link = linkStart + "matchwars";
             var imageId = 1;
-            buildModal(title, desc, imageId);
+            buildModal(title, desc, imageId, link);
             break;
         case 'sgt':
             title = 'Student Grade Table';
-            desc = 'This is info about theStudent Grade Table project';
+            desc = 'The student grade table is an information table listing student names, courses and grades.';
+            link = linkStart + "studentgradetable";
             var imageId = 2;
-            buildModal(title, desc, imageId);
+            buildModal(title, desc, imageId, link);
             break;
         case 'twailerz':
             title = 'Twailerz';
-            desc = 'This is info about the Twailerz project';
+            desc = 'Twailerz is a website that connects the latest tweets via twitter about an upcoming movie and connects it with that trailer.';
+            link = linkStart + "twailerz";
             var imageId = 3;
-            buildModal(title, desc, imageId);
+            buildModal(title, desc, imageId, link);
             break;
         case 'tictactoe':
             title = 'Tic Tac Toe';
-            desc = 'This is info about the Tic Tac Toe project';
+            desc = 'This is a classic Tic Tac Toe game.';
+            link = linkStart + "tictactoe";
             var imageId = 4;
-            buildModal(title, desc, imageId);
+            buildModal(title, desc, imageId, link);
             break;
         case 'taskit':
             title = 'Task It';
-            desc = 'This is info about the Task It project';
+            desc = 'Task It! is a "to do list" application to keep track of your current and upcoming tasks.';
+            link = linkStart + "taskit";
             var imageId = 5;
-            buildModal(title, desc, imageId);
+            buildModal(title, desc, imageId, link);
             break;
     }
 }

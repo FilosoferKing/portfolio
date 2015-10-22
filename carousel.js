@@ -1,6 +1,7 @@
 var projectImageArray = ['marounrecords.png', 'memorymatch.png', 'sgt.png', 'twailerz.png', 'tic-tac-toe.png', 'taskit.png'];
 var titleArray = ['Maroun Records', 'Memory Match','Student Grade Table', 'Twailerz', 'Tic Tac Toe', 'Task It'];
-var descArray = ['This is info about the Maroun Records project', 'This is info about the Memory Match project', 'This is info about theStudent Grade Table project', 'This is info about the Twailerz project', 'This is info about the Tic Tac Toe project', 'This is info about the Task It project'];
+var descArray = ['Maroun Records is music label website for supporting up and coming artists.', 'Match Wars is a Star Wars themed card matching game to test your memory.', 'The student grade table is an information table listing student names, courses and grades.', 'Twailerz is a website that connects the latest tweets via twitter about an upcoming movie and connects it with that trailer.', 'This is a classic Tic Tac Toe game.', 'Task It! is a "to do list" application to keep track of your current and upcoming tasks.'];
+var linkArray = ['marounrecords', 'matchwars', 'studentgradetable', 'twailerz', 'tictactoe', 'taskit'];
 var currentImage = 0;
 var stagedImage = '';
 var clickEnabled = true;
@@ -65,7 +66,8 @@ function loadProjectImage(imageId){
             class: 'col-xs-12 projectImageDiv',
             id: i,
             title: titleArray[i],
-            desc: descArray[i]
+            desc: descArray[i],
+            link: "http://www.trevorlinan.com/" + linkArray[i]
         });
         var image = $('<img>', {
             src: 'img/projects/' + projectImageArray[i] + '',
@@ -133,12 +135,22 @@ function displayNextImage(direction){
 function modalInfoChange(){
     var modalTitle = $('#' + stagedImage).attr('title');
     var modalInfo = $('#' + stagedImage).attr('desc');
+    var modalLink = $('#' + stagedImage).attr('link');
+    var projectLink = $('<a>', {
+        id: 'projectLink',
+        href: modalLink,
+        target: "_blank",
+        text: "View Project"
+    });
 
     $('#projectTitle').fadeTo(250, 0);
     $('#projectInfo').fadeTo(250, 0);
+    $('#projectLinkText').fadeTo(250, 0);
     setTimeout(function(){
+        $('#projectLinkText').empty().append(projectLink);
         $('#projectTitle').text(modalTitle).fadeTo(250, 1);
         $('#projectInfo').text(modalInfo).fadeTo(250, 1);
+        $('#projectLinkText').fadeTo(250, 1);
     }, 500);
 }
 
