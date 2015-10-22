@@ -1,22 +1,20 @@
 <?php
-
 $email_name = "trevorlinan";
 $email_direct = "@gmail.com";
 $to = $email_name . $email_direct;
-
-
+$to_address = $to;
 $name = $_POST['name'];
-$from_email = "From: " . $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
+$message_wrap = wordwrap($message, 70, "\r\n");
+$from_email = $_POST['email'];
+$headers = "From: " . "'$name'" . " " . "'$from_email'" . "\r\n";
 
-If (mail($to, $subject, $message, $from_email)) {
+if (mail("$to_address","$subject","$message_wrap", "$headers")){
+    header('Location: http://www.trevorlinan.com/#connect');
     print "Email has been sent.";
 } else {
+    header('Location: http://www.trevorlinan.com/#connect');
     print "Email was not sent.";
-};
-
-print($to . $name . $from_email . $subject . $body);
-
-
+}
 ?>
