@@ -1189,7 +1189,7 @@ PAGE: Projects Page
     #background-color: rgba(56, 77, 86, .75);
     #border-top: 2px solid rgba(56, 77, 86, 1);
     #border-bottom: 2px solid rgba(56, 77, 86, 1);
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, 1);
     transform: translate(-50%, -50%);
     text-align: center;
     line-height: 155%;
@@ -1260,13 +1260,12 @@ PAGE: Projects Page
     width: 100%;
     height: 100%;
     content: '';
-    background: transparent url('img/projects/marounrecordsbw.png') no-repeat 50% 50%;
+    background: transparent url('img/projects/marounrecords.png') no-repeat 50% 50%;
     background-size: 80% auto;
-    opacity: 1;
+    opacity: .25;
 }
 
 #marounrecords:hover::before {
-    background: transparent url('img/projects/marounrecords.png') no-repeat 50% 50%;
     background-size: 90% auto;
     transition-duration: .5s;
     transform: scale(1.75, 1.75) rotateZ(-5deg);
@@ -1280,13 +1279,12 @@ PAGE: Projects Page
     width: 100%;
     height: 100%;
     content: '';
-    background: transparent url('img/projects/memorymatchbw.png') no-repeat 50% 50%;
+    background: transparent url('img/projects/memorymatch.png') no-repeat 50% 50%;
     background-size: 80% auto;
-    opacity: 1;
+    opacity: .25;
 }
 
 #memorymatch:hover::before {
-    background: transparent url('img/projects/memorymatch.png') no-repeat 50% 50%;
     background-size: 90% auto;
     transition-duration: .5s;
     transform: scale(1.75, 1.75) rotateZ(-5deg);
@@ -1300,13 +1298,12 @@ PAGE: Projects Page
     width: 100%;
     height: 100%;
     content: '';
-    background: transparent url('img/projects/calculatorbw.png') no-repeat 50% 50%;
+    background: transparent url('img/projects/calculator.png') no-repeat 50% 50%;
     background-size: 80% auto;
-    opacity: 1;
+    opacity: .25;
 }
 
 #calculator:hover::before {
-    background: transparent url('img/projects/calculator.png') no-repeat 50% 50%;
     background-size: 90% auto;
     transition-duration: .5s;
     transform: scale(1.75, 1.75) rotateZ(-5deg);
@@ -1320,13 +1317,12 @@ PAGE: Projects Page
     width: 100%;
     height: 100%;
     content: '';
-    background: transparent url('img/projects/sgtbw.png') no-repeat 50% 50%;
+    background: transparent url('img/projects/sgt.png') no-repeat 50% 50%;
     background-size: 80% auto;
-    opacity: 1;
+    opacity: .25;
 }
 
 #sgt:hover::before {
-    background: transparent url('img/projects/sgt.png') no-repeat 50% 50%;
     background-size: 90% auto;
     transition-duration: .5s;
     transform: scale(1.75, 1.75) rotateZ(-5deg);
@@ -1340,13 +1336,12 @@ PAGE: Projects Page
     width: 100%;
     height: 100%;
     content: '';
-    background: transparent url('img/projects/twailerzbw.png') no-repeat 50% 50%;
+    background: transparent url('img/projects/twailerz.png') no-repeat 50% 50%;
     background-size: 80% auto;
-    opacity: 1;
+    opacity: .25;
 }
 
 #twailerz:hover::before {
-    background: transparent url('img/projects/twailerz.png') no-repeat 50% 50%;
     background-size: 90% auto;
     transition-duration: .5s;
     transform: scale(1.75, 1.75) rotateZ(-5deg);
@@ -1360,13 +1355,12 @@ PAGE: Projects Page
     width: 100%;
     height: 100%;
     content: '';
-    background: transparent url('img/projects/tic-tact-toebw.png') no-repeat 50% 50%;
+    background: transparent url('img/projects/tic-tac-toe.png') no-repeat 50% 50%;
     background-size: 80% auto;
-    opacity: 1;
+    opacity: .25;
 }
 
 #tictactoe:hover::before {
-    background: transparent url('img/projects/tic-tac-toe.png') no-repeat 50% 50%;
     background-size: 90% auto;
     transition-duration: .5s;
     transform: scale(1.75, 1.75) rotateZ(-5deg);
@@ -1380,13 +1374,12 @@ PAGE: Projects Page
     width: 100%;
     height: 100%;
     content: '';
-    background: transparent url('img/projects/taskitbw.png') no-repeat 50% 50%;
+    background: transparent url('img/projects/taskit.png') no-repeat 50% 50%;
     background-size: 80% auto;
-    opacity: 1;
+    opacity: .25;
 }
 
 #taskit:hover::before {
-    background: transparent url('img/projects/taskit.png') no-repeat 50% 50%;
     background-size: 90% auto;
     transition-duration: .5s;
     transform: scale(1.75, 1.75) rotateZ(-5deg);
